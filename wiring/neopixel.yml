@@ -1,0 +1,65 @@
+templates:
+  - &jst_con
+    type: '<a href="https://www.adafruit.com/product/4336">JST PH</a>'
+    subtype: plug
+    # TODO: Figure out pin order
+    pinlabels: [GND, VCC, Data]
+    supplier: Adafruit
+    spn: 4336
+    ignore_in_bom: true  # Handle wire and connector as additional part
+    additional_components:
+      -
+        type: JST PH 3-pin Plug-Plug Cable - 100mm long
+        subtype: https://www.adafruit.com/product/4336
+        qty: 0.5
+        supplier: Adafruit
+        spn: 4336
+
+  - &jst_wire
+    gauge: 22 AWG
+    length: 2 cm
+    # TODO: Figure out pin order
+    wirelabels: [GND, VCC, Data]
+    colors: [BK, RD, WH]
+    category: bundle
+    type: Neopixel data
+    ignore_in_bom: true  # JST connector and wire is a single part
+
+  - &neopixel_strip
+    type: '<a href="https://www.adafruit.com/product/1376">Neopixel Strip</a>'
+    subtype: pad
+    pinlabels: [GND#1, Din, VCC#1, GND#2, Dout, VCC#2]
+    show_pincount: false
+    supplier: Adafruit
+    spn: 1376
+    ignore_in_bom: true  # Neopixel isn't actually a connector
+    additional_components:
+      -
+        type: Adafruit NeoPixel Digital RGB LED Strip - White 30 LED
+        subtype: https://www.adafruit.com/product/1376
+        supplier: Adafruit
+        spn: 1376
+
+connectors:
+  C1:
+    <<: *jst_con
+  C2:
+    <<: *jst_con
+  N1:
+    <<: *neopixel_strip
+
+cables:
+  W1:
+    <<: *jst_wire
+  W2:
+    <<: *jst_wire
+
+connections:
+  -
+    - C1: [GND, VCC, Data]
+    - W1: [GND, VCC, Data]
+    - N1: [GND#1, VCC#1, Din]
+  -
+    - N1: [GND#2, VCC#2, Dout]
+    - W2: [GND, VCC, Data]
+    - C2: [GND, VCC, Data]

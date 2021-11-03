@@ -1,0 +1,6 @@
+*.svg
+!res/*.svg
+*.tsv
+*.gv
+*.html
+*.png

@@ -1,0 +1,45 @@
+connectors:
+  S1:
+    type: '<a href="https://www.digikey.ca/en/products/detail/e-switch/PV7F2Y0SS-341/2116217">SWITCH PUSHBUTTON SPDT 2A 48V</a>'
+    subtype: pin
+    pinlabels: ['1', '2', '3', '4', (+), (-)]
+    supplier: DigiKey
+    spn: 141-PV7F2Y0SS-341-ND
+    manufacturer: E-Switch
+    mpn: PV7F2Y0SS-341
+    image:
+      src: res/pv7.svg
+
+  C1:
+    type: '<a href="https://www.adafruit.com/product/4210">JST SH</a>'
+    subtype: plug
+    pinlabels: [BTN+, BTN-, LED+, LED-]
+    supplier: Adafruit
+    spn: 4210
+    ignore_in_bom: true  # Handle wire and connector as additional part
+    image:
+      src: res/sh-4.svg
+      height: 100
+    additional_components:
+      -
+        type: JST SH 4-pin Cable - 100mm Long
+        subtype: https://www.adafruit.com/product/4210
+        qty: 0.5
+        supplier: Adafruit
+        spn: 4210
+
+cables:
+  W1:
+    gauge: 28 AWG
+    length: 2 cm
+    wirelabels: [BTN+, BTN-, LED+, LED-]
+    colors: [YE, BU, RD, BK]
+    ignore_in_bom: true  # JST connector and wire is a single part
+
+connections:
+  -
+    - S1: ['3', '4', (+), (-)]
+    - W1: [BTN+, BTN-, LED+, LED-]
+    - C1: [BTN+, BTN-, LED+, LED-]
+
+

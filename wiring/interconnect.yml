@@ -1,0 +1,62 @@
+templates:
+  - &jst_con
+    type: '<a href="https://www.adafruit.com/product/4210">JST SH</a>'
+    subtype: plug
+    pinlabels: [BTN, LED, VCC, GND]
+    supplier: Adafruit
+    spn: 4210
+    ignore_in_bom: true  # Handle wire and connector as additional part
+    image:
+      src: res/sh-4.svg
+      height: 100
+    additional_components:
+      -
+        type: JST SH 4-pin Cable - 100mm Long
+        subtype: https://www.adafruit.com/product/4210
+        qty: 0.5
+        supplier: Adafruit
+        spn: 4210
+
+  - &jst_wire
+    gauge: 28 AWG
+    length: 1 m
+    wirelabels: [BTN, LED, VCC, GND]
+    colors: [YE, BU, RD, BK]
+    ignore_in_bom: true  # JST connector and wire is a single part
+    additional_components:
+      -
+        type: 28 AWG stranded wire (yellow)
+        qty: 1
+        qty_multiplier: length
+        unit: m
+      -
+        type: 28 AWG stranded wire (blue)
+        qty: 1
+        qty_multiplier: length
+        unit: m
+      -
+        type: 28 AWG stranded wire (red)
+        qty: 1
+        qty_multiplier: length
+        unit: m
+      -
+        type: 28 AWG stranded wire (black)
+        qty: 1
+        qty_multiplier: length
+        unit: m
+
+connectors:
+  C1:
+    <<: *jst_con
+  C2:
+    <<: *jst_con
+
+cables:
+  W1:
+    <<: *jst_wire
+
+connections:
+  -
+    - C1: [BTN, LED, VCC, GND]
+    - W1: [BTN, LED, VCC, GND]
+    - C2: [BTN, LED, VCC, GND]
