@@ -1,0 +1,1494 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1150 5500 1150 5600
+Wire Wire Line
+	2150 1550 2250 1550
+Wire Wire Line
+	2250 1550 2250 1450
+Wire Wire Line
+	2150 1750 2250 1750
+Wire Wire Line
+	2150 1850 2250 1850
+Wire Wire Line
+	2550 1850 2650 1850
+Wire Wire Line
+	2650 1850 2650 1950
+Wire Wire Line
+	2550 1750 2650 1750
+Wire Wire Line
+	2650 1750 2650 1850
+Connection ~ 2650 1850
+Wire Wire Line
+	1550 3150 1550 3050
+NoConn ~ 2150 2050
+NoConn ~ 2150 2150
+NoConn ~ 2150 2250
+NoConn ~ 2150 2350
+NoConn ~ 2150 2650
+NoConn ~ 2150 2750
+Wire Wire Line
+	1250 3150 1250 3050
+Wire Wire Line
+	1250 3550 1250 3450
+Wire Wire Line
+	4200 1800 4200 1700
+Wire Wire Line
+	3700 2300 3700 2200
+Wire Wire Line
+	3700 2200 3800 2200
+Wire Wire Line
+	3700 2600 3700 2700
+Wire Wire Line
+	3700 2700 4200 2700
+Wire Wire Line
+	4200 2400 4200 2700
+Connection ~ 4200 2700
+Wire Wire Line
+	4600 2000 4700 2000
+Wire Wire Line
+	4700 1700 4700 2000
+Wire Wire Line
+	5100 1800 5100 1700
+Wire Wire Line
+	4700 2200 4600 2200
+Wire Wire Line
+	5000 2200 5100 2200
+Wire Wire Line
+	5100 2200 5100 2100
+Wire Wire Line
+	5550 1700 5550 1800
+Wire Wire Line
+	5550 2200 5550 2100
+Wire Wire Line
+	5950 1700 5950 1800
+Wire Wire Line
+	5950 2200 5950 2100
+Wire Wire Line
+	1150 5900 1150 6100
+Wire Wire Line
+	7300 2450 7550 2450
+Wire Wire Line
+	7950 1900 7750 1900
+Wire Wire Line
+	7750 1900 7750 2150
+Wire Wire Line
+	7100 2150 7100 1700
+Wire Wire Line
+	7100 1700 7950 1700
+Wire Wire Line
+	6900 2450 6650 2450
+Wire Wire Line
+	6650 2450 6650 2700
+Wire Wire Line
+	7950 2450 8350 2450
+Wire Wire Line
+	8350 2450 8350 2550
+Wire Wire Line
+	8350 2450 8350 2100
+Connection ~ 8350 2450
+Wire Wire Line
+	8850 2550 8850 2350
+Wire Wire Line
+	8750 1900 8850 1900
+Wire Wire Line
+	8850 1900 8850 2050
+Wire Wire Line
+	8750 1700 9100 1700
+Wire Wire Line
+	9100 1700 9100 1800
+Wire Wire Line
+	9100 1700 9100 1550
+Connection ~ 9100 1700
+Wire Wire Line
+	9100 2550 9100 2100
+Wire Wire Line
+	9100 1150 9100 1250
+Text Notes 1100 1050 0    118  ~ 24
+Power Input
+Text Notes 3950 1300 0    118  ~ 24
+Charging
+Text Notes 7450 1250 0    118  ~ 24
+Protection
+Wire Wire Line
+	5850 4100 5950 4100
+Wire Wire Line
+	5950 4100 5950 3850
+Wire Wire Line
+	5950 3850 6050 3850
+Wire Wire Line
+	5850 4200 5950 4200
+Wire Wire Line
+	5300 4750 5300 4850
+Wire Wire Line
+	5300 4850 5400 4850
+Wire Wire Line
+	5400 4750 5400 4850
+Connection ~ 5400 4850
+Wire Wire Line
+	5500 4750 5500 4850
+Wire Wire Line
+	5500 4850 5400 4850
+Wire Wire Line
+	6350 4200 6250 4200
+Wire Wire Line
+	6350 3850 6750 3850
+Wire Wire Line
+	6750 3850 6750 3950
+Wire Wire Line
+	5850 4500 6750 4500
+Wire Wire Line
+	6750 4500 6750 4250
+Connection ~ 6750 4500
+Wire Wire Line
+	6750 4850 6750 4800
+Wire Wire Line
+	6750 3850 7600 3850
+Wire Wire Line
+	7600 3850 7600 3750
+Connection ~ 6750 3850
+Wire Wire Line
+	3300 3750 3300 3850
+Wire Wire Line
+	3300 3850 3500 3850
+Wire Wire Line
+	3900 3850 3500 3850
+Connection ~ 3500 3850
+Wire Wire Line
+	3900 3850 4550 3850
+Wire Wire Line
+	4800 3850 4800 4100
+Wire Wire Line
+	4800 4100 4900 4100
+Connection ~ 3900 3850
+Wire Wire Line
+	3500 4250 3500 4150
+Wire Wire Line
+	3900 4250 3900 4150
+Connection ~ 4550 3850
+Wire Wire Line
+	4550 3850 4800 3850
+Wire Wire Line
+	4550 4250 4550 4150
+Text GLabel 4900 4350 0    39   Input ~ 0
+OUTEN
+Text GLabel 4000 4950 2    39   Input ~ 0
+OUTEN
+Wire Wire Line
+	4000 4950 3900 4950
+Wire Wire Line
+	3900 4950 3900 5050
+Wire Wire Line
+	3900 5350 3900 5450
+Wire Wire Line
+	3800 4950 3900 4950
+Connection ~ 3900 4950
+Wire Wire Line
+	3300 4850 3300 4950
+Wire Wire Line
+	3300 4950 3400 4950
+Wire Wire Line
+	4500 4900 4500 5000
+Wire Wire Line
+	4900 4500 4850 4500
+Wire Wire Line
+	4500 4500 4500 4600
+Wire Wire Line
+	4850 4800 4850 4500
+Connection ~ 4850 4500
+Wire Wire Line
+	4850 4500 4500 4500
+Wire Wire Line
+	4850 5100 4850 5400
+Wire Wire Line
+	4850 5400 4650 5400
+Wire Wire Line
+	4500 5400 4500 5300
+Connection ~ 4650 5400
+Wire Wire Line
+	4650 5400 4500 5400
+Text Notes 5000 3450 0    118  ~ 24
+Boost
+Wire Wire Line
+	5200 3850 4800 3850
+Connection ~ 4800 3850
+Wire Wire Line
+	5500 3850 5950 3850
+Connection ~ 5950 3850
+$Comp
+L Device:L L1
+U 1 1 61963F49
+P 5350 3850
+F 0 "L1" V 5540 3850 50  0000 C CNN
+F 1 "6.8u" V 5449 3850 50  0000 C CNN
+F 2 "Gigahawk:ASPI-0630LR-6R8M-T15" H 5350 3850 50  0001 C CNN
+F 3 "https://abracon.com/Magnetics/power/ASPI-0630LR.pdf" H 5350 3850 50  0001 C CNN
+F 4 "535-13041-1-ND" V 5350 3850 50  0001 C CNN "Digikey"
+	1    5350 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 6192722E
+P 4650 5400
+F 0 "#PWR020" H 4650 5150 50  0001 C CNN
+F 1 "GND" H 4655 5227 50  0000 C CNN
+F 2 "" H 4650 5400 50  0001 C CNN
+F 3 "" H 4650 5400 50  0001 C CNN
+	1    4650 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 619114F0
+P 4500 5150
+F 0 "C3" H 4385 5104 50  0000 R CNN
+F 1 "2.2n" H 4385 5195 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4538 5000 50  0001 C CNN
+F 3 "www.samsungsem.com/kr/support/product-search/mlcc/CL21B222KDCNFNC.jsp" H 4500 5150 50  0001 C CNN
+F 4 "1276-2484-1-ND" H 4500 5150 50  0001 C CNN "Digikey"
+	1    4500 5150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 61910DA0
+P 4850 4950
+F 0 "C5" H 4735 4996 50  0000 R CNN
+F 1 "47p" H 4735 4905 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4888 4800 50  0001 C CNN
+F 3 "https://www.johansondielectrics.com/downloads/catalog/johanson-dielectrics-product-catalog.pdf" H 4850 4950 50  0001 C CNN
+F 4 "709-1175-1-ND" H 4850 4950 50  0001 C CNN "Digikey"
+	1    4850 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 6190F9C8
+P 4500 4750
+F 0 "R6" V 4293 4750 50  0000 C CNN
+F 1 "51k" V 4384 4750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 4750 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204&DocType=DS&DocLang=English" H 4500 4750 50  0001 C CNN
+F 4 "A126373CT-ND" H 4500 4750 50  0001 C CNN "Digikey"
+	1    4500 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+BATT #PWR012
+U 1 1 61903928
+P 3300 4850
+F 0 "#PWR012" H 3300 4700 50  0001 C CNN
+F 1 "+BATT" H 3315 5023 50  0000 C CNN
+F 2 "" H 3300 4850 50  0001 C CNN
+F 3 "" H 3300 4850 50  0001 C CNN
+	1    3300 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 6190069F
+P 3600 4950
+F 0 "SW1" H 3600 5185 50  0000 C CNN
+F 1 "SW_SPST" H 3600 5094 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_E-Switch_EG1224_SPDT_Angled" H 3600 4950 50  0001 C CNN
+F 3 "https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/119/EG.pdf" H 3600 4950 50  0001 C CNN
+F 4 "EG2585-ND" H 3600 4950 50  0001 C CNN "Digikey"
+	1    3600 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 618EB047
+P 3900 5200
+F 0 "R5" V 3693 5200 50  0000 C CNN
+F 1 "10k" V 3784 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3830 5200 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3900 5200 50  0001 C CNN
+F 4 "RMCF0805JT10K0CT-ND" H 3900 5200 50  0001 C CNN "Digikey"
+	1    3900 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 618EBB3E
+P 3900 5450
+F 0 "#PWR015" H 3900 5200 50  0001 C CNN
+F 1 "GND" H 3905 5277 50  0000 C CNN
+F 2 "" H 3900 5450 50  0001 C CNN
+F 3 "" H 3900 5450 50  0001 C CNN
+	1    3900 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 618DD0F7
+P 4550 4250
+F 0 "#PWR018" H 4550 4000 50  0001 C CNN
+F 1 "GND" H 4555 4077 50  0000 C CNN
+F 2 "" H 4550 4250 50  0001 C CNN
+F 3 "" H 4550 4250 50  0001 C CNN
+	1    4550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 618DC168
+P 4550 4000
+F 0 "C4" H 4435 3954 50  0000 R CNN
+F 1 "1u" H 4435 4045 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4588 3850 50  0001 C CNN
+F 3 "https://www.samsungsem.com/kr/support/product-search/mlcc/CL21B105KOFNNNE.jsp" H 4550 4000 50  0001 C CNN
+F 4 "1276-1026-1-ND" H 4550 4000 50  0001 C CNN "Digikey"
+	1    4550 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 618DA0BB
+P 3900 4250
+F 0 "#PWR014" H 3900 4000 50  0001 C CNN
+F 1 "GND" H 3905 4077 50  0000 C CNN
+F 2 "" H 3900 4250 50  0001 C CNN
+F 3 "" H 3900 4250 50  0001 C CNN
+	1    3900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 618D7836
+P 3500 4250
+F 0 "#PWR013" H 3500 4000 50  0001 C CNN
+F 1 "GND" H 3505 4077 50  0000 C CNN
+F 2 "" H 3500 4250 50  0001 C CNN
+F 3 "" H 3500 4250 50  0001 C CNN
+	1    3500 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C1
+U 1 1 618D1D49
+P 3500 4000
+F 0 "C1" H 3615 4046 50  0000 L CNN
+F 1 "470u" H 3615 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 3500 4000 50  0001 C CNN
+F 3 "https://www.we-online.com/katalog/datasheet/875115252003.pdf" H 3500 4000 50  0001 C CNN
+F 4 "732-6451-1-ND" H 3500 4000 50  0001 C CNN "Digikey"
+	1    3500 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 618D143D
+P 3900 4000
+F 0 "C2" H 3785 3954 50  0000 R CNN
+F 1 "10u" H 3785 4045 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3938 3850 50  0001 C CNN
+F 3 "http://www1.futureelectronics.com/doc/Samsung%20Electro-Mechanics/CL21A106KPFNNNG.pdf" H 3900 4000 50  0001 C CNN
+F 4 "1276-6456-1-ND" H 3900 4000 50  0001 C CNN "Digikey"
+	1    3900 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+BATT #PWR011
+U 1 1 618C9FC8
+P 3300 3750
+F 0 "#PWR011" H 3300 3600 50  0001 C CNN
+F 1 "+BATT" H 3315 3923 50  0000 C CNN
+F 2 "" H 3300 3750 50  0001 C CNN
+F 3 "" H 3300 3750 50  0001 C CNN
+	1    3300 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR030
+U 1 1 618C5E6A
+P 7600 3750
+F 0 "#PWR030" H 7600 3600 50  0001 C CNN
+F 1 "VCC" H 7615 3923 50  0000 C CNN
+F 2 "" H 7600 3750 50  0001 C CNN
+F 3 "" H 7600 3750 50  0001 C CNN
+	1    7600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 618C2C6C
+P 6750 4850
+F 0 "#PWR029" H 6750 4600 50  0001 C CNN
+F 1 "GND" H 6755 4677 50  0000 C CNN
+F 2 "" H 6750 4850 50  0001 C CNN
+F 3 "" H 6750 4850 50  0001 C CNN
+	1    6750 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 618B9690
+P 6750 4650
+F 0 "R9" V 6543 4650 50  0000 C CNN
+F 1 "10k" V 6634 4650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 4650 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6750 4650 50  0001 C CNN
+F 4 "RMCF0805JT10K0CT-ND" H 6750 4650 50  0001 C CNN "Digikey"
+	1    6750 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 618B55A5
+P 6750 4100
+F 0 "R8" V 6543 4100 50  0000 C CNN
+F 1 "30k" V 6634 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 4100 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 6750 4100 50  0001 C CNN
+F 4 "13-RT0805FRE0730KLCT-ND" H 6750 4100 50  0001 C CNN "Digikey"
+	1    6750 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 618B3411
+P 6350 4200
+F 0 "#PWR027" H 6350 3950 50  0001 C CNN
+F 1 "GND" V 6355 4072 50  0000 R CNN
+F 2 "" H 6350 4200 50  0001 C CNN
+F 3 "" H 6350 4200 50  0001 C CNN
+	1    6350 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 618AECAC
+P 5400 4850
+F 0 "#PWR022" H 5400 4600 50  0001 C CNN
+F 1 "GND" H 5405 4677 50  0000 C CNN
+F 2 "" H 5400 4850 50  0001 C CNN
+F 3 "" H 5400 4850 50  0001 C CNN
+	1    5400 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 618AC69B
+P 6100 4200
+F 0 "C8" V 5848 4200 50  0000 C CNN
+F 1 "10n" V 5939 4200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6138 4050 50  0001 C CNN
+F 3 "https://datasheets.avx.com/X7RDielectric.pdf" H 6100 4200 50  0001 C CNN
+F 4 "478-1383-1-ND" H 6100 4200 50  0001 C CNN "Digikey"
+	1    6100 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:B140-E3 D4
+U 1 1 618A3748
+P 6200 3850
+F 0 "D4" H 6200 3633 50  0000 C CNN
+F 1 "B340LA-13-F" H 6200 3724 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 6200 3675 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30240.pdf" H 6200 3850 50  0001 C CNN
+F 4 "B340LA-FDICT-ND" H 6200 3850 50  0001 C CNN "Digikey"
+	1    6200 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L gigahawk:PAM2423 U2
+U 1 1 618A1252
+P 5400 4000
+F 0 "U2" H 5050 4050 50  0000 C CNN
+F 1 "PAM2423" H 5700 3300 50  0000 C CNN
+F 2 "Gigahawk:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm_HandSolderThermalVia" H 5400 4000 118 0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/PAM2421_22_23.pdf" H 5400 4000 118 0001 C CNN
+F 4 "PAM2423AECADJRDICT-ND" H 5400 4000 50  0001 C CNN "Digikey"
+	1    5400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR033
+U 1 1 61881B61
+P 9100 1150
+F 0 "#PWR033" H 9100 1000 50  0001 C CNN
+F 1 "+BATT" H 9115 1323 50  0000 C CNN
+F 2 "" H 9100 1150 50  0001 C CNN
+F 3 "" H 9100 1150 50  0001 C CNN
+	1    9100 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR034
+U 1 1 6187F180
+P 9100 2550
+F 0 "#PWR034" H 9100 2400 50  0001 C CNN
+F 1 "-BATT" H 9115 2723 50  0000 C CNN
+F 2 "" H 9100 2550 50  0001 C CNN
+F 3 "" H 9100 2550 50  0001 C CNN
+	1    9100 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 6187C3C2
+P 9100 1950
+F 0 "C9" H 9215 1996 50  0000 L CNN
+F 1 "0.1u" H 9215 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9138 1800 50  0001 C CNN
+F 3 "https://datasheets.avx.com/X7RDielectric.pdf" H 9100 1950 50  0001 C CNN
+F 4 "478-10836-1-ND" H 9100 1950 50  0001 C CNN "Digikey"
+	1    9100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 61878251
+P 9100 1400
+F 0 "R11" V 8893 1400 50  0000 C CNN
+F 1 "330R" V 8984 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9030 1400 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-3&DocType=DS&DocLang=English" H 9100 1400 50  0001 C CNN
+F 4 "A130131CT-ND" H 9100 1400 50  0001 C CNN "Digikey"
+	1    9100 1400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR032
+U 1 1 61875AEB
+P 8850 2550
+F 0 "#PWR032" H 8850 2300 50  0001 C CNN
+F 1 "GND" H 8855 2377 50  0000 C CNN
+F 2 "" H 8850 2550 50  0001 C CNN
+F 3 "" H 8850 2550 50  0001 C CNN
+	1    8850 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR031
+U 1 1 618716CA
+P 8350 2550
+F 0 "#PWR031" H 8350 2400 50  0001 C CNN
+F 1 "-BATT" H 8365 2723 50  0000 C CNN
+F 2 "" H 8350 2550 50  0001 C CNN
+F 3 "" H 8350 2550 50  0001 C CNN
+	1    8350 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:PSMN5R2-60YL Q2
+U 1 1 61868C76
+P 7750 2350
+F 0 "Q2" V 7999 2350 50  0000 C CNN
+F 1 "PSMN6R0-25YLB" V 8100 2300 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:LFPAK56" H 7900 2350 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PSMN6R0-25YLB.pdf" H 7750 2350 50  0001 C CNN
+F 4 "1727-6497-1-ND" V 7750 2350 50  0001 C CNN "Digikey"
+	1    7750 2350
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_FET:PSMN5R2-60YL Q1
+U 1 1 618667B5
+P 7100 2350
+F 0 "Q1" V 7349 2350 50  0000 C CNN
+F 1 "PSMN6R0-25YLB" V 7450 2300 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:LFPAK56" H 7250 2350 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PSMN6R0-25YLB.pdf" H 7100 2350 50  0001 C CNN
+F 4 "1727-6497-1-ND" V 7100 2350 50  0001 C CNN "Digikey"
+	1    7100 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 618612B5
+P 8850 2200
+F 0 "R10" V 8643 2200 50  0000 C CNN
+F 1 "2.2k" V 8734 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8780 2200 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204&DocType=DS&DocLang=English" H 8850 2200 50  0001 C CNN
+F 4 "A106060CT-ND" H 8850 2200 50  0001 C CNN "Digikey"
+	1    8850 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Management:BQ297xy U3
+U 1 1 6185EAFB
+P 8350 1800
+F 0 "U3" H 8350 2167 50  0000 C CNN
+F 1 "BQ29703DSET" H 8350 2076 50  0000 C CNN
+F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 8350 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 8100 2000 50  0001 C CNN
+F 4 "296-37960-1-ND" H 8350 1800 50  0001 C CNN "Digikey"
+	1    8350 1800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR02
+U 1 1 6185BF0F
+P 1150 6100
+F 0 "#PWR02" H 1150 5950 50  0001 C CNN
+F 1 "-BATT" H 1165 6273 50  0000 C CNN
+F 2 "" H 1150 6100 50  0001 C CNN
+F 3 "" H 1150 6100 50  0001 C CNN
+	1    1150 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 618595A4
+P 5950 2200
+F 0 "#PWR026" H 5950 1950 50  0001 C CNN
+F 1 "GND" H 5955 2027 50  0000 C CNN
+F 2 "" H 5950 2200 50  0001 C CNN
+F 3 "" H 5950 2200 50  0001 C CNN
+	1    5950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 6185959A
+P 5950 1950
+F 0 "C7" H 6065 1996 50  0000 L CNN
+F 1 "4.7u" H 6065 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5988 1800 50  0001 C CNN
+F 3 "https://www.samsungsem.com/kr/support/product-search/mlcc/CL21A475KPFNNNE.jsp" H 5950 1950 50  0001 C CNN
+F 4 "1276-1259-1-ND" H 5950 1950 50  0001 C CNN "Digikey"
+	1    5950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR025
+U 1 1 61858889
+P 5950 1700
+F 0 "#PWR025" H 5950 1550 50  0001 C CNN
+F 1 "+BATT" H 5965 1873 50  0000 C CNN
+F 2 "" H 5950 1700 50  0001 C CNN
+F 3 "" H 5950 1700 50  0001 C CNN
+	1    5950 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 61856FED
+P 5550 2200
+F 0 "#PWR024" H 5550 1950 50  0001 C CNN
+F 1 "GND" H 5555 2027 50  0000 C CNN
+F 2 "" H 5550 2200 50  0001 C CNN
+F 3 "" H 5550 2200 50  0001 C CNN
+	1    5550 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 61856A97
+P 5550 1950
+F 0 "C6" H 5665 1996 50  0000 L CNN
+F 1 "4.7u" H 5665 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5588 1800 50  0001 C CNN
+F 3 "https://www.samsungsem.com/kr/support/product-search/mlcc/CL21A475KPFNNNE.jsp" H 5550 1950 50  0001 C CNN
+F 4 "1276-1259-1-ND" H 5550 1950 50  0001 C CNN "Digikey"
+	1    5550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR023
+U 1 1 618557B1
+P 5550 1700
+F 0 "#PWR023" H 5550 1550 50  0001 C CNN
+F 1 "VBUS" H 5565 1873 50  0000 C CNN
+F 2 "" H 5550 1700 50  0001 C CNN
+F 3 "" H 5550 1700 50  0001 C CNN
+	1    5550 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR021
+U 1 1 61849BCA
+P 5100 1700
+F 0 "#PWR021" H 5100 1550 50  0001 C CNN
+F 1 "VBUS" H 5115 1873 50  0000 C CNN
+F 2 "" H 5100 1700 50  0001 C CNN
+F 3 "" H 5100 1700 50  0001 C CNN
+	1    5100 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR019
+U 1 1 61847AA6
+P 4700 1700
+F 0 "#PWR019" H 4700 1550 50  0001 C CNN
+F 1 "+BATT" H 4715 1873 50  0000 C CNN
+F 2 "" H 4700 1700 50  0001 C CNN
+F 3 "" H 4700 1700 50  0001 C CNN
+	1    4700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 61845C08
+P 3700 2450
+F 0 "R4" V 3493 2450 50  0000 C CNN
+F 1 "2k" V 3584 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3630 2450 50  0001 C CNN
+F 3 "https://www.susumu.co.jp/common/pdf/n_catalog_partition01_en.pdf" H 3700 2450 50  0001 C CNN
+F 4 "RG20N2.0KWCT-ND" H 3700 2450 50  0001 C CNN "Digikey"
+	1    3700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 61844CEE
+P 4200 2700
+F 0 "#PWR017" H 4200 2450 50  0001 C CNN
+F 1 "GND" H 4205 2527 50  0000 C CNN
+F 2 "" H 4200 2700 50  0001 C CNN
+F 3 "" H 4200 2700 50  0001 C CNN
+	1    4200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR016
+U 1 1 618431BA
+P 4200 1700
+F 0 "#PWR016" H 4200 1550 50  0001 C CNN
+F 1 "VBUS" H 4215 1873 50  0000 C CNN
+F 2 "" H 4200 1700 50  0001 C CNN
+F 3 "" H 4200 1700 50  0001 C CNN
+	1    4200 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 61842738
+P 1250 3550
+F 0 "#PWR03" H 1250 3300 50  0001 C CNN
+F 1 "GND" H 1255 3377 50  0000 C CNN
+F 2 "" H 1250 3550 50  0001 C CNN
+F 3 "" H 1250 3550 50  0001 C CNN
+	1    1250 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 61840D39
+P 1250 3300
+F 0 "R1" V 1043 3300 50  0000 C CNN
+F 1 "0R" V 1134 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1180 3300 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1250 3300 50  0001 C CNN
+F 4 "RMCF0805ZT0R00CT-ND" H 1250 3300 50  0001 C CNN "Digikey"
+	1    1250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 6183F607
+P 1550 3150
+F 0 "#PWR06" H 1550 2900 50  0001 C CNN
+F 1 "GND" H 1555 2977 50  0000 C CNN
+F 2 "" H 1550 3150 50  0001 C CNN
+F 3 "" H 1550 3150 50  0001 C CNN
+	1    1550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 6183DD01
+P 2650 1950
+F 0 "#PWR09" H 2650 1700 50  0001 C CNN
+F 1 "GND" H 2655 1777 50  0000 C CNN
+F 2 "" H 2650 1950 50  0001 C CNN
+F 3 "" H 2650 1950 50  0001 C CNN
+	1    2650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6183CD0D
+P 2400 1850
+F 0 "R3" V 2193 1850 50  0000 C CNN
+F 1 "5.1k" V 2284 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2330 1850 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204&DocType=DS&DocLang=English" H 2400 1850 50  0001 C CNN
+F 4 "A126379CT-ND" H 2400 1850 50  0001 C CNN "Digikey"
+	1    2400 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6183B79F
+P 2400 1750
+F 0 "R2" V 2350 1600 50  0000 C CNN
+F 1 "5.1k" V 2350 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2330 1750 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204&DocType=DS&DocLang=English" H 2400 1750 50  0001 C CNN
+F 4 "A126379CT-ND" H 2400 1750 50  0001 C CNN "Digikey"
+	1    2400 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VBUS #PWR08
+U 1 1 61839BB3
+P 2250 1450
+F 0 "#PWR08" H 2250 1300 50  0001 C CNN
+F 1 "VBUS" H 2265 1623 50  0000 C CNN
+F 2 "" H 2250 1450 50  0001 C CNN
+F 3 "" H 2250 1450 50  0001 C CNN
+	1    2250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J2
+U 1 1 6183635B
+P 1550 2150
+F 0 "J2" H 1657 3017 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 1657 2926 50  0000 C CNN
+F 2 "Gigahawk:UJC-HP-3-SMT-TR" H 1700 2150 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/ujc-hp-3-smt-tr.pdf" H 1700 2150 50  0001 C CNN
+F 4 "2223-UJC-HP-3-SMT-CT-ND" H 1550 2150 50  0001 C CNN "Digikey"
+	1    1550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Management:MCP73831-2-OT U1
+U 1 1 618355A4
+P 4200 2100
+F 0 "U1" H 3950 2350 50  0000 C CNN
+F 1 "MCP73831T-2ATI/OT" H 4600 1850 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4250 1850 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 4050 2050 50  0001 C CNN
+F 4 "MCP73831T-2ATI/OTCT-ND" H 4200 2100 50  0001 C CNN "Digikey"
+	1    4200 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 61834613
+P 6650 2700
+F 0 "#PWR028" H 6650 2450 50  0001 C CNN
+F 1 "GND" H 6655 2527 50  0000 C CNN
+F 2 "" H 6650 2700 50  0001 C CNN
+F 3 "" H 6650 2700 50  0001 C CNN
+	1    6650 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR01
+U 1 1 61833A38
+P 1150 5500
+F 0 "#PWR01" H 1150 5350 50  0001 C CNN
+F 1 "+BATT" H 1165 5673 50  0000 C CNN
+F 2 "" H 1150 5500 50  0001 C CNN
+F 3 "" H 1150 5500 50  0001 C CNN
+	1    1150 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 61832A80
+P 1150 5800
+F 0 "BT1" H 1268 5896 50  0000 L CNN
+F 1 "Battery_Cell" H 1268 5805 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 1150 5860 50  0001 C CNN
+F 3 "https://www.keyelco.com/userAssets/file/M65p27.pdf" V 1150 5860 50  0001 C CNN
+F 4 "36-1042-ND" H 1150 5800 50  0001 C CNN "Digikey"
+	1    1150 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:B140-E3 D2
+U 1 1 6196FC2E
+P 10450 2850
+F 0 "D2" H 10450 2633 50  0000 C CNN
+F 1 "B340LA-13-F" H 10450 2724 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 10450 2675 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30240.pdf" H 10450 2850 50  0001 C CNN
+F 4 "B340LA-FDICT-ND" H 10450 2850 50  0001 C CNN "Digikey"
+	1    10450 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR010
+U 1 1 619744C6
+P 10800 2750
+F 0 "#PWR010" H 10800 2600 50  0001 C CNN
+F 1 "VCC" H 10815 2923 50  0000 C CNN
+F 2 "" H 10800 2750 50  0001 C CNN
+F 3 "" H 10800 2750 50  0001 C CNN
+	1    10800 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 2850 10800 2750
+Wire Wire Line
+	10600 2850 10800 2850
+$Comp
+L gigahawk:PJ-202A J1
+U 1 1 61992B38
+P 1200 4250
+F 0 "J1" H 1195 4590 50  0000 C CNN
+F 1 "PJ-202A" H 1195 4499 50  0000 C CNN
+F 2 "Gigahawk:CUI_PJ-202A" H 1200 4250 50  0001 L BNN
+F 3 "https://www.cuidevices.com/product/resource/pj-202a.pdf" H 1200 4250 50  0001 L BNN
+F 4 "CUI INC" H 1200 4250 50  0001 L BNN "MANUFACTURER"
+F 5 "Manufacturer recommendations" H 1200 4250 50  0001 L BNN "STANDARD"
+F 6 "1.02" H 1200 4250 50  0001 L BNN "PART_REV"
+F 7 "CP-202A-ND" H 1200 4250 50  0001 C CNN "Digikey"
+	1    1200 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4150 1500 4150
+Wire Wire Line
+	1500 4150 1500 4050
+$Comp
+L power:VBUS #PWR04
+U 1 1 619986FA
+P 1500 4050
+F 0 "#PWR04" H 1500 3900 50  0001 C CNN
+F 1 "VBUS" H 1515 4223 50  0000 C CNN
+F 2 "" H 1500 4050 50  0001 C CNN
+F 3 "" H 1500 4050 50  0001 C CNN
+	1    1500 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 619A4445
+P 1500 4450
+F 0 "#PWR05" H 1500 4200 50  0001 C CNN
+F 1 "GND" H 1505 4277 50  0000 C CNN
+F 2 "" H 1500 4450 50  0001 C CNN
+F 3 "" H 1500 4450 50  0001 C CNN
+	1    1500 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4350 1500 4350
+Wire Wire Line
+	1500 4350 1500 4450
+Wire Wire Line
+	1400 4250 1500 4250
+Wire Wire Line
+	1500 4250 1500 4350
+Connection ~ 1500 4350
+$Sheet
+S 9300 3900 950  150 
+U 619B0133
+F0 "conn_common" 50
+F1 "conn_common.sch" 50
+$EndSheet
+Text GLabel 8750 4900 0    50   Input ~ 0
+BTN-
+$Comp
+L power:GND #PWR036
+U 1 1 619C78D5
+P 8850 5700
+F 0 "#PWR036" H 8850 5450 50  0001 C CNN
+F 1 "GND" H 8855 5527 50  0000 C CNN
+F 2 "" H 8850 5700 50  0001 C CNN
+F 3 "" H 8850 5700 50  0001 C CNN
+	1    8850 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 4900 8750 4900
+Text GLabel 8750 4750 0    50   Input ~ 0
+BTN+
+$Comp
+L power:VCC #PWR035
+U 1 1 619CBF7C
+P 8850 4250
+F 0 "#PWR035" H 8850 4100 50  0001 C CNN
+F 1 "VCC" H 8865 4423 50  0000 C CNN
+F 2 "" H 8850 4250 50  0001 C CNN
+F 3 "" H 8850 4250 50  0001 C CNN
+	1    8850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 619CCC7B
+P 8850 4500
+F 0 "R12" V 8643 4500 50  0000 C CNN
+F 1 "10k" V 8734 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8780 4500 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8850 4500 50  0001 C CNN
+F 4 "RMCF0805JT10K0CT-ND" H 8850 4500 50  0001 C CNN "Digikey"
+	1    8850 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8850 4350 8850 4250
+Wire Wire Line
+	8850 4650 8850 4750
+Wire Wire Line
+	8850 4750 8750 4750
+Wire Wire Line
+	8850 4750 9250 4750
+Connection ~ 8850 4750
+Text GLabel 9250 4750 2    50   Input ~ 0
+IC_BTN_SW
+Wire Wire Line
+	8850 4900 8850 5000
+$Comp
+L power:VCC #PWR037
+U 1 1 619E9A22
+P 10000 4550
+F 0 "#PWR037" H 10000 4400 50  0001 C CNN
+F 1 "VCC" H 10015 4723 50  0000 C CNN
+F 2 "" H 10000 4550 50  0001 C CNN
+F 3 "" H 10000 4550 50  0001 C CNN
+	1    10000 4550
+	1    0    0    -1  
+$EndComp
+Text GLabel 9900 5050 0    50   Input ~ 0
+LED+
+Text GLabel 9900 5200 0    50   Input ~ 0
+LED-
+$Comp
+L Device:R R13
+U 1 1 619EBCEA
+P 10000 4800
+F 0 "R13" V 9793 4800 50  0000 C CNN
+F 1 "110R" V 9884 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9930 4800 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10000 4800 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 10000 4800 50  0001 C CNN "Digikey"
+	1    10000 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10000 4950 10000 5050
+Wire Wire Line
+	10000 5050 9900 5050
+Wire Wire Line
+	9900 5200 10000 5200
+Wire Wire Line
+	10000 5200 10000 5300
+$Comp
+L power:GND #PWR038
+U 1 1 619F4B1C
+P 10200 6000
+F 0 "#PWR038" H 10200 5750 50  0001 C CNN
+F 1 "GND" H 10205 5827 50  0000 C CNN
+F 2 "" H 10200 6000 50  0001 C CNN
+F 3 "" H 10200 6000 50  0001 C CNN
+	1    10200 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 4650 10000 4550
+$Comp
+L Transistor_FET:BSS214NW Q3
+U 1 1 61A04D08
+P 10100 5500
+F 0 "Q3" H 10305 5546 50  0000 L CNN
+F 1 "BSS214NW" H 10305 5455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 10300 5425 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 10100 5500 50  0001 L CNN
+F 4 "BSS214NWH6327XTSA1CT-ND" H 10100 5500 50  0001 C CNN "Digikey"
+	1    10100 5500
+	-1   0    0    -1  
+$EndComp
+Text GLabel 10400 5500 2    50   Input ~ 0
+IC_BTN_LED
+Wire Wire Line
+	10400 5500 10350 5500
+$Comp
+L Device:R R14
+U 1 1 61A18D41
+P 10350 5750
+F 0 "R14" V 10143 5750 50  0000 C CNN
+F 1 "10k" V 10234 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10280 5750 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10350 5750 50  0001 C CNN
+F 4 "RMCF0805JT10K0CT-ND" H 10350 5750 50  0001 C CNN "Digikey"
+	1    10350 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10350 5600 10350 5500
+Connection ~ 10350 5500
+Wire Wire Line
+	10350 5500 10300 5500
+Wire Wire Line
+	10350 5900 10350 6000
+Wire Wire Line
+	10350 6000 10200 6000
+Wire Wire Line
+	10000 5700 10000 6000
+Connection ~ 10200 6000
+Wire Wire Line
+	10200 6000 10000 6000
+Text GLabel 5300 6800 0    50   Input ~ 0
+NPX_DATA
+$Comp
+L Device:LED D5
+U 1 1 61A338F0
+P 2500 7150
+F 0 "D5" V 2539 7032 50  0000 R CNN
+F 1 "LED" V 2448 7032 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2500 7150 50  0001 C CNN
+F 3 "https://optoelectronics.liteon.com/upload/download/DS22-2007-0094/LTST-C193KGKT-5A.PDF" H 2500 7150 50  0001 C CNN
+F 4 "160-1832-1-ND" V 2500 7150 50  0001 C CNN "Digikey"
+	1    2500 7150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR043
+U 1 1 61A35C3C
+P 2500 6500
+F 0 "#PWR043" H 2500 6350 50  0001 C CNN
+F 1 "VCC" H 2515 6673 50  0000 C CNN
+F 2 "" H 2500 6500 50  0001 C CNN
+F 3 "" H 2500 6500 50  0001 C CNN
+	1    2500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 61A3FA62
+P 2500 6750
+F 0 "R15" V 2293 6750 50  0000 C CNN
+F 1 "110R" V 2384 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2430 6750 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2500 6750 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 2500 6750 50  0001 C CNN "Digikey"
+	1    2500 6750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 6500 2500 6600
+Wire Wire Line
+	2500 6900 2500 7000
+$Comp
+L power:GND #PWR044
+U 1 1 61A4A12C
+P 2500 7400
+F 0 "#PWR044" H 2500 7150 50  0001 C CNN
+F 1 "GND" H 2505 7227 50  0000 C CNN
+F 2 "" H 2500 7400 50  0001 C CNN
+F 3 "" H 2500 7400 50  0001 C CNN
+	1    2500 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 7400 2500 7300
+$Comp
+L power:VBUS #PWR045
+U 1 1 61A56E19
+P 2900 6500
+F 0 "#PWR045" H 2900 6350 50  0001 C CNN
+F 1 "VBUS" H 2915 6673 50  0000 C CNN
+F 2 "" H 2900 6500 50  0001 C CNN
+F 3 "" H 2900 6500 50  0001 C CNN
+	1    2900 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 61A58869
+P 2900 7150
+F 0 "D6" V 2939 7032 50  0000 R CNN
+F 1 "LED" V 2848 7032 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2900 7150 50  0001 C CNN
+F 3 "https://optoelectronics.liteon.com/upload/download/DS22-2007-0094/LTST-C193KGKT-5A.PDF" H 2900 7150 50  0001 C CNN
+F 4 "160-1832-1-ND" V 2900 7150 50  0001 C CNN "Digikey"
+	1    2900 7150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 61A58EB3
+P 2900 6750
+F 0 "R16" V 2693 6750 50  0000 C CNN
+F 1 "110R" V 2784 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2830 6750 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2900 6750 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 2900 6750 50  0001 C CNN "Digikey"
+	1    2900 6750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2900 6900 2900 7000
+$Comp
+L power:GND #PWR046
+U 1 1 61A58EBE
+P 2900 7400
+F 0 "#PWR046" H 2900 7150 50  0001 C CNN
+F 1 "GND" H 2905 7227 50  0000 C CNN
+F 2 "" H 2900 7400 50  0001 C CNN
+F 3 "" H 2900 7400 50  0001 C CNN
+	1    2900 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 7400 2900 7300
+Wire Wire Line
+	2900 6600 2900 6500
+Text Notes 750  5150 0    118  ~ 24
+Battery Holder
+Text Notes 9200 3650 0    118  ~ 24
+Common
+Text Notes 2050 6150 0    118  ~ 24
+Power Indication
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61A90BBD
+P 4200 6400
+F 0 "TP1" V 4154 6588 50  0000 L CNN
+F 1 "TestPoint" V 4245 6588 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4400 6400 50  0001 C CNN
+F 3 "~" H 4400 6400 50  0001 C CNN
+	1    4200 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR047
+U 1 1 61A9261B
+P 4100 6400
+F 0 "#PWR047" H 4100 6250 50  0001 C CNN
+F 1 "VCC" H 4115 6573 50  0000 C CNN
+F 2 "" H 4100 6400 50  0001 C CNN
+F 3 "" H 4100 6400 50  0001 C CNN
+	1    4100 6400
+	0    -1   -1   0   
+$EndComp
+Text Notes 3950 6200 0    118  ~ 24
+Testpoints
+Wire Wire Line
+	4100 6400 4200 6400
+$Comp
+L power:VBUS #PWR048
+U 1 1 61A9E538
+P 4100 6600
+F 0 "#PWR048" H 4100 6450 50  0001 C CNN
+F 1 "VBUS" H 4115 6773 50  0000 C CNN
+F 2 "" H 4100 6600 50  0001 C CNN
+F 3 "" H 4100 6600 50  0001 C CNN
+	1    4100 6600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 61A9F01C
+P 4200 6600
+F 0 "TP2" V 4154 6788 50  0000 L CNN
+F 1 "TestPoint" V 4245 6788 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4400 6600 50  0001 C CNN
+F 3 "~" H 4400 6600 50  0001 C CNN
+	1    4200 6600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 6600 4100 6600
+$Comp
+L power:GND #PWR049
+U 1 1 61AA414E
+P 4100 6800
+F 0 "#PWR049" H 4100 6550 50  0001 C CNN
+F 1 "GND" H 4105 6627 50  0000 C CNN
+F 2 "" H 4100 6800 50  0001 C CNN
+F 3 "" H 4100 6800 50  0001 C CNN
+	1    4100 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 61AA504E
+P 4200 6800
+F 0 "TP3" V 4154 6988 50  0000 L CNN
+F 1 "TestPoint" V 4245 6988 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4400 6800 50  0001 C CNN
+F 3 "~" H 4400 6800 50  0001 C CNN
+	1    4200 6800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 6800 4100 6800
+$Comp
+L power:+BATT #PWR050
+U 1 1 61AAA13F
+P 4100 7050
+F 0 "#PWR050" H 4100 6900 50  0001 C CNN
+F 1 "+BATT" H 4115 7223 50  0000 C CNN
+F 2 "" H 4100 7050 50  0001 C CNN
+F 3 "" H 4100 7050 50  0001 C CNN
+	1    4100 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 61AAB787
+P 4200 7050
+F 0 "TP4" V 4154 7238 50  0000 L CNN
+F 1 "TestPoint" V 4245 7238 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4400 7050 50  0001 C CNN
+F 3 "~" H 4400 7050 50  0001 C CNN
+	1    4200 7050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 7050 4100 7050
+$Comp
+L power:-BATT #PWR051
+U 1 1 61AB0C9E
+P 4100 7300
+F 0 "#PWR051" H 4100 7150 50  0001 C CNN
+F 1 "-BATT" H 4115 7473 50  0000 C CNN
+F 2 "" H 4100 7300 50  0001 C CNN
+F 3 "" H 4100 7300 50  0001 C CNN
+	1    4100 7300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 61AB1E0B
+P 4200 7300
+F 0 "TP5" V 4154 7488 50  0000 L CNN
+F 1 "TestPoint" V 4245 7488 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4400 7300 50  0001 C CNN
+F 3 "~" H 4400 7300 50  0001 C CNN
+	1    4200 7300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 7300 4100 7300
+Text GLabel 5300 6400 0    50   Input ~ 0
+BTN+
+$Comp
+L Connector:TestPoint TP6
+U 1 1 61ABE0AF
+P 5400 6400
+F 0 "TP6" V 5354 6588 50  0000 L CNN
+F 1 "TestPoint" V 5445 6588 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5600 6400 50  0001 C CNN
+F 3 "~" H 5600 6400 50  0001 C CNN
+	1    5400 6400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 6400 5300 6400
+Text GLabel 5300 6600 0    50   Input ~ 0
+IC_BTN_LED
+$Comp
+L Connector:TestPoint TP7
+U 1 1 61AC8873
+P 5400 6600
+F 0 "TP7" V 5354 6788 50  0000 L CNN
+F 1 "TestPoint" V 5445 6788 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5600 6600 50  0001 C CNN
+F 3 "~" H 5600 6600 50  0001 C CNN
+	1    5400 6600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 6600 5300 6600
+$Comp
+L Connector:TestPoint TP8
+U 1 1 61ACDF8C
+P 5400 6800
+F 0 "TP8" V 5354 6988 50  0000 L CNN
+F 1 "TestPoint" V 5445 6988 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5600 6800 50  0001 C CNN
+F 3 "~" H 5600 6800 50  0001 C CNN
+	1    5400 6800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 6800 5300 6800
+$Comp
+L Device:R R7
+U 1 1 61AEF696
+P 4850 2200
+F 0 "R7" V 4643 2200 50  0000 C CNN
+F 1 "110R" V 4734 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4780 2200 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4850 2200 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 4850 2200 50  0001 C CNN "Digikey"
+	1    4850 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 61AF0524
+P 5100 1950
+F 0 "D3" V 5139 1832 50  0000 R CNN
+F 1 "LED" V 5048 1832 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5100 1950 50  0001 C CNN
+F 3 "https://optoelectronics.liteon.com/upload/download/DS22-2007-0094/LTST-C193KGKT-5A.PDF" H 5100 1950 50  0001 C CNN
+F 4 "160-1832-1-ND" V 5100 1950 50  0001 C CNN "Digikey"
+	1    5100 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Jumper JP1
+U 1 1 61B3BA58
+P 8850 5300
+F 0 "JP1" V 8896 5212 50  0000 R CNN
+F 1 "Jumper" V 8805 5212 50  0000 R CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm" H 8850 5300 50  0001 C CNN
+F 3 "~" H 8850 5300 50  0001 C CNN
+	1    8850 5300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8850 5700 8850 5600
+Text Notes 8700 5350 2    50   ~ 0
+Jumper here to avoid \nGND net being renamed
+$Comp
+L Device:CP1 C10
+U 1 1 61B826FE
+P 7600 4000
+F 0 "C10" H 7715 4046 50  0000 L CNN
+F 1 "1000u" H 7715 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.6" H 7600 4000 50  0001 C CNN
+F 3 "https://www.nichicon.co.jp/english/products/pdfs/e-pcg.pdf" H 7600 4000 50  0001 C CNN
+F 4 "493-3094-1-ND" H 7600 4000 50  0001 C CNN "Digikey"
+	1    7600 4000
+	1    0    0    -1  
+$EndComp
+Connection ~ 7600 3850
+$Comp
+L power:GND #PWR052
+U 1 1 61B8323C
+P 7600 4250
+F 0 "#PWR052" H 7600 4000 50  0001 C CNN
+F 1 "GND" H 7605 4077 50  0000 C CNN
+F 2 "" H 7600 4250 50  0001 C CNN
+F 3 "" H 7600 4250 50  0001 C CNN
+	1    7600 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4250 7600 4150
+$Comp
+L power:VBUS #PWR?
+U 1 1 61BA47EA
+P 10100 2750
+F 0 "#PWR?" H 10100 2600 50  0001 C CNN
+F 1 "VBUS" H 10115 2923 50  0000 C CNN
+F 2 "" H 10100 2750 50  0001 C CNN
+F 3 "" H 10100 2750 50  0001 C CNN
+	1    10100 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2750 10100 2850
+Wire Wire Line
+	10100 2850 10300 2850
+Text Notes 10050 2450 0    118  ~ 24
+Bypass
+$EndSCHEMATC
