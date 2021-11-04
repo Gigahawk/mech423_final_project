@@ -3,10 +3,13 @@ templates:
     type: '<a href="https://www.adafruit.com/product/4336">JST PH</a>'
     subtype: plug
     # TODO: Figure out pin order
-    pinlabels: [GND, VCC, Data]
+    pinlabels: [Data, VCC, GND]
     supplier: Adafruit
     spn: 4336
     ignore_in_bom: true  # Handle wire and connector as additional part
+    image:
+      src: res/ph.svg
+      width: 200
     additional_components:
       -
         type: JST PH 3-pin Plug-Plug Cable - 100mm long
@@ -19,8 +22,8 @@ templates:
     gauge: 22 AWG
     length: 2 cm
     # TODO: Figure out pin order
-    wirelabels: [GND, VCC, Data]
-    colors: [BK, RD, WH]
+    wirelabels: [Data, VCC, GND]
+    colors: [WH, RD, BK]
     category: bundle
     type: Neopixel data
     ignore_in_bom: true  # JST connector and wire is a single part

@@ -2,7 +2,7 @@ templates:
   - &jst_con
     type: '<a href="https://www.adafruit.com/product/4210">JST SH</a>'
     subtype: plug
-    pinlabels: [BTN, LED, VCC, GND]
+    pinlabels: [GND, VCC, LED, BTN]
     supplier: Adafruit
     spn: 4210
     ignore_in_bom: true  # Handle wire and connector as additional part
@@ -20,8 +20,8 @@ templates:
   - &jst_wire
     gauge: 28 AWG
     length: 1 m
-    wirelabels: [BTN, LED, VCC, GND]
-    colors: [YE, BU, RD, BK]
+    wirelabels: [GND, VCC, LED, BTN]
+    colors: [BK, RD, BU, YE]
     ignore_in_bom: true  # JST connector and wire is a single part
     additional_components:
       -

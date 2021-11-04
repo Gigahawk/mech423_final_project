@@ -33,7 +33,7 @@ cables:
     gauge: 28 AWG
     length: 2 cm
     wirelabels: [BTN+, BTN-, LED+, LED-]
-    colors: [YE, BU, RD, BK]
+    colors: [BK, RD, BU, YE]
     ignore_in_bom: true  # JST connector and wire is a single part
 
 connections:

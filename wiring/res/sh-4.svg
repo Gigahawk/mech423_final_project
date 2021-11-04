@@ -53,8 +53,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
-     inkscape:cx="76.811055"
-     inkscape:cy="78.633443"
+     inkscape:cx="58.798735"
+     inkscape:cy="13.622707"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -77,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -89,14 +89,10 @@
     <text
        style="font-variant:normal;font-weight:normal;font-size:3.51367px;font-family:'Century Gothic';-inkscape-font-specification:CenturyGothic;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
        id="text925"
-       x="-99.359367"
-       y="45.553688"><tspan
-         x="-99.359367"
-         y="45.553688"
-         id="tspan921"
-         style="stroke-width:0.352778">4</tspan><tspan
-         x="-100.58703"
-         y="33.023022"
+       x="-99.693451"
+       y="56.912643"><tspan
+         x="-100.92111"
+         y="44.381977"
          id="tspan923"
          style="stroke-width:0.352778">1</tspan></text>
     <path
@@ -183,5 +179,14 @@
        d="m -117.43569,41.870689 2.75167,1.100667 -2.75167,0.889"
        style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="path3443" />
+    <text
+       style="font-variant:normal;font-weight:normal;font-size:3.51367px;font-family:'Century Gothic';-inkscape-font-specification:CenturyGothic;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352778"
+       id="text925-1"
+       x="-99.736885"
+       y="47.706154"><tspan
+         x="-100.96456"
+         y="35.175488"
+         id="tspan923-5"
+         style="stroke-width:0.352778">4</tspan></text>
   </g>
 </svg>
