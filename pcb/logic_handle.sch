@@ -448,4 +448,190 @@ Wire Wire Line
 Wire Wire Line
 	6550 4450 6550 4350
 Connection ~ 6450 4450
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U?
+U 1 1 619CE39A
+P 2850 6050
+F 0 "U?" H 2600 6700 50  0000 C CNN
+F 1 "TXS0108EPW" H 3150 5400 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 2850 5300 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2850 5950 50  0001 C CNN
+F 4 "296-21527-1-ND" H 2850 6050 50  0001 C CNN "Digikey"
+	1    2850 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 619CF59A
+P 2750 5250
+F 0 "#PWR?" H 2750 5100 50  0001 C CNN
+F 1 "+3V3" H 2765 5423 50  0000 C CNN
+F 2 "" H 2750 5250 50  0001 C CNN
+F 3 "" H 2750 5250 50  0001 C CNN
+	1    2750 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 5350 2750 5250
+$Comp
+L power:VCC #PWR?
+U 1 1 619D199B
+P 2950 5250
+F 0 "#PWR?" H 2950 5100 50  0001 C CNN
+F 1 "VCC" H 2965 5423 50  0000 C CNN
+F 2 "" H 2950 5250 50  0001 C CNN
+F 3 "" H 2950 5250 50  0001 C CNN
+	1    2950 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 5350 2950 5250
+$Comp
+L Device:R R?
+U 1 1 619D30A3
+P 1850 6100
+F 0 "R?" H 1700 6050 50  0000 L CNN
+F 1 "10k" H 1650 6150 50  0000 L CNN
+F 2 "" V 1780 6100 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1850 6100 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 1850 6100 50  0001 C CNN "Digikey"
+	1    1850 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 619D40ED
+P 1850 6350
+F 0 "#PWR?" H 1850 6100 50  0001 C CNN
+F 1 "GND" H 1855 6177 50  0000 C CNN
+F 2 "" H 1850 6350 50  0001 C CNN
+F 3 "" H 1850 6350 50  0001 C CNN
+	1    1850 6350
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 5650 0    50   Input ~ 0
+SHFT_EN
+$Comp
+L power:GND #PWR?
+U 1 1 619D79C2
+P 2850 6850
+F 0 "#PWR?" H 2850 6600 50  0001 C CNN
+F 1 "GND" H 2855 6677 50  0000 C CNN
+F 2 "" H 2850 6850 50  0001 C CNN
+F 3 "" H 2850 6850 50  0001 C CNN
+	1    2850 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 6750 2850 6850
+$Comp
+L Device:C C?
+U 1 1 619D9BB2
+P 1200 6100
+F 0 "C?" H 1300 6050 50  0000 L CNN
+F 1 "0.1u" H 1300 6150 50  0000 L CNN
+F 2 "" H 1238 5950 50  0001 C CNN
+F 3 "~" H 1200 6100 50  0001 C CNN
+	1    1200 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 619DC720
+P 1200 6350
+F 0 "#PWR?" H 1200 6100 50  0001 C CNN
+F 1 "GND" H 1205 6177 50  0000 C CNN
+F 2 "" H 1200 6350 50  0001 C CNN
+F 3 "" H 1200 6350 50  0001 C CNN
+	1    1200 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 619DD6CD
+P 1400 6350
+F 0 "#PWR?" H 1400 6100 50  0001 C CNN
+F 1 "GND" H 1405 6177 50  0000 C CNN
+F 2 "" H 1400 6350 50  0001 C CNN
+F 3 "" H 1400 6350 50  0001 C CNN
+	1    1400 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 6350 1200 6250
+Wire Wire Line
+	1400 6350 1400 6250
+$Comp
+L Device:C C?
+U 1 1 619DFAAB
+P 1400 6100
+F 0 "C?" H 1515 6146 50  0000 L CNN
+F 1 "10u" H 1515 6055 50  0000 L CNN
+F 2 "" H 1438 5950 50  0001 C CNN
+F 3 "~" H 1400 6100 50  0001 C CNN
+	1    1400 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 619E1DEA
+P 1200 5850
+F 0 "#PWR?" H 1200 5700 50  0001 C CNN
+F 1 "+3V3" H 1215 6023 50  0000 C CNN
+F 2 "" H 1200 5850 50  0001 C CNN
+F 3 "" H 1200 5850 50  0001 C CNN
+	1    1200 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 619E251A
+P 1400 5850
+F 0 "#PWR?" H 1400 5700 50  0001 C CNN
+F 1 "VCC" H 1415 6023 50  0000 C CNN
+F 2 "" H 1400 5850 50  0001 C CNN
+F 3 "" H 1400 5850 50  0001 C CNN
+	1    1400 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 5850 1200 5950
+Wire Wire Line
+	1400 5850 1400 5950
+Text Notes 1400 4850 0    118  ~ 24
+Level Shifting
+Text Notes 7150 850  0    118  ~ 24
+MCU
+Text Notes 1300 900  0    118  ~ 24
+Power
+$Comp
+L Device:R R?
+U 1 1 619F32E8
+P 3500 5750
+F 0 "R?" V 3550 5500 50  0000 L CNN
+F 1 "470R" V 3450 5450 50  0000 L CNN
+F 2 "" V 3430 5750 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3500 5750 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 3500 5750 50  0001 C CNN "Digikey"
+	1    3500 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 5750 3250 5750
+Wire Wire Line
+	3650 5750 3800 5750
+Text GLabel 3800 5750 2    50   Input ~ 0
+NPX_DATA
+Text GLabel 2350 5750 0    50   Input ~ 0
+NPX_MCU
+Wire Wire Line
+	1850 6250 1850 6350
+Text GLabel 1850 5850 0    50   Input ~ 0
+SHFT_EN
+Wire Wire Line
+	1850 5850 1850 5950
+Wire Wire Line
+	2350 5650 2450 5650
+Wire Wire Line
+	2350 5750 2450 5750
 $EndSCHEMATC
