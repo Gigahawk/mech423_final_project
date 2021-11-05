@@ -147,6 +147,7 @@ F 0 "H1" H 3450 1196 50  0000 L CNN
 F 1 "MountingHole" H 3450 1105 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 3350 1150 50  0001 C CNN
 F 3 "~" H 3350 1150 50  0001 C CNN
+F 4 "(3, 3)" H 3550 1200 50  0000 L CNN "Location"
 	1    3350 1150
 	1    0    0    -1  
 $EndComp
@@ -158,6 +159,7 @@ F 0 "H2" H 3450 1396 50  0000 L CNN
 F 1 "MountingHole" H 3450 1305 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 3350 1350 50  0001 C CNN
 F 3 "~" H 3350 1350 50  0001 C CNN
+F 4 "(3, 32)" H 3550 1400 50  0000 L CNN "Location"
 	1    3350 1350
 	1    0    0    -1  
 $EndComp
@@ -169,6 +171,7 @@ F 0 "H3" H 3450 1596 50  0000 L CNN
 F 1 "MountingHole" H 3450 1505 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 3350 1550 50  0001 C CNN
 F 3 "~" H 3350 1550 50  0001 C CNN
+F 4 "(97, 32)" H 3550 1600 50  0000 L CNN "Location"
 	1    3350 1550
 	1    0    0    -1  
 $EndComp
@@ -180,7 +183,19 @@ F 0 "H4" H 3450 1796 50  0000 L CNN
 F 1 "MountingHole" H 3450 1705 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 3350 1750 50  0001 C CNN
 F 3 "~" H 3350 1750 50  0001 C CNN
+F 4 "(97, 3)" H 3550 1800 50  0000 L CNN "Location"
 	1    3350 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO1
+U 1 1 6195747A
+P 10700 950
+F 0 "LOGO1" H 10700 1225 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10700 725 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 10700 950 50  0001 C CNN
+F 3 "~" H 10700 950 50  0001 C CNN
+	1    10700 950 
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
