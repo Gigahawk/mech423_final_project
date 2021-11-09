@@ -1,9 +1,6 @@
 #include <msp430.h>
 #include "ws2812.h"
 
-#define ENABLE_SPI_PIN P1DIR &= ~(OUTPUT_PIN); P1SEL0 &= ~(OUTPUT_PIN); P1SEL1 |= (OUTPUT_PIN);
-#define DISABLE_SPI_PIN P1SEL0 &= ~(OUTPUT_PIN); P1SEL1 &= ~(OUTPUT_PIN); P1DIR |= (OUTPUT_PIN); P1OUT &= ~(OUTPUT_PIN)
-
 // WS2812 takes GRB format
 typedef struct {
     u_char green;
@@ -15,7 +12,14 @@ static LED leds[NUM_LEDS] = { { 0, 0, 0 } };
 
 // Initializes everything needed to use this library. This clears the strip.
 void initStrip() {
-    DISABLE_SPI_PIN;
+    P1DIR &= ~(OUTPUT_PIN);
+
+    P1SEL0 &= ~(OUTPUT_PIN);
+    P1SEL1 |= (OUTPUT_PIN);
+
+    // enable spi clk
+    P2SEL0 &= ~(BIT2);
+    P2SEL1 |= BIT2;
 
     // Hold UCB0 in reset
     UCB0CTLW0 |= UCSWRST;
@@ -62,9 +66,6 @@ void setLEDColor(u_int p, u_char r, u_char g, u_char b) {
 
 // Send colors to the strip and show them. Disables interrupts while processing.
 void showStrip() {
-    _disable_interrupts();
-    ENABLE_SPI_PIN;
-
     // send RGB color for every LED
     unsigned int i, j;
     for (i = 0; i < NUM_LEDS; i++) {
@@ -88,14 +89,15 @@ void showStrip() {
         }
     }
 
+    // Reset UCB0, SIMO only seems to idle low while/after reset
+    UCB0CTLW0 |= UCSWRST;
 
-    while (!(UCB0IFG & UCTXIFG));
-    // Hack cause CPOL setting doesn't seem to work
-    DISABLE_SPI_PIN;
-    // send RES code for at least 50 us (800 cycles at 16 MHz)
+    // Hold SIMO low to latch values
     _delay_cycles(10000);
 
-    _enable_interrupts();
+    // Release UCB0 from reset
+    UCB0CTLW0 &= ~(UCSWRST);
+
 }
 
 // Clear the color of all LEDs (make them black/off)
