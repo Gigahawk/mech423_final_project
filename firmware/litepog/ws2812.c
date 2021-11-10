@@ -89,6 +89,9 @@ void showStrip() {
         }
     }
 
+    // Wait for transfer to finish
+    while(UCB0STATW & UCBUSY);
+
     // Reset UCB0, SIMO only seems to idle low while/after reset
     UCB0CTLW0 |= UCSWRST;
 
