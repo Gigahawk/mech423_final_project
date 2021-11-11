@@ -1,4 +1,1583 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 8100 7000 1000 150 
+U 6195BBD0
+F0 "conn_common" 50
+F1 "conn_common.sch" 50
+$EndSheet
+Wire Wire Line
+	1150 1450 1150 1350
+Wire Wire Line
+	1150 1450 1300 1450
+Wire Wire Line
+	1600 1850 1600 1750
+Wire Wire Line
+	1900 1450 2050 1450
+Wire Wire Line
+	2050 1450 2050 1350
+Connection ~ 2050 1450
+Connection ~ 1150 1450
+Wire Wire Line
+	1150 1850 1150 1750
+Wire Wire Line
+	2050 1850 2050 1750
+Wire Wire Line
+	1150 2500 1150 2400
+Wire Wire Line
+	1550 2400 1550 2500
+Wire Wire Line
+	1150 2900 1150 2800
+Wire Wire Line
+	1550 2900 1550 2800
+Wire Wire Line
+	1150 3300 1150 3200
+Wire Wire Line
+	1550 3300 1550 3200
+Text GLabel 4700 1350 0    50   Input ~ 0
+XIN
+Wire Wire Line
+	4700 1350 4800 1350
+Text GLabel 4700 1450 0    50   Input ~ 0
+XOUT
+Wire Wire Line
+	4700 1450 4800 1450
+Wire Wire Line
+	4800 1550 4400 1550
+Wire Wire Line
+	4400 1550 4400 1450
+Wire Wire Line
+	4800 1650 4400 1650
+Wire Wire Line
+	4400 1650 4400 1750
+Wire Wire Line
+	4050 1450 4250 1450
+Wire Wire Line
+	4050 1750 4250 1750
+Connection ~ 4250 1750
+Wire Wire Line
+	4250 1750 4400 1750
+Connection ~ 4250 1450
+Wire Wire Line
+	4250 1450 4400 1450
+Wire Wire Line
+	10050 1350 9950 1350
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 619888ED
+P 10750 1650
+F 0 "#PWR0101" H 10750 1500 50  0001 C CNN
+F 1 "+3V3" V 10765 1778 50  0000 L CNN
+F 2 "" H 10750 1650 50  0001 C CNN
+F 3 "" H 10750 1650 50  0001 C CNN
+	1    10750 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6198691F
+P 10050 1350
+F 0 "#PWR0102" H 10050 1100 50  0001 C CNN
+F 1 "GND" V 10055 1222 50  0000 R CNN
+F 2 "" H 10050 1350 50  0001 C CNN
+F 3 "" H 10050 1350 50  0001 C CNN
+	1    10050 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 61985C95
+P 4250 1600
+F 0 "C5" H 4350 1550 50  0000 L CNN
+F 1 "0.1u" H 4350 1650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4288 1450 50  0001 C CNN
+F 3 "https://datasheets.avx.com/X7RDielectric.pdf" H 4250 1600 50  0001 C CNN
+F 4 "478-10836-1-ND" H 4250 1600 50  0001 C CNN "Digikey"
+	1    4250 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 61982888
+P 4050 1450
+F 0 "#PWR0103" H 4050 1200 50  0001 C CNN
+F 1 "GND" V 4055 1322 50  0000 R CNN
+F 2 "" H 4050 1450 50  0001 C CNN
+F 3 "" H 4050 1450 50  0001 C CNN
+	1    4050 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 61980311
+P 4050 1750
+F 0 "#PWR0104" H 4050 1600 50  0001 C CNN
+F 1 "+3V3" V 4065 1878 50  0000 L CNN
+F 2 "" H 4050 1750 50  0001 C CNN
+F 3 "" H 4050 1750 50  0001 C CNN
+	1    4050 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L gigahawk:MSP430FR5739IDAR U3
+U 1 1 6197C720
+P 7350 1250
+F 0 "U3" H 5200 1350 60  0000 C CNN
+F 1 "MSP430FR5739IDAR" H 7350 1350 60  0000 C CNN
+F 2 "Gigahawk:MSP430FR5739IDAR" H 9450 -800 60  0001 C CNN
+F 3 "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fmsp430fr5739" H 4800 1150 60  0001 C CNN
+F 4 "296-29235-1-ND" H 7350 1250 50  0001 C CNN "Digikey"
+	1    7350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 61972410
+P 1550 3300
+F 0 "#PWR06" H 1550 3050 50  0001 C CNN
+F 1 "GND" H 1555 3127 50  0000 C CNN
+F 2 "" H 1550 3300 50  0001 C CNN
+F 3 "" H 1550 3300 50  0001 C CNN
+	1    1550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 61971154
+P 1150 3300
+F 0 "#PWR04" H 1150 3050 50  0001 C CNN
+F 1 "GND" H 1155 3127 50  0000 C CNN
+F 2 "" H 1150 3300 50  0001 C CNN
+F 3 "" H 1150 3300 50  0001 C CNN
+	1    1150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 6197095B
+P 1550 3050
+F 0 "D2" V 1589 2932 50  0000 R CNN
+F 1 "LED" V 1498 2932 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1550 3050 50  0001 C CNN
+F 3 "https://optoelectronics.liteon.com/upload/download/DS22-2007-0094/LTST-C193KGKT-5A.PDF" H 1550 3050 50  0001 C CNN
+F 4 "160-1832-1-ND" H 1550 3050 50  0001 C CNN "Digikey"
+	1    1550 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 6196EBFE
+P 1150 3050
+F 0 "D1" V 1189 2932 50  0000 R CNN
+F 1 "LED" V 1098 2932 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1150 3050 50  0001 C CNN
+F 3 "https://optoelectronics.liteon.com/upload/download/DS22-2007-0094/LTST-C193KGKT-5A.PDF" H 1150 3050 50  0001 C CNN
+F 4 "160-1832-1-ND" H 1150 3050 50  0001 C CNN "Digikey"
+	1    1150 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6196E18A
+P 1550 2650
+F 0 "R2" H 1620 2696 50  0000 L CNN
+F 1 "110R" H 1620 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 2650 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1550 2650 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 1550 2650 50  0001 C CNN "Digikey"
+	1    1550 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6196D418
+P 1150 2650
+F 0 "R1" H 1220 2696 50  0000 L CNN
+F 1 "110R" H 1220 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1080 2650 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1150 2650 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 1150 2650 50  0001 C CNN "Digikey"
+	1    1150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR05
+U 1 1 6196CA05
+P 1550 2400
+F 0 "#PWR05" H 1550 2250 50  0001 C CNN
+F 1 "+3V3" H 1565 2573 50  0000 C CNN
+F 2 "" H 1550 2400 50  0001 C CNN
+F 3 "" H 1550 2400 50  0001 C CNN
+	1    1550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR03
+U 1 1 6196C38E
+P 1150 2400
+F 0 "#PWR03" H 1150 2250 50  0001 C CNN
+F 1 "VCC" H 1165 2573 50  0000 C CNN
+F 2 "" H 1150 2400 50  0001 C CNN
+F 3 "" H 1150 2400 50  0001 C CNN
+	1    1150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 6196619D
+P 2050 1850
+F 0 "#PWR09" H 2050 1600 50  0001 C CNN
+F 1 "GND" H 2055 1677 50  0000 C CNN
+F 2 "" H 2050 1850 50  0001 C CNN
+F 3 "" H 2050 1850 50  0001 C CNN
+	1    2050 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 619654D8
+P 1150 1850
+F 0 "#PWR02" H 1150 1600 50  0001 C CNN
+F 1 "GND" H 1155 1677 50  0000 C CNN
+F 2 "" H 1150 1850 50  0001 C CNN
+F 3 "" H 1150 1850 50  0001 C CNN
+	1    1150 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 61964D80
+P 1150 1600
+F 0 "C1" H 1250 1550 50  0000 L CNN
+F 1 "10u" H 1250 1650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1188 1450 50  0001 C CNN
+F 3 "http://www1.futureelectronics.com/doc/Samsung%20Electro-Mechanics/CL21A106KPFNNNG.pdf" H 1150 1600 50  0001 C CNN
+F 4 "1276-6456-1-ND" H 1150 1600 50  0001 C CNN "Digikey"
+	1    1150 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 61964060
+P 2050 1600
+F 0 "C2" H 2165 1646 50  0000 L CNN
+F 1 "10u" H 2165 1555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2088 1450 50  0001 C CNN
+F 3 "http://www1.futureelectronics.com/doc/Samsung%20Electro-Mechanics/CL21A106KPFNNNG.pdf" H 2050 1600 50  0001 C CNN
+F 4 "1276-6456-1-ND" H 2050 1600 50  0001 C CNN "Digikey"
+	1    2050 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR08
+U 1 1 6196120C
+P 2050 1350
+F 0 "#PWR08" H 2050 1200 50  0001 C CNN
+F 1 "+3V3" H 2065 1523 50  0000 C CNN
+F 2 "" H 2050 1350 50  0001 C CNN
+F 3 "" H 2050 1350 50  0001 C CNN
+	1    2050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 619602B9
+P 1600 1850
+F 0 "#PWR07" H 1600 1600 50  0001 C CNN
+F 1 "GND" H 1605 1677 50  0000 C CNN
+F 2 "" H 1600 1850 50  0001 C CNN
+F 3 "" H 1600 1850 50  0001 C CNN
+	1    1600 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:NCP1117-3.3_TO252 U1
+U 1 1 6195D68D
+P 1600 1450
+F 0 "U1" H 1600 1692 50  0000 C CNN
+F 1 "NCP1117-3.3_TO252" H 1600 1600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 1600 1675 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 1600 1450 50  0001 C CNN
+F 4 "NCP1117ST33T3GOSCT-ND" H 1600 1450 50  0001 C CNN "Digikey"
+	1    1600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 6195C111
+P 1150 1350
+F 0 "#PWR01" H 1150 1200 50  0001 C CNN
+F 1 "VCC" H 1165 1523 50  0000 C CNN
+F 2 "" H 1150 1350 50  0001 C CNN
+F 3 "" H 1150 1350 50  0001 C CNN
+	1    1150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 6198A822
+P 10700 1950
+F 0 "#PWR0105" H 10700 1700 50  0001 C CNN
+F 1 "GND" V 10705 1822 50  0000 R CNN
+F 2 "" H 10700 1950 50  0001 C CNN
+F 3 "" H 10700 1950 50  0001 C CNN
+	1    10700 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 6198B0E3
+P 10250 1950
+F 0 "C10" V 10200 1800 50  0000 L CNN
+F 1 "0.47u" V 10200 2000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10288 1800 50  0001 C CNN
+F 3 "https://datasheets.kyocera-avx.com/X7RDielectric.pdf" H 10250 1950 50  0001 C CNN
+F 4 "478-10438-1-ND" H 10250 1950 50  0001 C CNN "Digikey"
+	1    10250 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10400 1950 10450 1950
+Wire Wire Line
+	10100 1950 9950 1950
+Wire Wire Line
+	9950 1850 10450 1850
+Wire Wire Line
+	10450 1850 10450 1950
+Connection ~ 10450 1950
+$Comp
+L Device:C C11
+U 1 1 61991465
+P 10550 1800
+F 0 "C11" H 10665 1846 50  0000 L CNN
+F 1 "0.1u" H 10665 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10588 1650 50  0001 C CNN
+F 3 "https://datasheets.avx.com/X7RDielectric.pdf" H 10550 1800 50  0001 C CNN
+F 4 "478-10836-1-ND" H 10550 1800 50  0001 C CNN "Digikey"
+	1    10550 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 1750 10450 1750
+Wire Wire Line
+	10450 1750 10450 1650
+Wire Wire Line
+	10450 1650 10550 1650
+Connection ~ 10550 1650
+Wire Wire Line
+	10550 1650 10750 1650
+Wire Wire Line
+	10450 1950 10550 1950
+Connection ~ 10550 1950
+Wire Wire Line
+	10550 1950 10700 1950
+Text GLabel 10050 2950 2    50   Input ~ 0
+SBWTDIO
+Wire Wire Line
+	10050 2950 9950 2950
+Text GLabel 10050 3050 2    50   Input ~ 0
+SBWTCK
+Wire Wire Line
+	10050 3050 9950 3050
+$Comp
+L Device:C C7
+U 1 1 61995628
+P 8300 3850
+F 0 "C7" H 8415 3896 50  0000 L CNN
+F 1 "4.7u" H 8415 3805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8338 3700 50  0001 C CNN
+F 3 "https://www.samsungsem.com/kr/support/product-search/mlcc/CL21A475KPFNNNE.jsp" H 8300 3850 50  0001 C CNN
+F 4 "1276-1259-1-ND" H 8300 3850 50  0001 C CNN "Digikey"
+	1    8300 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 6199609D
+P 8200 3600
+F 0 "#PWR0106" H 8200 3450 50  0001 C CNN
+F 1 "+3V3" H 8215 3773 50  0000 C CNN
+F 2 "" H 8200 3600 50  0001 C CNN
+F 3 "" H 8200 3600 50  0001 C CNN
+	1    8200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 619977C8
+P 8100 3850
+F 0 "C6" H 8200 3800 50  0000 L CNN
+F 1 "4.7u" H 8200 3900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8138 3700 50  0001 C CNN
+F 3 "https://www.samsungsem.com/kr/support/product-search/mlcc/CL21A475KPFNNNE.jsp" H 8100 3850 50  0001 C CNN
+F 4 "1276-1259-1-ND" H 8100 3850 50  0001 C CNN "Digikey"
+	1    8100 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8100 3700 8100 3600
+Wire Wire Line
+	8100 3600 8200 3600
+Wire Wire Line
+	8200 3600 8300 3600
+Wire Wire Line
+	8300 3600 8300 3700
+Connection ~ 8200 3600
+$Comp
+L power:GND #PWR0107
+U 1 1 61999C76
+P 8200 4100
+F 0 "#PWR0107" H 8200 3850 50  0001 C CNN
+F 1 "GND" H 8205 3927 50  0000 C CNN
+F 2 "" H 8200 4100 50  0001 C CNN
+F 3 "" H 8200 4100 50  0001 C CNN
+	1    8200 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 4100 8100 4100
+Wire Wire Line
+	8100 4100 8100 4000
+Wire Wire Line
+	8200 4100 8300 4100
+Wire Wire Line
+	8300 4100 8300 4000
+Connection ~ 8200 4100
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U2
+U 1 1 619CE39A
+P 2850 5100
+F 0 "U2" H 2600 5750 50  0000 C CNN
+F 1 "TXS0108EPW" H 3150 4450 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 2850 4350 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2850 5000 50  0001 C CNN
+F 4 "296-21527-1-ND" H 2850 5100 50  0001 C CNN "Digikey"
+	1    2850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 619CF59A
+P 2750 4300
+F 0 "#PWR0108" H 2750 4150 50  0001 C CNN
+F 1 "+3V3" H 2765 4473 50  0000 C CNN
+F 2 "" H 2750 4300 50  0001 C CNN
+F 3 "" H 2750 4300 50  0001 C CNN
+	1    2750 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 4400 2750 4300
+$Comp
+L power:VCC #PWR0109
+U 1 1 619D199B
+P 2950 4300
+F 0 "#PWR0109" H 2950 4150 50  0001 C CNN
+F 1 "VCC" H 2965 4473 50  0000 C CNN
+F 2 "" H 2950 4300 50  0001 C CNN
+F 3 "" H 2950 4300 50  0001 C CNN
+	1    2950 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4400 2950 4300
+$Comp
+L Device:R R3
+U 1 1 619D30A3
+P 1450 4500
+F 0 "R3" H 1300 4450 50  0000 L CNN
+F 1 "10k" H 1250 4550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1380 4500 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1450 4500 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 1450 4500 50  0001 C CNN "Digikey"
+	1    1450 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 619D40ED
+P 1450 4750
+F 0 "#PWR0110" H 1450 4500 50  0001 C CNN
+F 1 "GND" H 1455 4577 50  0000 C CNN
+F 2 "" H 1450 4750 50  0001 C CNN
+F 3 "" H 1450 4750 50  0001 C CNN
+	1    1450 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 4700 0    50   Input ~ 0
+SHFT_EN
+$Comp
+L power:GND #PWR0111
+U 1 1 619D79C2
+P 2850 5900
+F 0 "#PWR0111" H 2850 5650 50  0001 C CNN
+F 1 "GND" H 2855 5727 50  0000 C CNN
+F 2 "" H 2850 5900 50  0001 C CNN
+F 3 "" H 2850 5900 50  0001 C CNN
+	1    2850 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 5800 2850 5900
+$Comp
+L Device:C C3
+U 1 1 619D9BB2
+P 800 4500
+F 0 "C3" H 900 4450 50  0000 L CNN
+F 1 "0.1u" H 900 4550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 838 4350 50  0001 C CNN
+F 3 "https://datasheets.avx.com/X7RDielectric.pdf" H 800 4500 50  0001 C CNN
+F 4 "478-10836-1-ND" H 800 4500 50  0001 C CNN "Digikey"
+	1    800  4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 619DC720
+P 800 4750
+F 0 "#PWR0112" H 800 4500 50  0001 C CNN
+F 1 "GND" H 805 4577 50  0000 C CNN
+F 2 "" H 800 4750 50  0001 C CNN
+F 3 "" H 800 4750 50  0001 C CNN
+	1    800  4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 619DD6CD
+P 1000 4750
+F 0 "#PWR0113" H 1000 4500 50  0001 C CNN
+F 1 "GND" H 1005 4577 50  0000 C CNN
+F 2 "" H 1000 4750 50  0001 C CNN
+F 3 "" H 1000 4750 50  0001 C CNN
+	1    1000 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  4750 800  4650
+Wire Wire Line
+	1000 4750 1000 4650
+$Comp
+L Device:C C4
+U 1 1 619DFAAB
+P 1000 4500
+F 0 "C4" H 1115 4546 50  0000 L CNN
+F 1 "10u" H 1115 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1038 4350 50  0001 C CNN
+F 3 "http://www1.futureelectronics.com/doc/Samsung%20Electro-Mechanics/CL21A106KPFNNNG.pdf" H 1000 4500 50  0001 C CNN
+F 4 "1276-6456-1-ND" H 1000 4500 50  0001 C CNN "Digikey"
+	1    1000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0114
+U 1 1 619E1DEA
+P 800 4250
+F 0 "#PWR0114" H 800 4100 50  0001 C CNN
+F 1 "+3V3" H 815 4423 50  0000 C CNN
+F 2 "" H 800 4250 50  0001 C CNN
+F 3 "" H 800 4250 50  0001 C CNN
+	1    800  4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0115
+U 1 1 619E251A
+P 1000 4250
+F 0 "#PWR0115" H 1000 4100 50  0001 C CNN
+F 1 "VCC" H 1015 4423 50  0000 C CNN
+F 2 "" H 1000 4250 50  0001 C CNN
+F 3 "" H 1000 4250 50  0001 C CNN
+	1    1000 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  4250 800  4350
+Wire Wire Line
+	1000 4250 1000 4350
+Text Notes 1250 3900 0    118  ~ 24
+Level Shifting
+Text Notes 7150 850  0    118  ~ 24
+MCU
+Text Notes 1300 900  0    118  ~ 24
+Power
+$Comp
+L Device:R R4
+U 1 1 619F32E8
+P 3500 4800
+F 0 "R4" V 3550 4550 50  0000 L CNN
+F 1 "470R" V 3450 4500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3430 4800 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3500 4800 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 3500 4800 50  0001 C CNN "Digikey"
+	1    3500 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 4800 3300 4800
+Wire Wire Line
+	3650 4800 3800 4800
+Text GLabel 3800 4800 2    50   Input ~ 0
+NPX
+Text GLabel 2350 4800 0    50   Input ~ 0
+NPX_MCU_SHIFT
+Wire Wire Line
+	1450 4650 1450 4750
+Text GLabel 1450 4250 0    50   Input ~ 0
+SHFT_EN
+Wire Wire Line
+	1450 4250 1450 4350
+Wire Wire Line
+	2350 4700 2450 4700
+Wire Wire Line
+	2350 4800 2450 4800
+$Comp
+L Jumper:Jumper_3_Bridged12 JP1
+U 1 1 618BAD14
+P 1600 7400
+F 0 "JP1" H 1600 7604 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 1600 7513 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 1600 7400 50  0001 C CNN
+F 3 "~" H 1600 7400 50  0001 C CNN
+	1    1600 7400
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 7650 2    50   Input ~ 0
+NPX_MCU
+Wire Wire Line
+	1600 7550 1600 7650
+Text GLabel 10050 2150 2    50   Input ~ 0
+NPX_MAIN
+Wire Wire Line
+	10050 2150 9950 2150
+Text GLabel 1250 7400 0    50   Input ~ 0
+NPX_MAIN
+Wire Wire Line
+	1250 7400 1350 7400
+Text GLabel 1950 7400 2    50   Input ~ 0
+NPX_AUX
+Wire Wire Line
+	1950 7400 1850 7400
+Text GLabel 10050 2850 2    50   Input ~ 0
+NPX_AUX
+Wire Wire Line
+	10050 2850 9950 2850
+Text GLabel 10050 2650 2    50   Input ~ 0
+NPX_DBG_CLK_MAIN
+Wire Wire Line
+	10050 2650 9950 2650
+Text GLabel 4700 2650 0    50   Input ~ 0
+NPX_DBG_CLK_AUX
+Wire Wire Line
+	4800 2650 4700 2650
+$Comp
+L Jumper:Jumper_3_Bridged12 JP6
+U 1 1 618DACA5
+P 3600 7400
+F 0 "JP6" H 3600 7604 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 7513 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 7400 50  0001 C CNN
+F 3 "~" H 3600 7400 50  0001 C CNN
+	1    3600 7400
+	1    0    0    -1  
+$EndComp
+Text GLabel 3600 7650 2    50   Input ~ 0
+NPX_MCU
+Wire Wire Line
+	3250 7400 3350 7400
+Wire Wire Line
+	3600 7650 3600 7550
+Text GLabel 3250 7400 0    50   Input ~ 0
+NPX_MCU_SHIFT
+Text GLabel 3350 4650 2    50   Input ~ 0
+NPX_MCU_BYPASS
+Wire Wire Line
+	3350 4650 3300 4650
+Wire Wire Line
+	3300 4650 3300 4800
+Connection ~ 3300 4800
+Wire Wire Line
+	3300 4800 3250 4800
+Text GLabel 3950 7400 2    50   Input ~ 0
+NPX_MCU_BYPASS
+Wire Wire Line
+	3950 7400 3850 7400
+Text GLabel 4700 2750 0    50   Input ~ 0
+LED1_MAIN
+Wire Wire Line
+	4700 2750 4800 2750
+Text GLabel 4700 2850 0    50   Input ~ 0
+LED2_MAIN
+Wire Wire Line
+	4700 2850 4800 2850
+Text GLabel 4700 2950 0    50   Input ~ 0
+LED1_AUX
+Text GLabel 4700 3050 0    50   Input ~ 0
+LED2_AUX
+Wire Wire Line
+	4700 2950 4800 2950
+Wire Wire Line
+	4700 3050 4800 3050
+$Comp
+L Jumper:Jumper_3_Bridged12 JP2
+U 1 1 618EA28A
+P 1600 8000
+F 0 "JP2" H 1600 8204 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 1600 8113 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 1600 8000 50  0001 C CNN
+F 3 "~" H 1600 8000 50  0001 C CNN
+	1    1600 8000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 8000 0    50   Input ~ 0
+LED1_MAIN
+Wire Wire Line
+	1250 8000 1350 8000
+Text GLabel 1950 8000 2    50   Input ~ 0
+LED1_AUX
+Wire Wire Line
+	1950 8000 1850 8000
+Text GLabel 1600 8250 2    50   Input ~ 0
+LED1_MCU
+Wire Wire Line
+	1600 8250 1600 8150
+$Comp
+L Jumper:Jumper_3_Bridged12 JP3
+U 1 1 618F106B
+P 1600 8600
+F 0 "JP3" H 1600 8804 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 1600 8713 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 1600 8600 50  0001 C CNN
+F 3 "~" H 1600 8600 50  0001 C CNN
+	1    1600 8600
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 8600 0    50   Input ~ 0
+LED2_MAIN
+Wire Wire Line
+	1250 8600 1350 8600
+Text GLabel 1950 8600 2    50   Input ~ 0
+LED2_AUX
+Wire Wire Line
+	1950 8600 1850 8600
+Text GLabel 1600 8850 2    50   Input ~ 0
+LED2_MCU
+Wire Wire Line
+	1600 8850 1600 8750
+Text GLabel 4700 2050 0    50   Input ~ 0
+BTN1_MAIN
+Text GLabel 4700 2150 0    50   Input ~ 0
+BTN2_MAIN
+Text GLabel 4700 2250 0    50   Input ~ 0
+BTN1_AUX
+Text GLabel 4700 2350 0    50   Input ~ 0
+BTN2_AUX
+Wire Wire Line
+	4700 2050 4800 2050
+Wire Wire Line
+	4700 2150 4800 2150
+Wire Wire Line
+	4700 2250 4800 2250
+Wire Wire Line
+	4700 2350 4800 2350
+$Comp
+L Switch:SW_Push SW1
+U 1 1 61903D80
+P 6950 4550
+F 0 "SW1" V 6904 4698 50  0000 L CNN
+F 1 "SW_Push" V 6995 4698 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 6950 4750 50  0001 C CNN
+F 3 "https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/165/TL3342.pdf" H 6950 4750 50  0001 C CNN
+F 4 "EG5470CT-ND" V 6950 4550 50  0001 C CNN "Digikey"
+	1    6950 4550
+	0    1    1    0   
+$EndComp
+Text GLabel 6850 4250 0    50   Input ~ 0
+SBWTDIO
+$Comp
+L power:GND #PWR0116
+U 1 1 619048D5
+P 6950 4850
+F 0 "#PWR0116" H 6950 4600 50  0001 C CNN
+F 1 "GND" H 6955 4677 50  0000 C CNN
+F 2 "" H 6950 4850 50  0001 C CNN
+F 3 "" H 6950 4850 50  0001 C CNN
+	1    6950 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 4850 6950 4750
+Wire Wire Line
+	6950 4250 6850 4250
+Text GLabel 4700 3150 0    50   Input ~ 0
+UART_TXD
+Wire Wire Line
+	4700 3150 4800 3150
+Text GLabel 10050 3150 2    50   Input ~ 0
+UART_RXD
+Wire Wire Line
+	9950 3150 10050 3150
+Text Notes 6850 4650 2    50   ~ 0
+Reset\nSwitch
+$Comp
+L Device:Crystal Y1
+U 1 1 6192230A
+P 9600 3750
+F 0 "Y1" H 9600 4018 50  0000 C CNN
+F 1 "Crystal" H 9600 3927 50  0000 C CNN
+F 2 "Gigahawk:Crystal_SMD_AWSZT-CV-2Pin_3.7x3.1mm" H 9600 3750 50  0001 C CNN
+F 3 "https://abracon.com/Resonators/AWSZT-CV.pdf" H 9600 3750 50  0001 C CNN
+F 4 "535-10028-2-ND" H 9600 3750 50  0001 C CNN "Digikey"
+	1    9600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 619231EA
+P 9600 4000
+F 0 "R9" V 9650 3750 50  0000 L CNN
+F 1 "1M" V 9650 4100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9530 4000 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9600 4000 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 9600 4000 50  0001 C CNN "Digikey"
+	1    9600 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9750 4000 9900 4000
+Wire Wire Line
+	9900 4000 9900 3750
+Wire Wire Line
+	9900 3750 9750 3750
+Wire Wire Line
+	9450 3750 9300 3750
+Wire Wire Line
+	9300 3750 9300 4000
+Wire Wire Line
+	9300 4000 9450 4000
+$Comp
+L Device:C C8
+U 1 1 6192B280
+P 9300 4150
+F 0 "C8" H 9415 4196 50  0000 L CNN
+F 1 "15p" H 9415 4105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9338 4000 50  0001 C CNN
+F 3 "https://datasheets.kyocera-avx.com/C0GNP0-Dielectric.pdf" H 9300 4150 50  0001 C CNN
+F 4 "478-1306-1-ND" H 9300 4150 50  0001 C CNN "Digikey"
+	1    9300 4150
+	1    0    0    -1  
+$EndComp
+Connection ~ 9900 4000
+Connection ~ 9300 4000
+$Comp
+L Device:C C9
+U 1 1 6192D2AB
+P 9900 4150
+F 0 "C9" H 10000 4100 50  0000 L CNN
+F 1 "15p" H 10000 4200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9938 4000 50  0001 C CNN
+F 3 "https://datasheets.kyocera-avx.com/C0GNP0-Dielectric.pdf" H 9900 4150 50  0001 C CNN
+F 4 "478-1306-1-ND" H 9900 4150 50  0001 C CNN "Digikey"
+	1    9900 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 619324E0
+P 9600 4400
+F 0 "#PWR0117" H 9600 4150 50  0001 C CNN
+F 1 "GND" H 9605 4227 50  0000 C CNN
+F 2 "" H 9600 4400 50  0001 C CNN
+F 3 "" H 9600 4400 50  0001 C CNN
+	1    9600 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 4400 9300 4400
+Wire Wire Line
+	9300 4400 9300 4300
+Wire Wire Line
+	9600 4400 9900 4400
+Wire Wire Line
+	9900 4400 9900 4300
+Connection ~ 9600 4400
+Text GLabel 9200 3750 0    50   Input ~ 0
+XIN
+Wire Wire Line
+	9200 3750 9300 3750
+Connection ~ 9300 3750
+Text GLabel 10000 3750 2    50   Input ~ 0
+XOUT
+Wire Wire Line
+	10000 3750 9900 3750
+Connection ~ 9900 3750
+$Comp
+L Jumper:Jumper_3_Bridged12 JP7
+U 1 1 6195E4BA
+P 3600 8000
+F 0 "JP7" H 3600 8204 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 8113 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 8000 50  0001 C CNN
+F 3 "~" H 3600 8000 50  0001 C CNN
+	1    3600 8000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 8000 0    50   Input ~ 0
+LED1_MCU_SHIFT
+Wire Wire Line
+	3250 8000 3350 8000
+Wire Wire Line
+	3950 8000 3850 8000
+Text GLabel 3600 8250 2    50   Input ~ 0
+LED1_MCU
+Wire Wire Line
+	3600 8250 3600 8150
+$Comp
+L Jumper:Jumper_3_Bridged12 JP8
+U 1 1 61964C9A
+P 3600 8600
+F 0 "JP8" H 3600 8804 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 8713 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 8600 50  0001 C CNN
+F 3 "~" H 3600 8600 50  0001 C CNN
+	1    3600 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 8600 3350 8600
+Wire Wire Line
+	3950 8600 3850 8600
+Text GLabel 3600 8850 2    50   Input ~ 0
+LED2_MCU
+Wire Wire Line
+	3600 8850 3600 8750
+Text GLabel 3250 8600 0    50   Input ~ 0
+LED2_MCU_SHIFT
+Text GLabel 2350 4900 0    50   Input ~ 0
+LED1_MCU_SHIFT
+Text GLabel 2350 5000 0    50   Input ~ 0
+LED2_MCU_SHIFT
+Wire Wire Line
+	2350 4900 2450 4900
+Wire Wire Line
+	2350 5000 2450 5000
+Text GLabel 3350 4900 2    50   Input ~ 0
+LED1
+Wire Wire Line
+	3350 4900 3250 4900
+Text GLabel 3350 5000 2    50   Input ~ 0
+LED2
+Wire Wire Line
+	3250 5000 3350 5000
+Text GLabel 3950 8600 2    50   Input ~ 0
+LED2
+Text GLabel 3950 8000 2    50   Input ~ 0
+LED1
+$Comp
+L Jumper:Jumper_3_Bridged12 JP4
+U 1 1 6198166F
+P 1600 9200
+F 0 "JP4" H 1600 9404 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 1600 9313 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 1600 9200 50  0001 C CNN
+F 3 "~" H 1600 9200 50  0001 C CNN
+	1    1600 9200
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 9200 0    50   Input ~ 0
+BTN1_MAIN
+Wire Wire Line
+	1250 9200 1350 9200
+Text GLabel 1950 9200 2    50   Input ~ 0
+BTN1_AUX
+Wire Wire Line
+	1950 9200 1850 9200
+Text GLabel 1600 9450 2    50   Input ~ 0
+BTN1_MCU
+Wire Wire Line
+	1600 9450 1600 9350
+$Comp
+L Jumper:Jumper_3_Bridged12 JP5
+U 1 1 61986297
+P 1600 9800
+F 0 "JP5" H 1600 10004 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 1600 9913 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 1600 9800 50  0001 C CNN
+F 3 "~" H 1600 9800 50  0001 C CNN
+	1    1600 9800
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 9800 0    50   Input ~ 0
+BTN2_MAIN
+Wire Wire Line
+	1250 9800 1350 9800
+Text GLabel 1950 9800 2    50   Input ~ 0
+BTN2_AUX
+Wire Wire Line
+	1950 9800 1850 9800
+Text GLabel 1600 10050 2    50   Input ~ 0
+BTN2_MCU
+Wire Wire Line
+	1600 10050 1600 9950
+$Comp
+L Jumper:Jumper_3_Bridged12 JP9
+U 1 1 6198CA2E
+P 3600 9200
+F 0 "JP9" H 3600 9404 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 9313 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 9200 50  0001 C CNN
+F 3 "~" H 3600 9200 50  0001 C CNN
+	1    3600 9200
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 9200 0    50   Input ~ 0
+BTN1_MCU_SHIFT
+Wire Wire Line
+	3250 9200 3350 9200
+Text GLabel 3950 9200 2    50   Input ~ 0
+BTN1
+Wire Wire Line
+	3950 9200 3850 9200
+Text GLabel 3600 9450 2    50   Input ~ 0
+BTN1_MCU
+Wire Wire Line
+	3600 9450 3600 9350
+$Comp
+L Jumper:Jumper_3_Bridged12 JP10
+U 1 1 61992140
+P 3600 9800
+F 0 "JP10" H 3600 10004 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 9913 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 9800 50  0001 C CNN
+F 3 "~" H 3600 9800 50  0001 C CNN
+	1    3600 9800
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 9800 0    50   Input ~ 0
+BTN2_MCU_SHIFT
+Wire Wire Line
+	3250 9800 3350 9800
+Text GLabel 3950 9800 2    50   Input ~ 0
+BTN2
+Wire Wire Line
+	3950 9800 3850 9800
+Text GLabel 3600 10050 2    50   Input ~ 0
+BTN2_MCU
+Wire Wire Line
+	3600 10050 3600 9950
+Text GLabel 2350 5100 0    50   Input ~ 0
+BTN1_MCU_SHIFT
+Wire Wire Line
+	2350 5100 2450 5100
+Text GLabel 2350 5200 0    50   Input ~ 0
+BTN2_MCU_SHIFT
+Wire Wire Line
+	2350 5200 2450 5200
+Text GLabel 3350 5100 2    50   Input ~ 0
+BTN1
+Wire Wire Line
+	3350 5100 3250 5100
+Text GLabel 3350 5200 2    50   Input ~ 0
+BTN2
+Wire Wire Line
+	3350 5200 3250 5200
+Text Notes 1650 7000 0    118  ~ 24
+Level Shifter Bypass
+$Comp
+L power:VCC #PWR0118
+U 1 1 619D05E6
+P 8100 7600
+F 0 "#PWR0118" H 8100 7450 50  0001 C CNN
+F 1 "VCC" H 8115 7773 50  0000 C CNN
+F 2 "" H 8100 7600 50  0001 C CNN
+F 3 "" H 8100 7600 50  0001 C CNN
+	1    8100 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 619D2AFC
+P 8100 7850
+F 0 "R6" H 7950 7800 50  0000 L CNN
+F 1 "10k" H 7900 7900 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8030 7850 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8100 7850 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 8100 7850 50  0001 C CNN "Digikey"
+	1    8100 7850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8100 7700 8100 7600
+Text GLabel 8000 8100 0    50   Input ~ 0
+BTN+
+Wire Wire Line
+	8000 8100 8100 8100
+Wire Wire Line
+	8100 8100 8100 8000
+Text GLabel 8200 8100 2    50   Input ~ 0
+BTN1
+Wire Wire Line
+	8200 8100 8100 8100
+Connection ~ 8100 8100
+Text GLabel 8000 8250 0    50   Input ~ 0
+BTN-
+$Comp
+L Device:Jumper JP11
+U 1 1 619EDE6F
+P 8100 8650
+F 0 "JP11" V 8146 8562 50  0000 R CNN
+F 1 "Jumper" V 8055 8562 50  0000 R CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm" H 8100 8650 50  0001 C CNN
+F 3 "~" H 8100 8650 50  0001 C CNN
+	1    8100 8650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 8250 8100 8250
+Wire Wire Line
+	8100 8250 8100 8350
+Text Notes 7950 8700 2    50   ~ 0
+Jumper here to avoid\nGND net being renamed
+$Comp
+L power:GND #PWR0119
+U 1 1 619F5579
+P 8100 9050
+F 0 "#PWR0119" H 8100 8800 50  0001 C CNN
+F 1 "GND" H 8105 8877 50  0000 C CNN
+F 2 "" H 8100 9050 50  0001 C CNN
+F 3 "" H 8100 9050 50  0001 C CNN
+	1    8100 9050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 9050 8100 8950
+$Comp
+L power:VCC #PWR0120
+U 1 1 619FC416
+P 9100 7550
+F 0 "#PWR0120" H 9100 7400 50  0001 C CNN
+F 1 "VCC" H 9115 7723 50  0000 C CNN
+F 2 "" H 9100 7550 50  0001 C CNN
+F 3 "" H 9100 7550 50  0001 C CNN
+	1    9100 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 619FCE04
+P 9100 7800
+F 0 "R7" H 8950 7750 50  0000 L CNN
+F 1 "110R" H 8850 7850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9030 7800 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9100 7800 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 9100 7800 50  0001 C CNN "Digikey"
+	1    9100 7800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9100 7650 9100 7550
+Text GLabel 9000 8050 0    50   Input ~ 0
+LED+
+Text GLabel 9000 8200 0    50   Input ~ 0
+LED-
+Wire Wire Line
+	9000 8050 9100 8050
+Wire Wire Line
+	9100 8050 9100 7950
+$Comp
+L Transistor_FET:BSS214NW Q1
+U 1 1 61A0A21F
+P 9200 8500
+F 0 "Q1" H 9405 8454 50  0000 L CNN
+F 1 "BSS214NW" H 9405 8545 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9400 8425 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 9200 8500 50  0001 L CNN
+F 4 "BSS214NWH6327XTSA1CT-ND" H 9200 8500 50  0001 C CNN "Digikey"
+	1    9200 8500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9000 8200 9100 8200
+Wire Wire Line
+	9100 8200 9100 8300
+Wire Wire Line
+	9400 8500 9450 8500
+Text GLabel 9500 8500 2    50   Input ~ 0
+LED1
+$Comp
+L Device:R R8
+U 1 1 61A1864C
+P 9450 8750
+F 0 "R8" H 9300 8700 50  0000 L CNN
+F 1 "10k" H 9250 8800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9380 8750 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9450 8750 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 9450 8750 50  0001 C CNN "Digikey"
+	1    9450 8750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9450 8600 9450 8500
+Connection ~ 9450 8500
+Wire Wire Line
+	9450 8500 9500 8500
+Wire Wire Line
+	9100 8700 9100 9000
+Wire Wire Line
+	9100 9000 9300 9000
+Wire Wire Line
+	9450 9000 9450 8900
+$Comp
+L power:GND #PWR0121
+U 1 1 61A25C5A
+P 9300 9000
+F 0 "#PWR0121" H 9300 8750 50  0001 C CNN
+F 1 "GND" H 9305 8827 50  0000 C CNN
+F 2 "" H 9300 9000 50  0001 C CNN
+F 3 "" H 9300 9000 50  0001 C CNN
+	1    9300 9000
+	1    0    0    -1  
+$EndComp
+Connection ~ 9300 9000
+Wire Wire Line
+	9300 9000 9450 9000
+Text GLabel 8300 9550 0    50   Input ~ 0
+LED2
+Wire Wire Line
+	8300 9550 8400 9550
+Text GLabel 8400 9550 2    50   Input ~ 0
+IC_BTN_LED
+Text GLabel 8300 9650 0    50   Input ~ 0
+BTN2
+Wire Wire Line
+	8300 9650 8400 9650
+Text GLabel 8400 9650 2    50   Input ~ 0
+IC_BTN_SW
+Text GLabel 8300 9750 0    50   Input ~ 0
+NPX
+Text GLabel 8400 9750 2    50   Input ~ 0
+NPX_DATA
+Wire Wire Line
+	8400 9750 8300 9750
+Wire Wire Line
+	6950 4250 6950 4350
+$Comp
+L Device:R R5
+U 1 1 61A53EEF
+P 6950 4000
+F 0 "R5" H 6800 3950 50  0000 L CNN
+F 1 "47k" H 6750 4050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6880 4000 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6950 4000 50  0001 C CNN
+F 4 "RMCF0805JT110RCT-ND" H 6950 4000 50  0001 C CNN "Digikey"
+	1    6950 4000
+	-1   0    0    1   
+$EndComp
+Connection ~ 6950 4250
+Wire Wire Line
+	6950 4150 6950 4250
+$Comp
+L power:+3V3 #PWR0122
+U 1 1 61A69E90
+P 6950 3750
+F 0 "#PWR0122" H 6950 3600 50  0001 C CNN
+F 1 "+3V3" H 6965 3923 50  0000 C CNN
+F 2 "" H 6950 3750 50  0001 C CNN
+F 3 "" H 6950 3750 50  0001 C CNN
+	1    6950 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3750 6950 3850
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 61A7E6B6
+P 12400 2050
+F 0 "J1" H 12508 2431 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 12508 2340 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 12400 2050 50  0001 C CNN
+F 3 "~" H 12400 2050 50  0001 C CNN
+	1    12400 2050
+	1    0    0    -1  
+$EndComp
+Text GLabel 12700 1850 2    50   Input ~ 0
+UART_TXD
+Wire Wire Line
+	12700 1850 12600 1850
+Text GLabel 12700 1950 2    50   Input ~ 0
+SBWTCK
+Wire Wire Line
+	12700 1950 12600 1950
+Text GLabel 12700 2050 2    50   Input ~ 0
+SBWTDIO
+Wire Wire Line
+	12700 2050 12600 2050
+$Comp
+L power:GND #PWR0123
+U 1 1 61A967AB
+P 12700 2150
+F 0 "#PWR0123" H 12700 1900 50  0001 C CNN
+F 1 "GND" V 12700 2000 50  0000 R CNN
+F 2 "" H 12700 2150 50  0001 C CNN
+F 3 "" H 12700 2150 50  0001 C CNN
+	1    12700 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12700 2150 12600 2150
+Text GLabel 12700 2250 2    50   Input ~ 0
+UART_RXD
+Wire Wire Line
+	12700 2250 12600 2250
+Text Notes 12050 1450 0    118  ~ 24
+Programming
+Text GLabel 10050 2250 2    50   Input ~ 0
+SHFT_EN
+Wire Wire Line
+	10050 2250 9950 2250
+NoConn ~ 2450 5300
+NoConn ~ 2450 5400
+NoConn ~ 2450 5500
+NoConn ~ 3250 5300
+NoConn ~ 3250 5400
+NoConn ~ 3250 5500
+NoConn ~ 4800 2450
+NoConn ~ 4800 2550
+NoConn ~ 4800 1750
+NoConn ~ 4800 1850
+NoConn ~ 4800 1950
+NoConn ~ 9950 2050
+NoConn ~ 9950 1650
+NoConn ~ 9950 1550
+NoConn ~ 9950 1450
+NoConn ~ 9950 2350
+NoConn ~ 9950 2450
+NoConn ~ 9950 2550
+NoConn ~ 9950 2750
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61B4893C
+P 12350 7200
+F 0 "TP1" V 12400 7400 50  0000 L BNN
+F 1 "TestPoint" V 12300 7400 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 7200 50  0001 C CNN
+F 3 "~" H 12550 7200 50  0001 C CNN
+	1    12350 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0124
+U 1 1 61B4C53B
+P 12450 7200
+F 0 "#PWR0124" H 12450 7050 50  0001 C CNN
+F 1 "VCC" V 12450 7350 50  0000 L CNN
+F 2 "" H 12450 7200 50  0001 C CNN
+F 3 "" H 12450 7200 50  0001 C CNN
+	1    12450 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12450 7200 12350 7200
+$Comp
+L power:+3V3 #PWR0125
+U 1 1 61B55EBE
+P 12450 7350
+F 0 "#PWR0125" H 12450 7200 50  0001 C CNN
+F 1 "+3V3" V 12450 7450 50  0000 L CNN
+F 2 "" H 12450 7350 50  0001 C CNN
+F 3 "" H 12450 7350 50  0001 C CNN
+	1    12450 7350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12450 7350 12350 7350
+$Comp
+L Connector:TestPoint TP2
+U 1 1 61B5F805
+P 12350 7350
+F 0 "TP2" V 12400 7550 50  0000 L BNN
+F 1 "TestPoint" V 12300 7550 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 7350 50  0001 C CNN
+F 3 "~" H 12550 7350 50  0001 C CNN
+	1    12350 7350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 61B66FF8
+P 12350 7500
+F 0 "TP3" V 12400 7700 50  0000 L BNN
+F 1 "TestPoint" V 12300 7700 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 7500 50  0001 C CNN
+F 3 "~" H 12550 7500 50  0001 C CNN
+	1    12350 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0126
+U 1 1 61B67207
+P 12450 7500
+F 0 "#PWR0126" H 12450 7250 50  0001 C CNN
+F 1 "GND" H 12455 7327 50  0000 C CNN
+F 2 "" H 12450 7500 50  0001 C CNN
+F 3 "" H 12450 7500 50  0001 C CNN
+	1    12450 7500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12450 7500 12350 7500
+Text GLabel 12450 7650 2    50   Input ~ 0
+NPX_DBG_CLK_MAIN
+$Comp
+L Connector:TestPoint TP4
+U 1 1 61B70825
+P 12350 7650
+F 0 "TP4" V 12400 7850 50  0000 L BNN
+F 1 "TestPoint" V 12300 7850 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 7650 50  0001 C CNN
+F 3 "~" H 12550 7650 50  0001 C CNN
+	1    12350 7650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12350 7650 12450 7650
+Text GLabel 12450 7800 2    50   Input ~ 0
+NPX_DBG_CLK_AUX
+$Comp
+L Connector:TestPoint TP5
+U 1 1 61B78C35
+P 12350 7800
+F 0 "TP5" V 12400 8000 50  0000 L BNN
+F 1 "TestPoint" V 12300 8000 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 7800 50  0001 C CNN
+F 3 "~" H 12550 7800 50  0001 C CNN
+	1    12350 7800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 61B79040
+P 12350 7950
+F 0 "TP6" V 12400 8150 50  0000 L BNN
+F 1 "TestPoint" V 12300 8150 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 7950 50  0001 C CNN
+F 3 "~" H 12550 7950 50  0001 C CNN
+	1    12350 7950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 61B79307
+P 12350 8100
+F 0 "TP7" V 12400 8300 50  0000 L BNN
+F 1 "TestPoint" V 12300 8300 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8100 50  0001 C CNN
+F 3 "~" H 12550 8100 50  0001 C CNN
+	1    12350 8100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 61B796F3
+P 12350 8250
+F 0 "TP8" V 12400 8450 50  0000 L BNN
+F 1 "TestPoint" V 12300 8450 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8250 50  0001 C CNN
+F 3 "~" H 12550 8250 50  0001 C CNN
+	1    12350 8250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12450 7800 12350 7800
+Text GLabel 12450 7950 2    50   Input ~ 0
+NPX
+Wire Wire Line
+	12450 7950 12350 7950
+Text GLabel 12450 8100 2    50   Input ~ 0
+LED1
+Wire Wire Line
+	12450 8100 12350 8100
+Text GLabel 12450 8250 2    50   Input ~ 0
+LED2
+Wire Wire Line
+	12450 8250 12350 8250
+Text GLabel 12450 8400 2    50   Input ~ 0
+BTN1
+$Comp
+L Connector:TestPoint TP9
+U 1 1 61B9B3BB
+P 12350 8400
+F 0 "TP9" V 12400 8600 50  0000 L BNN
+F 1 "TestPoint" V 12300 8600 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8400 50  0001 C CNN
+F 3 "~" H 12550 8400 50  0001 C CNN
+	1    12350 8400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 61B9BA19
+P 12350 8550
+F 0 "TP10" V 12400 8750 50  0000 L BNN
+F 1 "TestPoint" V 12300 8750 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8550 50  0001 C CNN
+F 3 "~" H 12550 8550 50  0001 C CNN
+	1    12350 8550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP11
+U 1 1 61B9BA23
+P 12350 8700
+F 0 "TP11" V 12400 8900 50  0000 L BNN
+F 1 "TestPoint" V 12300 8900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8700 50  0001 C CNN
+F 3 "~" H 12550 8700 50  0001 C CNN
+	1    12350 8700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP12
+U 1 1 61B9BA2D
+P 12350 8850
+F 0 "TP12" V 12400 9050 50  0000 L BNN
+F 1 "TestPoint" V 12300 9050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8850 50  0001 C CNN
+F 3 "~" H 12550 8850 50  0001 C CNN
+	1    12350 8850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12450 8400 12350 8400
+Text GLabel 12450 8550 2    50   Input ~ 0
+BTN2
+Wire Wire Line
+	12450 8550 12350 8550
+Text GLabel 12450 8700 2    50   Input ~ 0
+SHFT_EN
+Wire Wire Line
+	12450 8700 12350 8700
+Text GLabel 12450 8850 2    50   Input ~ 0
+NPX_MCU_BYPASS
+Wire Wire Line
+	12450 8850 12350 8850
+Text Notes 9750 3650 0    50   ~ 0
+24MHz or DNI
+Text Notes 8200 6800 0    118  ~ 24
+Common
+Text Notes 11750 6850 0    118  ~ 24
+Testpoints
 $EndSCHEMATC
