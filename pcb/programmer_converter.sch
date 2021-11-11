@@ -20,7 +20,8 @@ P 6700 3150
 F 0 "J1" H 6728 3126 50  0000 L CNN
 F 1 "Conn_01x06_Female" H 6728 3035 50  0000 L CNN
 F 2 "Gigahawk:851-87-006-20-001101" H 6700 3150 50  0001 C CNN
-F 3 "~" H 6700 3150 50  0001 C CNN
+F 3 "https://www.precidip.com/AppHost/9696,1/Scripts/Modules/Catalog/Default.aspx?c=7&i=204&p=80&pdf=1&dsku=851-PP-NNN-20-001101" H 6700 3150 50  0001 C CNN
+F 4 "1212-1351-ND" H 6700 3150 50  0001 C CNN "Digikey"
 	1    6700 3150
 	1    0    0    -1  
 $EndComp
@@ -262,7 +263,8 @@ P 3950 3150
 F 0 "J4" H 4058 3531 50  0000 C CNN
 F 1 "Conn_01x06_Male" H 4058 3440 50  0000 C CNN
 F 2 "Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Horizontal" H 3950 3150 50  0001 C CNN
-F 3 "~" H 3950 3150 50  0001 C CNN
+F 3 "https://media.metz-connect.com/files/171/Data_sheet_PR20BXXHBNN.PDF" H 3950 3150 50  0001 C CNN
+F 4 "1849-PR20B06HBNN-ND" H 3950 3150 50  0001 C CNN "Digikey"
 	1    3950 3150
 	-1   0    0    -1  
 $EndComp
