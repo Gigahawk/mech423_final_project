@@ -502,7 +502,7 @@ F 0 "R3" H 1300 4450 50  0000 L CNN
 F 1 "10k" H 1250 4550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 1380 4500 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1450 4500 50  0001 C CNN
-F 4 "RMCF0805JT110RCT-ND" H 1450 4500 50  0001 C CNN "Digikey"
+F 4 "RMCF0805JT10K0CT-ND" H 1450 4500 50  0001 C CNN "Digikey"
 	1    1450 4500
 	-1   0    0    1   
 $EndComp
@@ -621,8 +621,8 @@ P 3500 4800
 F 0 "R4" V 3550 4550 50  0000 L CNN
 F 1 "470R" V 3450 4500 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 3430 4800 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3500 4800 50  0001 C CNN
-F 4 "RMCF0805JT110RCT-ND" H 3500 4800 50  0001 C CNN "Digikey"
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-3&DocType=DS&DocLang=English" H 3500 4800 50  0001 C CNN
+F 4 "A129745CT-ND" H 3500 4800 50  0001 C CNN "Digikey"
 	1    3500 4800
 	0    -1   -1   0   
 $EndComp
@@ -851,8 +851,8 @@ P 9600 4000
 F 0 "R9" V 9650 3750 50  0000 L CNN
 F 1 "1M" V 9650 4100 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 9530 4000 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9600 4000 50  0001 C CNN
-F 4 "RMCF0805JT110RCT-ND" H 9600 4000 50  0001 C CNN "Digikey"
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204&DocType=DS&DocLang=English" H 9600 4000 50  0001 C CNN
+F 4 "A106058CT-ND" H 9600 4000 50  0001 C CNN "Digikey"
 	1    9600 4000
 	0    -1   -1   0   
 $EndComp
@@ -1115,7 +1115,7 @@ F 0 "R6" H 7950 7800 50  0000 L CNN
 F 1 "10k" H 7900 7900 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 8030 7850 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8100 7850 50  0001 C CNN
-F 4 "RMCF0805JT110RCT-ND" H 8100 7850 50  0001 C CNN "Digikey"
+F 4 "RMCF0805JT10K0CT-ND" H 8100 7850 50  0001 C CNN "Digikey"
 	1    8100 7850
 	-1   0    0    1   
 $EndComp
@@ -1225,7 +1225,7 @@ F 0 "R8" H 9300 8700 50  0000 L CNN
 F 1 "10k" H 9250 8800 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 9380 8750 50  0001 C CNN
 F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 9450 8750 50  0001 C CNN
-F 4 "RMCF0805JT110RCT-ND" H 9450 8750 50  0001 C CNN "Digikey"
+F 4 "RMCF0805JT10K0CT-ND" H 9450 8750 50  0001 C CNN "Digikey"
 	1    9450 8750
 	-1   0    0    1   
 $EndComp
@@ -1281,8 +1281,8 @@ P 6950 4000
 F 0 "R5" H 6800 3950 50  0000 L CNN
 F 1 "47k" H 6750 4050 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 6880 4000 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 6950 4000 50  0001 C CNN
-F 4 "RMCF0805JT110RCT-ND" H 6950 4000 50  0001 C CNN "Digikey"
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-3&DocType=DS&DocLang=English" H 6950 4000 50  0001 C CNN
+F 4 "A130144CT-ND" H 6950 4000 50  0001 C CNN "Digikey"
 	1    6950 4000
 	-1   0    0    1   
 $EndComp

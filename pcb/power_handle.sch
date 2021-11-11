@@ -500,8 +500,8 @@ P 6200 3850
 F 0 "D4" H 6200 3633 50  0000 C CNN
 F 1 "B340LA-13-F" H 6200 3724 50  0000 C CNN
 F 2 "Diode_SMD:D_SMA" H 6200 3675 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30240.pdf" H 6200 3850 50  0001 C CNN
-F 4 "B340LA-FDICT-ND" H 6200 3850 50  0001 C CNN "Digikey"
+F 3 "https://www.comchiptech.com/admin/files/product/CDBA340L-HF%20RevC514368.pdf" H 6200 3850 50  0001 C CNN
+F 4 "641-1258-1-ND" H 6200 3850 50  0001 C CNN "Digikey"
 	1    6200 3850
 	-1   0    0    1   
 $EndComp
@@ -913,8 +913,8 @@ P 10450 2850
 F 0 "D2" H 10450 2633 50  0000 C CNN
 F 1 "B340LA-13-F" H 10450 2724 50  0000 C CNN
 F 2 "Diode_SMD:D_SMA" H 10450 2675 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30240.pdf" H 10450 2850 50  0001 C CNN
-F 4 "B340LA-FDICT-ND" H 10450 2850 50  0001 C CNN "Digikey"
+F 3 "https://www.comchiptech.com/admin/files/product/CDBA340L-HF%20RevC514368.pdf" H 10450 2850 50  0001 C CNN
+F 4 "641-1258-1-ND" H 10450 2850 50  0001 C CNN "Digikey"
 	1    10450 2850
 	-1   0    0    1   
 $EndComp
@@ -1455,8 +1455,8 @@ P 7600 4000
 F 0 "C10" H 7715 4046 50  0000 L CNN
 F 1 "1000u" H 7715 3955 50  0000 L CNN
 F 2 "Capacitor_SMD:CP_Elec_10x12.6" H 7600 4000 50  0001 C CNN
-F 3 "https://www.nichicon.co.jp/english/products/pdfs/e-pcg.pdf" H 7600 4000 50  0001 C CNN
-F 4 "493-3094-1-ND" H 7600 4000 50  0001 C CNN "Digikey"
+F 3 "https://www.nichicon.co.jp/english/products/pdfs/e-pcr.pdf" H 7600 4000 50  0001 C CNN
+F 4 "493-13738-1-ND" H 7600 4000 50  0001 C CNN "Digikey"
 	1    7600 4000
 	1    0    0    -1  
 $EndComp
