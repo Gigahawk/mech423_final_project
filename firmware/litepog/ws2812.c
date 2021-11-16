@@ -8,50 +8,52 @@ typedef struct {
     u_char blue;
 } LED;
 
-static LED leds[NUM_LEDS] = { { 0, 0, 0 } };
+static LED leds[NPX_NUM_LEDS] = { { 0, 0, 0 } };
 
 // Initializes everything needed to use this library. This clears the strip.
 void initStrip() {
-    P1DIR &= ~(OUTPUT_PIN);
+    NPX_PxDIR &= ~(NPX_PIN);
 
-    P1SEL0 &= ~(OUTPUT_PIN);
-    P1SEL1 |= (OUTPUT_PIN);
+    NPX_PxSEL0 &= ~(NPX_PIN);
+    NPX_PxSEL1 |= (NPX_PIN);
 
-    // enable spi clk
-    P2SEL0 &= ~(BIT2);
-    P2SEL1 |= BIT2;
+#ifdef NPX_DEBUG
+    // enable SPI CLK for timing debug
+    NPX_DBG_CLK_PxSEL0 &= ~(NPX_DBG_CLK_PIN);
+    NPX_DBG_CLK_PxSEL1 |= NPX_DBG_CLK_PIN;
+#endif
 
-    // Hold UCB0 in reset
-    UCB0CTLW0 |= UCSWRST;
+    // Hold SPI peripheral in reset
+    NPX_UCxCTLW0 |= UCSWRST;
 
     // Set mode to 3-pin SPI
-    UCB0CTLW0 &= ~(UCMODE0 | UCMODE1);
-    UCB0CTLW0 |= (UCMODE_0);
+    NPX_UCxCTLW0 &= ~(UCMODE0 | UCMODE1);
+    NPX_UCxCTLW0 |= (UCMODE_0);
 
     // Clock phase 1
-    UCB0CTLW0 |= UCCKPH;
+    NPX_UCxCTLW0 |= UCCKPH;
 
     // Clock polarity inactive low
-    UCB0CTLW0 &= ~(UCCKPL);
+    NPX_UCxCTLW0 &= ~(UCCKPL);
 
     // Data is MSB first
-    UCB0CTLW0 |= UCMSB;
+    NPX_UCxCTLW0 |= UCMSB;
 
-    // UCB0 is SPI master
-    UCB0CTLW0 |= UCMST;
+    // Act as SPI master
+    NPX_UCxCTLW0 |= UCMST;
 
     // Enable synchronous mode
-    UCB0CTLW0 |= UCSYNC;
+    NPX_UCxCTLW0 |= UCSYNC;
 
     // Clock source: SMCLK
-    UCB0CTLW0 &= ~(UCSSEL0 | UCSSEL1);
-    UCB0CTLW0 |= (UCSSEL__SMCLK);
+    NPX_UCxCTLW0 &= ~(UCSSEL0 | UCSSEL1);
+    NPX_UCxCTLW0 |= (UCSSEL__SMCLK);
 
     // Divide BRCLK by 11
-    UCB0BR0 = 11;
+    NPX_UCxBR0 = 11;
 
     // Bring UCB0 out of reset
-    UCB0CTLW0 &= ~(UCSWRST);
+    NPX_UCxCTLW0 &= ~(UCSWRST);
 
     clearStrip();
     showStrip();
@@ -66,9 +68,11 @@ void setLEDColor(u_int p, u_char r, u_char g, u_char b) {
 
 // Send colors to the strip and show them. Disables interrupts while processing.
 void showStrip() {
+    __disable_interrupt();
+
     // send RGB color for every LED
     unsigned int i, j;
-    for (i = 0; i < NUM_LEDS; i++) {
+    for (i = 0; i < NPX_NUM_LEDS; i++) {
         u_char *rgb = (u_char *)&leds[i]; // get GRB color for this LED
 
         // send green, then red, then blue
@@ -77,11 +81,11 @@ void showStrip() {
 
             // check each of the 8 bits
             while (mask != 0) {
-                while (!(UCB0IFG & UCTXIFG));    // wait to transmit
-                if (rgb[j] & mask) {        // most significant bit first
-                    UCB0TXBUF = HIGH_CODE;  // send 1
+                while (!(NPX_UCxIFG & UCTXIFG));  // wait to transmit
+                if (rgb[j] & mask) {              // most significant bit first
+                    UCB0TXBUF = HIGH_CODE;        // send 1
                 } else {
-                    UCB0TXBUF = LOW_CODE;   // send 0
+                    UCB0TXBUF = LOW_CODE;         // send 0
                 }
 
                 mask >>= 1;  // check next bit
@@ -90,17 +94,18 @@ void showStrip() {
     }
 
     // Wait for transfer to finish
-    while(UCB0STATW & UCBUSY);
+    while(NPX_UCxSTATW & UCBUSY);
 
-    // Reset UCB0, SIMO only seems to idle low while/after reset
-    UCB0CTLW0 |= UCSWRST;
+    // Reset SPI bus, SIMO only seems to idle low while/after reset
+    NPX_UCxCTLW0 |= UCSWRST;
 
     // Hold SIMO low to latch values
     _delay_cycles(10000);
 
     // Release UCB0 from reset
-    UCB0CTLW0 &= ~(UCSWRST);
+    NPX_UCxCTLW0 &= ~(UCSWRST);
 
+    __enable_interrupt();
 }
 
 // Clear the color of all LEDs (make them black/off)
@@ -111,7 +116,7 @@ void clearStrip() {
 // Fill the strip with a solid color. This will update the strip.
 void fillStrip(u_char r, u_char g, u_char b) {
     int i;
-    for (i = 0; i < NUM_LEDS; i++) {
+    for (i = 0; i < NPX_NUM_LEDS; i++) {
         setLEDColor(i, r, g, b);  // set all LEDs to specified color
     }
 }

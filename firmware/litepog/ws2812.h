@@ -1,9 +1,7 @@
 #ifndef __WS2812_H__
 #define __WS2812_H__
 #include <msp430.h>
-
-#define OUTPUT_PIN  (BIT6)  // Set to whatever UCB0SIMO is on your processor
-#define NUM_LEDS    (30)    // NUMBER OF LEDS IN YOUR STRIP
+#include "config.h"
 
 // Useful typedefs
 typedef unsigned char u_char;	// 8 bit
