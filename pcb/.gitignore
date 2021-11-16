@@ -30,3 +30,4 @@ fp-info-cache
 *.step
 *.FCStd*
 !*.FCStd
+*.pdf
