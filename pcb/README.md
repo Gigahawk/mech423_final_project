@@ -16,7 +16,8 @@ Logic handle was assembled and tested over multiple days:
 Notes:
 - MCU appears to work fine
     - Can be programmed as expected
-    - Resonator Y1 not populated for now, likely not necessary
+    - Resonator `Y1` not populated for now, likely not necessary
+        - Firmware can rely entirely on DCO
 - Power supply works fine
     - Produces 3.3V as expected
 - Level shifter doesn't work
@@ -30,7 +31,7 @@ Notes:
             - Will need multiple chips, but this will allow all IO to be 5V
         - Only shift the Neopixel data line
             - Minimizes chips, ideal solution for next revision
-- LED transistor Q1 is wired incorrectly
+- LED transistor `Q1` is wired incorrectly
     - Current always flows through body diode regardless of input
     - Solutions:
         - Short `LED-` and `LED1` (*Solution from 2021-11-17*):
@@ -52,15 +53,15 @@ Power handle was assembled over multiple days:
 Notes:
 - Boost circuit works as designed, capable of producing high current (> 1A continuous for 10 seconds)
 - Boost circuit can not be turned off
-    - The datasheet for PAM2423 indicates that setting the EN pin low only disables the IC's boosting function, it does not turn off the output since there is a direct path from input to output via the inductor and diode.
+    - The datasheet for PAM2423 indicates that setting the `EN` pin low only disables the IC's boosting function, it does not turn off the output since there is a direct path from input to output via the inductor and diode.
     - Solutions:
         - Use switch to cut off input current (**Current solution as of 2021-11-26**)
-            - Done by cutting the traces going to the input, and running wires to SW1.
-                - SW1 is already connected to BAT+ to drive the EN pin, add an extra wire to allow high current flow
+            - Done by cutting the traces going to the input, and running wires to `SW1`.
+                - `SW1` is already connected to `BATT+` to drive the `EN` pin, add an extra wire to allow high current flow
             - The EG1224 is only rated for 0.5A, finding higher current switches in this form factor is hard
                 - EG2219 is a DPDT switch rated for 0.5A per pole, which can theoretically be combined for 1A total current, but this is still impractical because the input must provide more than 1A current at peak loads
                 - Testing at 1A output current (~ 2A input current) seems to be fine (tested for ~10 seconds)
-            - This is the simplest solution for this revision, since it does not require EN to be rewired, nor does it allow the boost converter to continually drain the battery from quiescent current.
+            - This is the simplest solution for this revision, since it does not require `EN` to be rewired, nor does it allow the boost converter to continually drain the battery from quiescent current.
             - There is a risk of arcing if switch is disconnected during high load, although this has not been observed, and should never happen in normal operation
         - Use switch to cut off output current
             - Similar issues to cutting off input current, although current requirements on the output are lower
@@ -79,7 +80,7 @@ Notes:
             - This is intentional, we want to allow the battery to provide as much current as necessary for the boost converter
             - A battery capable of providing the necessary current without overheating is being used
         - Short circuit protection is untested
-            - This would involve shorting BATT+ to ground, which is unlikely to happen in regular operation
+            - This would involve shorting `BATT+` to ground, which is unlikely to happen in regular operation
             - This safety feature is typically intended for standalone battery protection boards that provide user accessible output terminals that could be accidentally shorted
         - Under voltage protection is untested
             - It is time-consuming to wait for the battery to completely drain while monitoring the voltage to ensure that the cutoff protection works.
@@ -88,10 +89,10 @@ Notes:
             - The charging circuit stops charging the battery prior to the over voltage protection threshold
         - Over charge current protection is untested
             - The charge current of the charging circuit is fixed at 500mA, and should never be high enough to trigger over charge current protection
-- Bypass diode D2 is left unpopulated
+- Bypass diode `D2` is left unpopulated
     - Theoretically it should be safe to populate, however it is unknown if this will cause adverse behavior with the boost circuit.
-    - Populating this diode will prevent the output from being turned off with the switch
-- Aluminum capacitors C10 and C1 are not structurally sound
+    - Populating this diode will prevent the output from being turned off with the switch when `VBUS` is present
+- Aluminum capacitors `C10` and `C1` are not structurally sound
     - Should be reinforced with hot glue
 
 ### Button harness (Assembled 2021-11-24)
