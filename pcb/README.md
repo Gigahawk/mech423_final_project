@@ -6,6 +6,8 @@ PCB files for LitePog
 
 The following notes refer to [pcb_rev1](https://github.com/Gigahawk/mech423_final_project/tree/pcb_rev1/pcb) (commit hash f791dd6).
 
+All hardware (with modifications) has been validated as of 2021-11-27.
+
 ### Logic Handle (assembled 2021-11-17)
 Logic handle was assembled and tested over multiple days:
 - 2021-11-17: Initial bring up and testing of all components
@@ -49,6 +51,7 @@ Notes:
 ### Power Handle
 Power handle was assembled over multiple days:
 - 2021-11-26: bring up and testing of critical components (boost, charging, protection, in that order)
+- 2021-11-27: assemble misc components (connectors, battery holder, button circuitry)
 
 Notes:
 - Boost circuit works as designed, capable of producing high current (> 1A continuous for 10 seconds)
@@ -95,14 +98,17 @@ Notes:
 - Aluminum capacitors `C10` and `C1` are not structurally sound
     - Should be reinforced with hot glue
 
-### Button harness (Assembled 2021-11-24)
+### Button Harness (Assembled 2021-11-24)
 - Works as expected
 
-### Neopixel strip (Assembled 2021-11-24)
+### Neopixel Strip (Assembled 2021-11-24)
 - Removing provided connectors is rather hard
     - Nearly damaged the pads while removing old joints
     - Simpler solution for next revision is to order more LEDs than required and cut off first one to access unsoldered pads
 
-### Interconnect harness (Assembled 2021-11-24)
+### Interconnect Harness (Assembled 2021-11-24)
 - Works as expected
 - Very time-consuming to assemble, set aside more time to do this next revision
+
+### Mock Power Handle (Assembled 2021-11-27)
+- Assembled board with bypass diode `D2` connecting the USB connector directly to `VCC`, and button circuitry for use in firmware testing.
