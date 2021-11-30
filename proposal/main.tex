@@ -21,19 +21,24 @@ The MSP430 will be used to control the LED's and process the signals from each c
 \section{Rationale}
 
 It's interesting to reverse engineer a product and see what type of difficulties the original developers may have experienced along the way.
-The product is still currently in it's kickstarter phase so it's not in full development and it would be nice to be able to have one to play with.
+The product is still currently in it's crowdfunding phase, so it's not in full development, and it would be nice to be able to have one to play with.
 
 \section{List of Functional Requirements}
 
 \begin{table}[H]
     \centering
-    \begin{tabularx}{\textwidth}{>{\hsize=.6\hsize\raggedright}X>{\hsize=.1\hsize\raggedright}X>{\hsize=.3\hsize\raggedright\arraybackslash}X}
-        Task & Effort & Person Responsible  \\\toprule
-         Power + charging PCB capable of delivering enough current for LED strip&20\% & Jasper\\\midrule
-         Microcontroller PCB to drive LED strip and read button inputs & 20\% & Jasper\\\midrule
-         Mechanical housing for parts& 20\% & Jacky\\\midrule
-         Addressable LED Strip& 5\% & Jacky\\ \midrule
-         Microcontroller code & 35\% & Jasper and Jacky\\\bottomrule
+    \begin{tabularx}{\textwidth}
+        {
+            >{\hsize=.6\hsize\raggedright}X
+            >{\hsize=.1\hsize\raggedright}X
+            >{\hsize=.3\hsize\raggedright\arraybackslash}X
+        }
+        Task                                                                    & Effort            & Person Responsible \\\toprule
+        Power + charging PCB capable of delivering enough current for LED strip & \SI{20}{\percent} & Jasper             \\\midrule
+        Microcontroller PCB to drive LED strip and read button inputs           & \SI{20}{\percent} & Jasper             \\\midrule
+        Mechanical housing for parts                                            & \SI{20}{\percent} & Jacky              \\\midrule
+        Addressable LED Strip                                                   & \SI{05}{\percent} & Jacky              \\ \midrule
+        Microcontroller code                                                    & \SI{35}{\percent} & Jasper and Jacky   \\\bottomrule
     \end{tabularx}
     \caption{Functional Requirements and their efforts}
     \label{tab:funcreq}
@@ -111,7 +116,7 @@ A bench power supply will be used to determine if a \SI{5}{\volt} boost circuit 
 \subsubsection{Brightness requirements}
 \begin{enumerate}
     \item Power the LED strip with \SI{5}{\volt} from a bench power supply
-    \item Connect a MCU to the data pin of the strip
+    \item Connect an MCU to the data pin of the strip
     \item Set all LEDs to full brightness white (RGB 255, 255, 255)
     \item Incrementally turn down the brightness until it is at a reasonable level
 \end{enumerate}
@@ -119,7 +124,7 @@ A bench power supply will be used to determine if a \SI{5}{\volt} boost circuit 
 \subsubsection{Voltage requirements}
 \begin{enumerate}
     \item Power the LED strip with \SI{3.2}{\volt} from a bench power supply
-    \item Connect a MCU to the data pin of the strip
+    \item Connect an MCU to the data pin of the strip
     \item Set all LEDs to a reasonable brightness of white
     \item If the LEDs turn on correctly, note the current consumption, if not, repeat the test at a higher voltage until the LED strip reliably turns on.
     \begin{itemize}
@@ -142,7 +147,7 @@ A bench power supply will be used to determine if a \SI{5}{\volt} boost circuit 
 Because there is limited space to store a power source within the handles of the device, a custom PCB will have to be made to hold the battery, and associated charging, protection and boost circuitry as required.
 
 Because the handle will be cylindrical, an 18650 battery will be used because it will be the most convenient form factor while providing high power and energy density.
-For safety reasons, a spring loaded battery holder will be used to avoid soldering or spot welding connections.
+For safety reasons, a spring-loaded battery holder will be used to avoid soldering or spot welding connections.
 
 \subsection{Inputs and Outputs}
 
@@ -191,7 +196,7 @@ For safety reasons, a spring loaded battery holder will be used to avoid solderi
 \subsubsection{Charging}
 
 \begin{enumerate}
-    \item Place PCB and USB battery bank inside of a fireproof container
+    \item Place PCB and USB battery bank inside a fireproof container
     \item Connect USB battery bank to PCB charging input
     \item Wait for charging to complete.
     \item Remove LiPo cell from PCB, ensure that it has the correct voltage for a charged cell (approximately \SI{4.2}{\volt})
@@ -200,7 +205,7 @@ For safety reasons, a spring loaded battery holder will be used to avoid solderi
 \subsubsection{Power Output}
 
 \begin{enumerate}
-    \item Place PCB inside of a fireproof container
+    \item Place PCB inside a fireproof container
     \item Connect PCB power output to a load
         \begin{itemize}
             \item If the lab contains a programmable load, this is preferred, otherwise the load can just be the LED strip + MCU
@@ -382,7 +387,7 @@ If it is no longer available at time of purchasing, the chip can be salvaged fro
 
 The battery or circuitry in the power PCB may not deliver enough power to the rest of the system when assembled.
 
-To mitigate limited power output, the USB charging connector and an auxilliary barrel connector will also be routed to the main power output so that the system can be externally powered.
+To mitigate limited power output, the USB charging connector and an auxiliary barrel connector will also be routed to the main power output so that the system can be externally powered.
 
 \section{Learning Objectives}
 
