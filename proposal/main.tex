@@ -1,0 +1,391 @@
+\documentclass{notes}
+\begin{document}
+\vspace*{\fill}
+\begin{center}
+{\centering\huge{MECH 423 Proposal}}\\
+\vspace*{2em}
+{\large Jasper Chan: 37467164 }\\
+{\large Jacky Chang: 19835164 }
+\end{center}
+\vspace*{\fill}
+\newpage
+\section{Objectives}
+
+The objective of this project is to design and create a simple two player game similar to LightPong\footnotemark.
+\footnotetext{
+    \url{https://www.kickstarter.com/projects/aaqib/light-pong-game}
+}
+The system will consist of two handles/controllers on each end of a flexible tube that houses an LED strip.
+The MSP430 will be used to control the LED's and process the signals from each controller.
+
+\section{Rationale}
+
+It's interesting to reverse engineer a product and see what type of difficulties the original developers may have experienced along the way.
+The product is still currently in it's kickstarter phase so it's not in full development and it would be nice to be able to have one to play with.
+
+\section{List of Functional Requirements}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\hsize=.6\hsize\raggedright}X>{\hsize=.1\hsize\raggedright}X>{\hsize=.3\hsize\raggedright\arraybackslash}X}
+        Task & Effort & Person Responsible  \\\toprule
+         Power + charging PCB capable of delivering enough current for LED strip&20\% & Jasper\\\midrule
+         Microcontroller PCB to drive LED strip and read button inputs & 20\% & Jasper\\\midrule
+         Mechanical housing for parts& 20\% & Jacky\\\midrule
+         Addressable LED Strip& 5\% & Jacky\\ \midrule
+         Microcontroller code & 35\% & Jasper and Jacky\\\bottomrule
+    \end{tabularx}
+    \caption{Functional Requirements and their efforts}
+    \label{tab:funcreq}
+\end{table}
+
+\section{Functional Requirement 1: Addressable LED strip}
+
+\subsection{Approach and Design}
+
+The most common addressable LED strips on the market are all based on the WS2812B (commonly referred to as Neopixels).
+The general rule of thumb is that each LED may consume up to \SI{60}{\milli\ampere} of current, although this rarely happens when displaying patterns on the strip since not all LEDs will be on/at full power.
+For our application, Adafruit sells\footnotemark\ a \SI{1}{\meter} long strip with 30 LEDs.
+\footnotetext{\url{https://www.adafruit.com/product/1376}}
+This provides an acceptable balance between LED density and current consumption.
+
+These LEDs are typically rated for \SI{5}{\volt} power and logic, however they can commonly be driven at lower voltages.
+In order to determine the power requirements for the power PCB, experimentation will have to be done.
+
+\subsection{Inputs and Outputs}
+
+\subsubsection{Inputs}
+
+\begin{enumerate}
+    \item Power
+    \begin{enumerate}
+        \item Voltage: nominally \SI{5}{\volt}, actual TBD
+        \item Current: Max \SI{60}{\milli\ampere} per LED
+    \end{enumerate}
+    \item Data: the WS2812B data format is described in the datasheet\footnotemark
+    \footnotetext{\url{https://cdn-shop.adafruit.com/datasheets/WS2812.pdf}}
+    \item Wiring: Wires between the handles will need to be run along the LED strip
+\end{enumerate}
+
+\subsubsection{Outputs}
+
+\begin{enumerate}
+    \item Light: the LED strip will emit light
+    \item Power: the power wiring inside the LED strip may be used to power the microcontroller PCB
+    \item Wiring: Wires between the handles will need to be run along the LED strip
+\end{enumerate}
+
+\subsection{Parameters}
+
+\begin{enumerate}
+    \item Strip length
+    \begin{enumerate}
+        \item Adafruit sells strips in \SI{1}{\meter} segments, but they can be cut in between each LED
+        \item A \SI{1}{\meter} strip will be used for convenience
+    \end{enumerate}
+    \item LED count
+    \begin{enumerate}
+        \item Adafruit sells strips at various LED densities
+        \item Higher densities will increase power and memory requirements on the MCU
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Development Plan}
+
+For simplicity, a \SI{1}{\meter} strip with 30 LEDs will be used.
+
+A \SI{3.3}{\volt} logic level microcontroller will be used to determine if the strip can be controlled without the use of a level shifter.
+
+A bench power supply will be used to determine if a \SI{5}{\volt} boost circuit will be needed to power the LEDs.
+
+\subsection{Test Plan}
+\label{sec:fr1testplan}
+
+\subsubsection{Logic level requirements}
+\begin{enumerate}
+    \item Power the LED strip with \SI{5}{\volt} from a bench power supply
+    \item Connect a \SI{3.3}{\volt} logic level MCU to the data pin of the strip
+    \item Attempt to display a test pattern, if this works, a level shifter is not required, if this does not work, redo the test with a level shifter.
+\end{enumerate}
+
+\subsubsection{Brightness requirements}
+\begin{enumerate}
+    \item Power the LED strip with \SI{5}{\volt} from a bench power supply
+    \item Connect a MCU to the data pin of the strip
+    \item Set all LEDs to full brightness white (RGB 255, 255, 255)
+    \item Incrementally turn down the brightness until it is at a reasonable level
+\end{enumerate}
+
+\subsubsection{Voltage requirements}
+\begin{enumerate}
+    \item Power the LED strip with \SI{3.2}{\volt} from a bench power supply
+    \item Connect a MCU to the data pin of the strip
+    \item Set all LEDs to a reasonable brightness of white
+    \item If the LEDs turn on correctly, note the current consumption, if not, repeat the test at a higher voltage until the LED strip reliably turns on.
+    \begin{itemize}
+        \item This will determine if we need a boost circuit or if the LEDs can be directly powered from a LiPo battery.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Integration}
+\begin{enumerate}
+    \item Power the LED strip with the determined acceptable voltage level
+    \item Connect MCU (with level shifter if required) to the data pin of the strip
+    \item Display a test pattern on the strip
+\end{enumerate}
+
+\section{Functional Requirement 2: Power + Charging PCB}
+\label{sec:fr2}
+
+\subsection{Approach and Design}
+
+Because there is limited space to store a power source within the handles of the device, a custom PCB will have to be made to hold the battery, and associated charging, protection and boost circuitry as required.
+
+Because the handle will be cylindrical, an 18650 battery will be used because it will be the most convenient form factor while providing high power and energy density.
+For safety reasons, a spring loaded battery holder will be used to avoid soldering or spot welding connections.
+
+\subsection{Inputs and Outputs}
+
+\subsubsection{Inputs}
+
+\begin{enumerate}
+    \item Charging power: Battery will be charged with a USB connection
+    \item Button: Power PCB will be housed in one of the device handles, and will need to have a connector for the handle button
+    \item Button LED signal: Power PCB will need a connection to receive the signal to turn the button's LED on or off.
+    \item Power Switch: The power PCB will need a power switch to disable the power output.
+\end{enumerate}
+
+\subsubsection{Outputs}
+
+\begin{enumerate}
+    \item LED strip power: Power PCB will need to provide power to the LED strip
+    \item Button signal: Power PCB will need to have a connection to deliver the button signal to the MCU
+    \item Button LED power: Power PCB will need to light up the button's LED when indicated by the MCU
+\end{enumerate}
+
+\subsection{Parameters}
+
+\begin{enumerate}
+    \item LED strip voltage: Determined in \autoref{sec:fr1testplan}
+    \item Total sustained current: Determined in \autoref{sec:fr1testplan}
+    \item Battery choice: Must be capable of providing enough power
+    \begin{itemize}
+        \item Battery may or may not come with protection circuitry built in.
+        Requirement for protection circuitry on the PCB is only required for unprotected cells.
+        PCB silkscreen will clearly indicate whether protected or unprotected cells should be used.
+    \end{itemize}
+    \item Charging current: for safety reasons this will be a conservative number (max 1C)
+    \item PCB dimensions: PCB must be big enough to hold all the components
+\end{enumerate}
+
+\subsection{Development Plan}
+
+\begin{enumerate}
+    \item Design schematic and layout of PCB
+    \item Send design to PCB house for manufacturing, buy components
+    \item Assemble PCB
+\end{enumerate}
+
+\subsection{Test Plan}
+
+\subsubsection{Charging}
+
+\begin{enumerate}
+    \item Place PCB and USB battery bank inside of a fireproof container
+    \item Connect USB battery bank to PCB charging input
+    \item Wait for charging to complete.
+    \item Remove LiPo cell from PCB, ensure that it has the correct voltage for a charged cell (approximately \SI{4.2}{\volt})
+\end{enumerate}
+
+\subsubsection{Power Output}
+
+\begin{enumerate}
+    \item Place PCB inside of a fireproof container
+    \item Connect PCB power output to a load
+        \begin{itemize}
+            \item If the lab contains a programmable load, this is preferred, otherwise the load can just be the LED strip + MCU
+        \end{itemize}
+    \item Enable PCB power output and load
+    \item Ensure power output is stable
+    \item Keep test running, ensure power output stops at or before designed battery cutoff voltage is reached.
+\end{enumerate}
+
+\subsubsection{Button LED}
+
+\begin{enumerate}
+    \item Connect button to PCB
+    \item Connect MCU GPIO to PCB
+    \item Enable PCB power output
+    \item Toggle Button LED GPIO, ensure LED toggles.
+\end{enumerate}
+
+\subsubsection{Button Input}
+
+\begin{enumerate}
+    \item Connect button to PCB
+    \item Connect MCU GPIO to PCB
+    \item Enable PCB power output
+    \item Press and release button, ensure MCU can read button input.
+\end{enumerate}
+
+\section{Functional Requirement 3: Microcontroller PCB}
+
+\subsection{Approach and Design}
+
+As required by the class, an MSP430 will be used.
+For simplicity, the same MSP430FR5739IDAR\footnotemark as used in Lab 3 will be used, and the design will be derived from the Lab 3 design.
+\footnotetext{
+    \url{https://www.digikey.ca/en/products/detail/texas-instruments/MSP430FR5739IDAR/2696032}
+}
+
+\subsection{Inputs and Outputs}
+
+\subsubsection{Inputs}
+
+\begin{enumerate}
+    \item Power: Power will be provided from the PCB board, either via the LED strip, or via a separate wire. Power may have to be stepped down to safely power the MCU
+    \item Button x2: MCU PCB will be housed in one of the device handles, and will need to have a connector for the handle button, as well as for the button on the other handle
+\end{enumerate}
+
+\subsubsection{Outputs}
+
+\begin{enumerate}
+    \item LED strip data: MCU PCB will need to control the LED strip
+    \item Button LED power x2: MCU PCB will need to light up the button's LED when indicated by the MCU
+\end{enumerate}
+
+\subsection{Parameters}
+
+\begin{enumerate}
+    \item Crystal choice: Determine frequency and precision of MCLK source
+\end{enumerate}
+
+\subsection{Development Plan}
+
+\begin{enumerate}
+    \item Design schematic and layout of PCB
+    \item Send design to PCB house for manufacturing, buy components
+    \item Assemble PCB
+\end{enumerate}
+
+\subsection{Test Plan}
+
+\begin{enumerate}
+    \item Power up PCB with bench power supply (use low current limit to minimize risk of shorts)
+    \item Check that MCU can be programmed
+    \item Program MCU with test firmware
+    \item Confirm functionality of all required IO pins with a test program
+\end{enumerate}
+
+\section{Functional Requirement 4: Mechanical Housing}
+
+\subsection{Approach and Design}
+
+A custom mechanical housing will have to be designed to house the other components.
+To avoid spending too much time or money machining, 3D printing will be primarily used to fabricate mechanical parts.
+To make debugging of other components easier, the housing will be designed to be disassembled easily.
+
+\subsection{Inputs and Outputs}
+
+\subsubsection{Inputs}
+
+\begin{enumerate}
+    \item Other components: all other components will either be fixed to or contained within the mechanical housing
+\end{enumerate}
+
+\subsubsection{Outputs}
+
+\begin{enumerate}
+    \item Mechanical stability: parts must be held securely
+\end{enumerate}
+
+\subsection{Parameters}
+
+\begin{enumerate}
+    \item Handle diameter: diameter must be small enough to be comfortable, but large enough contain the PCBs
+    \item Handle length: length must be short enough to be comfortable, but long enough to contain the PCBs
+\end{enumerate}
+
+\subsection{Development Plan}
+
+\begin{enumerate}
+    \item Once PCBs have been designed, PCB mechanical models will be passed on to the mechanical housing designer
+    \item Mechanical housing will be designed around the PCB models
+\end{enumerate}
+
+\subsection{Test Plan}
+
+\begin{enumerate}
+    \item PCBs (or printed models of the PCBs) will be assembled into the mechanical housings to test fit
+\end{enumerate}
+
+\section{Functional Requirement 5: Microcontroller Code}
+
+\subsection{Approach and Design}
+
+The code for the MCU will need to be written to implement the game behavior.
+Once the schematic for the MCU PCB is finalized, code can be written to run on it.
+
+\subsection{Inputs and Outputs}
+
+\subsubsection{Inputs}
+
+\begin{enumerate}
+    \item Buttons: The code must read the button inputs at the appropriate time
+\end{enumerate}
+
+\subsubsection{Outputs}
+
+\begin{enumerate}
+    \item Button LEDs: The code must drive the button LEDs at the appropriate time
+    \item LED strip: The code must drive the Neopixel LED strip at the appropriate time with the correct pattern
+\end{enumerate}
+
+\subsection{Parameters}
+
+\begin{enumerate}
+    \item Game speed: The movement speed of the "ball" will control how hard the game is to play
+\end{enumerate}
+
+\subsection{Development Plan}
+
+\begin{enumerate}
+    \item Once the schematic is finalized, code can be written for the PCB
+\end{enumerate}
+
+\subsection{Test Plan}
+
+\begin{enumerate}
+    \item Flash the code on the MCU PCB (or another MSP430 board if the MCU PCB has not been completed)
+    \item Hook up the buttons and LED strip and test that the code behaves as expected
+\end{enumerate}
+
+\section{Most Critical Module}
+
+The most critical module is the power PCB described in \autoref{sec:fr2}.
+The power PCB needs to provide stable power to all the other components.
+The power PCB will also be the larger of the two PCBs, and will be the limiting factor in how small the handles can be.
+
+\section{Risks and Countermeasures}
+
+\subsection{Parts Shortage}
+
+We are in the middle of a parts and shipping shortage at time of writing.
+
+To mitigate potential shipping delays, designs will be completed as soon as possible so that parts can be ordered as soon as possible.
+To mitigate parts potentially being available, a BOM will be kept up to date as the design progresses, and will be periodically checked with DigiKey to ensure that they are still available.
+Where possible, PCBs will be designed to support alternative parts.
+The most critical part will be the MSP430FR5739IDAR, which at time of writing is still available.
+If it is no longer available at time of purchasing, the chip can be salvaged from the PCB from Lab 3.
+
+\subsection{Limited Power}
+
+The battery or circuitry in the power PCB may not deliver enough power to the rest of the system when assembled.
+
+To mitigate limited power output, the USB charging connector and an auxilliary barrel connector will also be routed to the main power output so that the system can be externally powered.
+
+\section{Learning Objectives}
+
+We hope to further develop both electrical and mechanical CAD skills, as well as programming skills.
+
+\end{document}
