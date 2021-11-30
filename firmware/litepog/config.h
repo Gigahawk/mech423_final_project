@@ -93,14 +93,6 @@
 // LED 2 (connected to power handle) is on PJ.1
 #define LED2_PIN BIT1
 
-// Level shifter needs to be manually enabled
-#define SHFT_EN
-
-// Level shifter enable is on P3.7
-#define SHFT_PIN   BIT7
-#define SHFT_PxDIR P3DIR
-#define SHFT_PxOUT P3OUT
-
 #elif defined(LITEPOG_ALT)  // LitePog mainboard (alt config)
 
 // Neopixel is driven by UCA0
@@ -137,14 +129,6 @@
 #define LED1_PIN BIT2
 // LED 2 (connected to power handle) is on PJ.3
 #define LED2_PIN BIT3
-
-// Level shifter needs to be manually enabled
-#define SHFT_EN
-
-// Level shifter enable is on P3.7
-#define SHFT_PIN   BIT7
-#define SHFT_PxDIR P3DIR
-#define SHFT_PxOUT P3OUT
 
 #else
 
