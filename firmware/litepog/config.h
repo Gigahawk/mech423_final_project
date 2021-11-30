@@ -11,7 +11,27 @@
 // Number of LEDs in Neopixel strip
 #define NPX_NUM_LEDS 30
 
-//
+// Number of LEDs for one "pixel"/game element
+#define PIXEL_WIDTH (2 - (NPX_NUM_LEDS % 2))
+
+// Time between demo animation frames
+#define DEMO_INTERVAL 250
+
+// Time between countdown ticks
+#define COUNTDOWN_INTERVAL 700
+
+// Number of countdown ticks before game start
+#define COUNTDOWN_NUMBER 3
+
+// Time between winner animation frames
+#define WINNER_INTERVAL 300
+
+// Number of LEDs to flash per side
+#define WINNER_LED_WIDTH 3
+
+// Number of times the winner animation flashes
+#define WINNER_NUMBER 5
+
 
 // Hardware specific config
 #if defined(LITEPOG_EXP430)  // MSP-EXP430FR5739
