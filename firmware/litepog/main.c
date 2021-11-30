@@ -46,11 +46,6 @@ void initGpio(void) {
     LED_PxDIR |= (LED1_PIN | LED2_PIN);
     LED_PxOUT &= ~(LED1_PIN | LED2_PIN);
 
-#ifdef SHFT_EN
-    // Enable level shifter if required
-    SHFT_PxDIR |= (SHFT_PIN);
-    SHFT_PxOUT |= (SHFT_PIN);
-#endif
 }
 
 void initTimer(void) {
