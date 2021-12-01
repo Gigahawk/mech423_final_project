@@ -12,7 +12,7 @@
 #define NPX_NUM_LEDS 30
 
 // Time between demo animation frames
-#define DEMO_INTERVAL 250
+#define DEMO_INTERVAL 10
 
 // Time between countdown ticks
 #define COUNTDOWN_INTERVAL 700
