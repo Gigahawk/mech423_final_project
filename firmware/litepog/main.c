@@ -4,7 +4,13 @@
 #include "ws2812.h"
 #include "config.h"
 
-unsigned volatile long long counter;
+volatile uint64_t counter;
+
+typedef enum {
+    BTN_WAIT,
+    BTN_HIGH,
+    BTN_LOW
+} ButtonState;
 
 
 // Set DCO == SMCLK == MCLK == 24 MHz
@@ -76,8 +82,11 @@ void initTimer(void) {
 
 void drawCountDown(uint8_t state) {
     const uint8_t middle_idx = NPX_NUM_LEDS/2;
-    const uint8_t max_left = middle_idx - (COUNTDOWN_NUMBER - 1)*PIXEL_WIDTH;
-    const uint8_t max_right = middle_idx + (COUNTDOWN_NUMBER - 1)*PIXEL_WIDTH + (PIXEL_WIDTH - 1);
+    const uint8_t max_left = (
+            middle_idx - (COUNTDOWN_NUMBER - 1)*COUNTDOWN_LED_WIDTH);
+    const uint8_t max_right = (
+            middle_idx + (COUNTDOWN_NUMBER - 1)*COUNTDOWN_LED_WIDTH
+            + (COUNTDOWN_LED_WIDTH - 1));
     uint8_t i, j;
     uint8_t pos_left, pos_right;
 
@@ -85,9 +94,9 @@ void drawCountDown(uint8_t state) {
     if(state < COUNTDOWN_NUMBER) {
         // Show countdown going up (red lights)
         for(i=0; i<=state; i++) {
-            pos_left = middle_idx - i*PIXEL_WIDTH;
-            pos_right = middle_idx + i*PIXEL_WIDTH;
-            for(j=0; j<PIXEL_WIDTH; j++) {
+            pos_left = middle_idx - i*COUNTDOWN_LED_WIDTH;
+            pos_right = middle_idx + i*COUNTDOWN_LED_WIDTH;
+            for(j=0; j<COUNTDOWN_LED_WIDTH; j++) {
                 setLEDColor(pos_left + j, 255, 0, 0);
                 setLEDColor(pos_right + j, 255, 0, 0);
             }
@@ -103,9 +112,13 @@ void drawCountDown(uint8_t state) {
 void demoLoop(void) {
     int npx_idx = 0;
     bool countdown_started = false;
-    unsigned long long countdown_start;
-    unsigned long long demo_counter = 0;
+    uint64_t countdown_start;
+    uint64_t demo_counter = 0;
     uint8_t countdown_state;
+
+    clearStrip();
+    showStrip();
+
     while(1) {
         if(BTN_PxIN & BTN1_PIN)
             LED_PxOUT &= ~(LED1_PIN);
@@ -149,14 +162,86 @@ void demoLoop(void) {
     }
 }
 
+// Returns 0 if Player 1  wins, 1 if Player 2 wins
 uint8_t gameLoop(void) {
-    // TODO: Implement game logic
-    while(1) {
-        if(BTN_PxIN & BTN1_PIN)
-            return 0;
+    int8_t dir;
+    int32_t pos = NPX_NUM_LEDS / 2;
+    uint64_t ball_counter = 0;
+    int32_t ball_interval = BALL_INTERVAL_START;
+    ButtonState btn1, btn2;
 
-        if(BTN_PxIN & BTN2_PIN)
-            return 1;
+
+    // Ball should move away from player that releases button first
+    while(1) {
+        if(BTN_PxIN & BTN1_PIN) {
+            dir = 1;
+            break;
+        }
+
+        if(BTN_PxIN & BTN2_PIN) {
+            dir = -1;
+            break;
+        }
+    }
+
+    clearStrip();
+    showStrip();
+
+    while(1) {
+        if(ball_counter + ball_interval <= counter) {
+            ball_counter = counter;
+            pos += dir;
+            if(pos < 0)
+                return 1;
+            else if(pos >= NPX_NUM_LEDS)
+                return 0;
+            clearStrip();
+            setLEDColor(pos, 0, 0, 255);
+            showStrip();
+        }
+
+        if(pos == 0) {
+            LED_PxOUT |= LED1_PIN;
+            switch(btn1) {
+            case BTN_WAIT:
+                if(BTN_PxIN & BTN1_PIN)
+                    btn1 = BTN_HIGH;
+                break;
+            case BTN_HIGH:
+                if(!(BTN_PxIN & BTN1_PIN)) {
+                    btn1 = BTN_LOW;
+                    dir *= -1;
+                    ball_interval -= BALL_INTERVAL_SPEEDUP;
+                }
+                break;
+            }
+        } else {
+            LED_PxOUT &= ~(LED1_PIN);
+            btn1 = BTN_WAIT;
+        }
+
+        if(pos == NPX_NUM_LEDS - 1) {
+            LED_PxOUT |= LED2_PIN;
+            switch(btn2) {
+            case BTN_WAIT:
+                if(BTN_PxIN & BTN2_PIN)
+                    btn2 = BTN_HIGH;
+                break;
+            case BTN_HIGH:
+                if(!(BTN_PxIN & BTN2_PIN)) {
+                    btn2 = BTN_LOW;
+                    dir *= -1;
+                    ball_interval -= BALL_INTERVAL_SPEEDUP;
+                }
+                break;
+            }
+        } else {
+            LED_PxOUT &= ~(LED2_PIN);
+            btn2 = BTN_WAIT;
+        }
+
+        if(ball_interval < BALL_INTERVAL_MIN)
+            ball_interval = BALL_INTERVAL_MIN;
     }
 }
 
@@ -164,9 +249,11 @@ void winnerLoop(uint8_t winner) {
     uint8_t i = 0;
     uint8_t j;
     uint8_t winner_idx, loser_idx, idx1, idx2;
-    unsigned long long anim_start = counter;
+    uint64_t anim_start = counter;
 
+    LED_PxOUT &= 0;
     clearStrip();
+    showStrip();
     while(i<WINNER_NUMBER*2) {
         if (counter >= anim_start + i*WINNER_INTERVAL) {
             if(i%2) {

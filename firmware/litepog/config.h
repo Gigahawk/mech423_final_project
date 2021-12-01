@@ -11,17 +11,26 @@
 // Number of LEDs in Neopixel strip
 #define NPX_NUM_LEDS 30
 
-// Number of LEDs for one "pixel"/game element
-#define PIXEL_WIDTH (2 - (NPX_NUM_LEDS % 2))
-
 // Time between demo animation frames
 #define DEMO_INTERVAL 250
 
 // Time between countdown ticks
 #define COUNTDOWN_INTERVAL 700
 
+// Number of LEDs lit up for each countdown tick
+#define COUNTDOWN_LED_WIDTH (2 - (NPX_NUM_LEDS % 2))
+
 // Number of countdown ticks before game start
 #define COUNTDOWN_NUMBER 3
+
+// Initial time between ball events
+#define BALL_INTERVAL_START 150
+
+// Amount of speedup after each rally
+#define BALL_INTERVAL_SPEEDUP 10
+
+// Minimum interval time (max ball speed)
+#define BALL_INTERVAL_MIN 50
 
 // Time between winner animation frames
 #define WINNER_INTERVAL 300
