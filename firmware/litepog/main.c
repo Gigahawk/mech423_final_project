@@ -114,10 +114,9 @@ void demoLoop(void) {
     bool countdown_started = false;
     uint64_t countdown_start;
     uint64_t demo_counter = 0;
-    uint8_t countdown_state;
+    uint8_t countdown_state = 0;
     HsvColor hsv = {0, 255, 100};
     RgbColor rgb;
-
 
     clearStrip();
     showStrip();
