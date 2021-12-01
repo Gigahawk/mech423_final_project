@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include "ws2812.h"
 #include "config.h"
+#include "color.h"
 
 volatile uint64_t counter;
 
@@ -110,11 +111,13 @@ void drawCountDown(uint8_t state) {
 }
 
 void demoLoop(void) {
-    int npx_idx = 0;
     bool countdown_started = false;
     uint64_t countdown_start;
     uint64_t demo_counter = 0;
     uint8_t countdown_state;
+    HsvColor hsv = {0, 255, 100};
+    RgbColor rgb;
+
 
     clearStrip();
     showStrip();
@@ -152,11 +155,11 @@ void demoLoop(void) {
             countdown_state = 0;
             if(counter > demo_counter + DEMO_INTERVAL) {
                 demo_counter = counter;
+                rgb = HsvToRgb(hsv);
                 clearStrip();
-                setLEDColor(npx_idx, 0, 0, 255);
+                fillStrip(rgb.r, rgb.g, rgb.b);
                 showStrip();
-                if(++npx_idx >= NPX_NUM_LEDS)
-                    npx_idx = 0;
+                hsv.h++;
             }
         }
     }
