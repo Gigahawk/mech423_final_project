@@ -161,13 +161,6 @@ Wire Wire Line
 	7600 3850 7600 3750
 Connection ~ 6750 3850
 Wire Wire Line
-	3300 3750 3300 3850
-Wire Wire Line
-	3300 3850 3500 3850
-Wire Wire Line
-	3900 3850 3500 3850
-Connection ~ 3500 3850
-Wire Wire Line
 	3900 3850 4550 3850
 Wire Wire Line
 	4800 3850 4800 4100
@@ -175,31 +168,14 @@ Wire Wire Line
 	4800 4100 4900 4100
 Connection ~ 3900 3850
 Wire Wire Line
-	3500 4250 3500 4150
-Wire Wire Line
 	3900 4250 3900 4150
 Connection ~ 4550 3850
 Wire Wire Line
 	4550 3850 4800 3850
 Wire Wire Line
 	4550 4250 4550 4150
-Text GLabel 4900 4350 0    39   Input ~ 0
-OUTEN
-Text GLabel 4000 4950 2    39   Input ~ 0
-OUTEN
 Wire Wire Line
-	4000 4950 3900 4950
-Wire Wire Line
-	3900 4950 3900 5050
-Wire Wire Line
-	3900 5350 3900 5450
-Wire Wire Line
-	3800 4950 3900 4950
-Connection ~ 3900 4950
-Wire Wire Line
-	3300 4850 3300 4950
-Wire Wire Line
-	3300 4950 3400 4950
+	3100 4750 3100 4850
 Wire Wire Line
 	4500 4900 4500 5000
 Wire Wire Line
@@ -288,49 +264,38 @@ F 4 "A126373CT-ND" H 4500 4750 50  0001 C CNN "Digikey"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+BATT #PWR012
-U 1 1 61903928
-P 3300 4850
-F 0 "#PWR012" H 3300 4700 50  0001 C CNN
-F 1 "+BATT" H 3315 5023 50  0000 C CNN
-F 2 "" H 3300 4850 50  0001 C CNN
-F 3 "" H 3300 4850 50  0001 C CNN
-	1    3300 4850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Switch:SW_SPST SW1
 U 1 1 6190069F
-P 3600 4950
-F 0 "SW1" H 3600 5185 50  0000 C CNN
-F 1 "SW_SPST" H 3600 5094 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_E-Switch_EG1224_SPDT_Angled" H 3600 4950 50  0001 C CNN
-F 3 "https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/119/EG.pdf" H 3600 4950 50  0001 C CNN
-F 4 "EG2585-ND" H 3600 4950 50  0001 C CNN "Digikey"
-	1    3600 4950
-	1    0    0    -1  
+P 3100 4550
+F 0 "SW1" V 3150 4400 50  0000 C CNN
+F 1 "SW_SPST" V 3050 4350 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_E-Switch_EG1224_SPDT_Angled" H 3100 4550 50  0001 C CNN
+F 3 "https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/119/EG.pdf" H 3100 4550 50  0001 C CNN
+F 4 "EG2585-ND" H 3100 4550 50  0001 C CNN "Digikey"
+	1    3100 4550
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R5
 U 1 1 618EB047
-P 3900 5200
-F 0 "R5" V 3693 5200 50  0000 C CNN
-F 1 "10k" V 3784 5200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3830 5200 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 3900 5200 50  0001 C CNN
-F 4 "RMCF0805JT10K0CT-ND" H 3900 5200 50  0001 C CNN "Digikey"
-	1    3900 5200
-	-1   0    0    1   
+P 2850 4250
+F 0 "R5" V 3050 4250 50  0000 C CNN
+F 1 "10k" V 2950 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2780 4250 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2850 4250 50  0001 C CNN
+F 4 "RMCF0805JT10K0CT-ND" H 2850 4250 50  0001 C CNN "Digikey"
+	1    2850 4250
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR015
 U 1 1 618EBB3E
-P 3900 5450
-F 0 "#PWR015" H 3900 5200 50  0001 C CNN
-F 1 "GND" H 3905 5277 50  0000 C CNN
-F 2 "" H 3900 5450 50  0001 C CNN
-F 3 "" H 3900 5450 50  0001 C CNN
-	1    3900 5450
+P 3100 4850
+F 0 "#PWR015" H 3100 4600 50  0001 C CNN
+F 1 "GND" H 3105 4677 50  0000 C CNN
+F 2 "" H 3100 4850 50  0001 C CNN
+F 3 "" H 3100 4850 50  0001 C CNN
+	1    3100 4850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -368,29 +333,6 @@ F 3 "" H 3900 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR013
-U 1 1 618D7836
-P 3500 4250
-F 0 "#PWR013" H 3500 4000 50  0001 C CNN
-F 1 "GND" H 3505 4077 50  0000 C CNN
-F 2 "" H 3500 4250 50  0001 C CNN
-F 3 "" H 3500 4250 50  0001 C CNN
-	1    3500 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP1 C1
-U 1 1 618D1D49
-P 3500 4000
-F 0 "C1" H 3615 4046 50  0000 L CNN
-F 1 "470u" H 3615 3955 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_8x10" H 3500 4000 50  0001 C CNN
-F 3 "https://www.we-online.com/katalog/datasheet/875115252003.pdf" H 3500 4000 50  0001 C CNN
-F 4 "732-6451-1-ND" H 3500 4000 50  0001 C CNN "Digikey"
-	1    3500 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 618D143D
 P 3900 4000
@@ -405,12 +347,12 @@ $EndComp
 $Comp
 L power:+BATT #PWR011
 U 1 1 618C9FC8
-P 3300 3750
-F 0 "#PWR011" H 3300 3600 50  0001 C CNN
-F 1 "+BATT" H 3315 3923 50  0000 C CNN
-F 2 "" H 3300 3750 50  0001 C CNN
-F 3 "" H 3300 3750 50  0001 C CNN
-	1    3300 3750
+P 2600 3750
+F 0 "#PWR011" H 2600 3600 50  0001 C CNN
+F 1 "+BATT" H 2615 3923 50  0000 C CNN
+F 2 "" H 2600 3750 50  0001 C CNN
+F 3 "" H 2600 3750 50  0001 C CNN
+	1    2600 3750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1491,4 +1433,66 @@ Wire Wire Line
 	10100 2850 10300 2850
 Text Notes 10050 2450 0    118  ~ 24
 Bypass
+$Comp
+L Transistor_FET:IRF7404 Q4
+U 1 1 61CC99EE
+P 3100 3950
+F 0 "Q4" V 3442 3950 50  0000 C CNN
+F 1 "IRF7404" V 3351 3950 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3300 3875 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/irf7404.pdf?fileId=5546d462533600a4015355fa2b5b1b9e" V 3100 3950 50  0001 L CNN
+F 4 "IRF7404PBFCT-ND" H 3100 3950 50  0001 C CNN "Digikey"
+	1    3100 3950
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4900 4350 4800 4350
+Wire Wire Line
+	4800 4350 4800 4100
+Connection ~ 4800 4100
+Wire Wire Line
+	3000 4250 3100 4250
+Wire Wire Line
+	3100 4250 3100 4150
+Wire Wire Line
+	2700 4250 2600 4250
+Wire Wire Line
+	2600 3750 2600 3850
+Connection ~ 2600 3850
+Wire Wire Line
+	2600 3850 2600 4250
+Wire Wire Line
+	2600 3850 2900 3850
+Wire Wire Line
+	3100 4350 3100 4250
+Connection ~ 3100 4250
+$Comp
+L Device:CP1 C1
+U 1 1 618D1D49
+P 2450 4000
+F 0 "C1" H 2200 4050 50  0000 L CNN
+F 1 "470u" H 2150 3950 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 2450 4000 50  0001 C CNN
+F 3 "https://www.we-online.com/katalog/datasheet/875115252003.pdf" H 2450 4000 50  0001 C CNN
+F 4 "732-6451-1-ND" H 2450 4000 50  0001 C CNN "Digikey"
+	1    2450 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 618D7836
+P 2450 4250
+F 0 "#PWR013" H 2450 4000 50  0001 C CNN
+F 1 "GND" H 2455 4077 50  0000 C CNN
+F 2 "" H 2450 4250 50  0001 C CNN
+F 3 "" H 2450 4250 50  0001 C CNN
+	1    2450 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4250 2450 4150
+Wire Wire Line
+	3300 3850 3900 3850
+Wire Wire Line
+	2600 3850 2450 3850
 $EndSCHEMATC
