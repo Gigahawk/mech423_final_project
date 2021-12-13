@@ -1,0 +1,3 @@
+﻿"diameter"= 18.20mm
+"unprot_height"= 65.20mm
+"prot_height" = 72.5mm
