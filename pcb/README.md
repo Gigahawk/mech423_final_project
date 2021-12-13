@@ -52,6 +52,7 @@ Notes:
 Power handle was assembled over multiple days:
 - 2021-11-26: bring up and testing of critical components (boost, charging, protection, in that order)
 - 2021-11-27: assemble misc components (connectors, battery holder, button circuitry)
+- 2021-12-09: Final testing of safety features
 
 Notes:
 - Boost circuit works as designed, capable of producing high current (> 1A continuous for 10 seconds)
@@ -76,6 +77,7 @@ Notes:
 - Charging circuit appears to work as expected
     - LED comes on when plugged in and battery is below max voltage
     - LED turns off when max voltage is reached
+    - *EDIT 2021-12-09: Full discharge and charge cycle tested. Charging cutoff occurred at 4.2V as expected*
 - Protection circuit appears to work as expected
     - Datasheet for BQ2970 indicates that it must be bootstrapped the first time by connecting a charger to the battery, which was observed
     - *Note: protection features are largely untested*
@@ -88,6 +90,9 @@ Notes:
         - Under voltage protection is untested
             - It is time-consuming to wait for the battery to completely drain while monitoring the voltage to ensure that the cutoff protection works.
             - Periodic checking of the battery voltage during firmware development should take place to ensure the battery voltage is within safe levels
+            - *EDIT 2021-12-09: Full discharge and charge cycle tested.*
+                - Output was shut off at a safe voltage (VBAT ~2.9V when measured, but it may have risen slightly due to hysteresis)
+                - It is unclear which chip is actually responsible for cutting off the battery, both the PAM2423 boost converter and the BQ29703DSET protection chip is rated for an under voltage lockout of 2.5V, although it is likely both chips are working as expected.
         - Over voltage protection is untested
             - The charging circuit stops charging the battery prior to the over voltage protection threshold
         - Over charge current protection is untested
