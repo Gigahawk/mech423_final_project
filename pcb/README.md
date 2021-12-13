@@ -47,6 +47,7 @@ Notes:
             *Pin 1 was left floating, which was connected back to R8 with a bodge wire.*
         - Fix transistor configuration in schematic(swap drain and source)
             - ideal solution for next revision
+- *EDIT 2021-12-06: LED strip connector `JNPX1` should be moved towards the center by 0.5 to 1mm to avoid interference with the casing.*
 
 ### Power Handle
 Power handle was assembled over multiple days:
