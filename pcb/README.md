@@ -2,13 +2,6 @@
 
 PCB files for LitePog
 
-## Rev 2 Bring-Up Notes
-
-The following notes refer to [pcb_rev2](https://github.com/Gigahawk/mech423_final_project/tree/pcb_rev2/pcb) (commit hash 01e5584).
-
-Hardware has not been validated as of 2021-12-13, however it is likely that this revision will be functional out of the box.
-
-
 ## Rev 1 Bring-Up Notes
 
 The following notes refer to [pcb_rev1](https://github.com/Gigahawk/mech423_final_project/tree/pcb_rev1/pcb) (commit hash f791dd6).
