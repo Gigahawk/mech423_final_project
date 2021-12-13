@@ -456,12 +456,194 @@ Wire Wire Line
 Wire Wire Line
 	8300 4100 8300 4000
 Connection ~ 8200 4100
-Text Notes 1500 4250 0    118  ~ 24
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U2
+U 1 1 619CE39A
+P 2850 5100
+F 0 "U2" H 2600 5750 50  0000 C CNN
+F 1 "TXS0108EPW" H 3150 4450 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 2850 4350 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 2850 5000 50  0001 C CNN
+F 4 "296-21527-1-ND" H 2850 5100 50  0001 C CNN "Digikey"
+	1    2850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 619CF59A
+P 2750 4300
+F 0 "#PWR0108" H 2750 4150 50  0001 C CNN
+F 1 "+3V3" H 2765 4473 50  0000 C CNN
+F 2 "" H 2750 4300 50  0001 C CNN
+F 3 "" H 2750 4300 50  0001 C CNN
+	1    2750 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 4400 2750 4300
+$Comp
+L power:VCC #PWR0109
+U 1 1 619D199B
+P 2950 4300
+F 0 "#PWR0109" H 2950 4150 50  0001 C CNN
+F 1 "VCC" H 2965 4473 50  0000 C CNN
+F 2 "" H 2950 4300 50  0001 C CNN
+F 3 "" H 2950 4300 50  0001 C CNN
+	1    2950 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4400 2950 4300
+$Comp
+L Device:R R3
+U 1 1 619D30A3
+P 1450 4500
+F 0 "R3" H 1300 4450 50  0000 L CNN
+F 1 "10k" H 1250 4550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1380 4500 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1450 4500 50  0001 C CNN
+F 4 "RMCF0805JT10K0CT-ND" H 1450 4500 50  0001 C CNN "Digikey"
+	1    1450 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 619D40ED
+P 1450 4750
+F 0 "#PWR0110" H 1450 4500 50  0001 C CNN
+F 1 "GND" H 1455 4577 50  0000 C CNN
+F 2 "" H 1450 4750 50  0001 C CNN
+F 3 "" H 1450 4750 50  0001 C CNN
+	1    1450 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 4700 0    50   Input ~ 0
+SHFT_EN
+$Comp
+L power:GND #PWR0111
+U 1 1 619D79C2
+P 2850 5900
+F 0 "#PWR0111" H 2850 5650 50  0001 C CNN
+F 1 "GND" H 2855 5727 50  0000 C CNN
+F 2 "" H 2850 5900 50  0001 C CNN
+F 3 "" H 2850 5900 50  0001 C CNN
+	1    2850 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 5800 2850 5900
+$Comp
+L Device:C C3
+U 1 1 619D9BB2
+P 800 4500
+F 0 "C3" H 900 4450 50  0000 L CNN
+F 1 "0.1u" H 900 4550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 838 4350 50  0001 C CNN
+F 3 "https://datasheets.avx.com/X7RDielectric.pdf" H 800 4500 50  0001 C CNN
+F 4 "478-10836-1-ND" H 800 4500 50  0001 C CNN "Digikey"
+	1    800  4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 619DC720
+P 800 4750
+F 0 "#PWR0112" H 800 4500 50  0001 C CNN
+F 1 "GND" H 805 4577 50  0000 C CNN
+F 2 "" H 800 4750 50  0001 C CNN
+F 3 "" H 800 4750 50  0001 C CNN
+	1    800  4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 619DD6CD
+P 1000 4750
+F 0 "#PWR0113" H 1000 4500 50  0001 C CNN
+F 1 "GND" H 1005 4577 50  0000 C CNN
+F 2 "" H 1000 4750 50  0001 C CNN
+F 3 "" H 1000 4750 50  0001 C CNN
+	1    1000 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  4750 800  4650
+Wire Wire Line
+	1000 4750 1000 4650
+$Comp
+L Device:C C4
+U 1 1 619DFAAB
+P 1000 4500
+F 0 "C4" H 1115 4546 50  0000 L CNN
+F 1 "10u" H 1115 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1038 4350 50  0001 C CNN
+F 3 "http://www1.futureelectronics.com/doc/Samsung%20Electro-Mechanics/CL21A106KPFNNNG.pdf" H 1000 4500 50  0001 C CNN
+F 4 "1276-6456-1-ND" H 1000 4500 50  0001 C CNN "Digikey"
+	1    1000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0114
+U 1 1 619E1DEA
+P 800 4250
+F 0 "#PWR0114" H 800 4100 50  0001 C CNN
+F 1 "+3V3" H 815 4423 50  0000 C CNN
+F 2 "" H 800 4250 50  0001 C CNN
+F 3 "" H 800 4250 50  0001 C CNN
+	1    800  4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0115
+U 1 1 619E251A
+P 1000 4250
+F 0 "#PWR0115" H 1000 4100 50  0001 C CNN
+F 1 "VCC" H 1015 4423 50  0000 C CNN
+F 2 "" H 1000 4250 50  0001 C CNN
+F 3 "" H 1000 4250 50  0001 C CNN
+	1    1000 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  4250 800  4350
+Wire Wire Line
+	1000 4250 1000 4350
+Text Notes 1250 3900 0    118  ~ 24
 Level Shifting
 Text Notes 7150 850  0    118  ~ 24
 MCU
 Text Notes 1300 900  0    118  ~ 24
 Power
+$Comp
+L Device:R R4
+U 1 1 619F32E8
+P 3500 4800
+F 0 "R4" V 3550 4550 50  0000 L CNN
+F 1 "470R" V 3450 4500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3430 4800 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-3&DocType=DS&DocLang=English" H 3500 4800 50  0001 C CNN
+F 4 "A129745CT-ND" H 3500 4800 50  0001 C CNN "Digikey"
+	1    3500 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 4800 3300 4800
+Wire Wire Line
+	3650 4800 3800 4800
+Text GLabel 3800 4800 2    50   Input ~ 0
+NPX
+Text GLabel 2350 4800 0    50   Input ~ 0
+NPX_MCU_SHIFT
+Wire Wire Line
+	1450 4650 1450 4750
+Text GLabel 1450 4250 0    50   Input ~ 0
+SHFT_EN
+Wire Wire Line
+	1450 4250 1450 4350
+Wire Wire Line
+	2350 4700 2450 4700
+Wire Wire Line
+	2350 4800 2450 4800
 $Comp
 L Jumper:Jumper_3_Bridged12 JP1
 U 1 1 618BAD14
@@ -520,6 +702,15 @@ Wire Wire Line
 	3600 7650 3600 7550
 Text GLabel 3250 7400 0    50   Input ~ 0
 NPX_MCU_SHIFT
+Text GLabel 3350 4650 2    50   Input ~ 0
+NPX_MCU_BYPASS
+Wire Wire Line
+	3350 4650 3300 4650
+Wire Wire Line
+	3300 4650 3300 4800
+Connection ~ 3300 4800
+Wire Wire Line
+	3300 4800 3250 4800
 Text GLabel 3950 7400 2    50   Input ~ 0
 NPX_MCU_BYPASS
 Wire Wire Line
@@ -560,7 +751,7 @@ LED1_AUX
 Wire Wire Line
 	1950 8000 1850 8000
 Text GLabel 1600 8250 2    50   Input ~ 0
-LED1
+LED1_MCU
 Wire Wire Line
 	1600 8250 1600 8150
 $Comp
@@ -583,7 +774,7 @@ LED2_AUX
 Wire Wire Line
 	1950 8600 1850 8600
 Text GLabel 1600 8850 2    50   Input ~ 0
-LED2
+LED2_MCU
 Wire Wire Line
 	1600 8850 1600 8750
 Text GLabel 4700 2050 0    50   Input ~ 0
@@ -734,6 +925,68 @@ Wire Wire Line
 	10000 3750 9900 3750
 Connection ~ 9900 3750
 $Comp
+L Jumper:Jumper_3_Bridged12 JP7
+U 1 1 6195E4BA
+P 3600 8000
+F 0 "JP7" H 3600 8204 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 8113 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 8000 50  0001 C CNN
+F 3 "~" H 3600 8000 50  0001 C CNN
+	1    3600 8000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 8000 0    50   Input ~ 0
+LED1_MCU_SHIFT
+Wire Wire Line
+	3250 8000 3350 8000
+Wire Wire Line
+	3950 8000 3850 8000
+Text GLabel 3600 8250 2    50   Input ~ 0
+LED1_MCU
+Wire Wire Line
+	3600 8250 3600 8150
+$Comp
+L Jumper:Jumper_3_Bridged12 JP8
+U 1 1 61964C9A
+P 3600 8600
+F 0 "JP8" H 3600 8804 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 8713 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 8600 50  0001 C CNN
+F 3 "~" H 3600 8600 50  0001 C CNN
+	1    3600 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 8600 3350 8600
+Wire Wire Line
+	3950 8600 3850 8600
+Text GLabel 3600 8850 2    50   Input ~ 0
+LED2_MCU
+Wire Wire Line
+	3600 8850 3600 8750
+Text GLabel 3250 8600 0    50   Input ~ 0
+LED2_MCU_SHIFT
+Text GLabel 2350 4900 0    50   Input ~ 0
+LED1_MCU_SHIFT
+Text GLabel 2350 5000 0    50   Input ~ 0
+LED2_MCU_SHIFT
+Wire Wire Line
+	2350 4900 2450 4900
+Wire Wire Line
+	2350 5000 2450 5000
+Text GLabel 3350 4900 2    50   Input ~ 0
+LED1
+Wire Wire Line
+	3350 4900 3250 4900
+Text GLabel 3350 5000 2    50   Input ~ 0
+LED2
+Wire Wire Line
+	3250 5000 3350 5000
+Text GLabel 3950 8600 2    50   Input ~ 0
+LED2
+Text GLabel 3950 8000 2    50   Input ~ 0
+LED1
+$Comp
 L Jumper:Jumper_3_Bridged12 JP4
 U 1 1 6198166F
 P 1600 9200
@@ -753,7 +1006,7 @@ BTN1_AUX
 Wire Wire Line
 	1950 9200 1850 9200
 Text GLabel 1600 9450 2    50   Input ~ 0
-BTN1
+BTN1_MCU
 Wire Wire Line
 	1600 9450 1600 9350
 $Comp
@@ -776,11 +1029,73 @@ BTN2_AUX
 Wire Wire Line
 	1950 9800 1850 9800
 Text GLabel 1600 10050 2    50   Input ~ 0
-BTN2
+BTN2_MCU
 Wire Wire Line
 	1600 10050 1600 9950
-Text Notes 850  7050 0    118  ~ 24
-Level Shifter Bypass/Auxiliary pin select
+$Comp
+L Jumper:Jumper_3_Bridged12 JP9
+U 1 1 6198CA2E
+P 3600 9200
+F 0 "JP9" H 3600 9404 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 9313 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 9200 50  0001 C CNN
+F 3 "~" H 3600 9200 50  0001 C CNN
+	1    3600 9200
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 9200 0    50   Input ~ 0
+BTN1_MCU_SHIFT
+Wire Wire Line
+	3250 9200 3350 9200
+Text GLabel 3950 9200 2    50   Input ~ 0
+BTN1
+Wire Wire Line
+	3950 9200 3850 9200
+Text GLabel 3600 9450 2    50   Input ~ 0
+BTN1_MCU
+Wire Wire Line
+	3600 9450 3600 9350
+$Comp
+L Jumper:Jumper_3_Bridged12 JP10
+U 1 1 61992140
+P 3600 9800
+F 0 "JP10" H 3600 10004 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 3600 9913 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm" H 3600 9800 50  0001 C CNN
+F 3 "~" H 3600 9800 50  0001 C CNN
+	1    3600 9800
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 9800 0    50   Input ~ 0
+BTN2_MCU_SHIFT
+Wire Wire Line
+	3250 9800 3350 9800
+Text GLabel 3950 9800 2    50   Input ~ 0
+BTN2
+Wire Wire Line
+	3950 9800 3850 9800
+Text GLabel 3600 10050 2    50   Input ~ 0
+BTN2_MCU
+Wire Wire Line
+	3600 10050 3600 9950
+Text GLabel 2350 5100 0    50   Input ~ 0
+BTN1_MCU_SHIFT
+Wire Wire Line
+	2350 5100 2450 5100
+Text GLabel 2350 5200 0    50   Input ~ 0
+BTN2_MCU_SHIFT
+Wire Wire Line
+	2350 5200 2450 5200
+Text GLabel 3350 5100 2    50   Input ~ 0
+BTN1
+Wire Wire Line
+	3350 5100 3250 5100
+Text GLabel 3350 5200 2    50   Input ~ 0
+BTN2
+Wire Wire Line
+	3350 5200 3250 5200
+Text Notes 1650 7000 0    118  ~ 24
+Level Shifter Bypass
 $Comp
 L power:VCC #PWR0118
 U 1 1 619D05E6
@@ -882,6 +1197,18 @@ Wire Wire Line
 	9000 8050 9100 8050
 Wire Wire Line
 	9100 8050 9100 7950
+$Comp
+L Transistor_FET:BSS214NW Q1
+U 1 1 61A0A21F
+P 9200 8500
+F 0 "Q1" H 9405 8454 50  0000 L CNN
+F 1 "BSS214NW" H 9405 8545 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9400 8425 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 9200 8500 50  0001 L CNN
+F 4 "BSS214NWH6327XTSA1CT-ND" H 9200 8500 50  0001 C CNN "Digikey"
+	1    9200 8500
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
 	9000 8200 9100 8200
 Wire Wire Line
@@ -1017,6 +1344,16 @@ Wire Wire Line
 	12700 2250 12600 2250
 Text Notes 12050 1450 0    118  ~ 24
 Programming
+Text GLabel 10050 2250 2    50   Input ~ 0
+SHFT_EN
+Wire Wire Line
+	10050 2250 9950 2250
+NoConn ~ 2450 5300
+NoConn ~ 2450 5400
+NoConn ~ 2450 5500
+NoConn ~ 3250 5300
+NoConn ~ 3250 5400
+NoConn ~ 3250 5500
 NoConn ~ 4800 2450
 NoConn ~ 4800 2550
 NoConn ~ 4800 1750
@@ -1202,14 +1539,25 @@ F 3 "~" H 12550 8550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:TestPoint TP12
-U 1 1 61B9BA2D
+L Connector:TestPoint TP11
+U 1 1 61B9BA23
 P 12350 8700
-F 0 "TP12" V 12400 8900 50  0000 L BNN
+F 0 "TP11" V 12400 8900 50  0000 L BNN
 F 1 "TestPoint" V 12300 8900 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8700 50  0001 C CNN
 F 3 "~" H 12550 8700 50  0001 C CNN
 	1    12350 8700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP12
+U 1 1 61B9BA2D
+P 12350 8850
+F 0 "TP12" V 12400 9050 50  0000 L BNN
+F 1 "TestPoint" V 12300 9050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 12550 8850 50  0001 C CNN
+F 3 "~" H 12550 8850 50  0001 C CNN
+	1    12350 8850
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -1219,133 +1567,17 @@ BTN2
 Wire Wire Line
 	12450 8550 12350 8550
 Text GLabel 12450 8700 2    50   Input ~ 0
-NPX_MCU_BYPASS
+SHFT_EN
 Wire Wire Line
 	12450 8700 12350 8700
+Text GLabel 12450 8850 2    50   Input ~ 0
+NPX_MCU_BYPASS
+Wire Wire Line
+	12450 8850 12350 8850
 Text Notes 9750 3650 0    50   ~ 0
 24MHz or DNI
 Text Notes 8200 6800 0    118  ~ 24
 Common
 Text Notes 11750 6850 0    118  ~ 24
 Testpoints
-$Comp
-L Transistor_FET:BSS214NW Q1
-U 1 1 61A0A21F
-P 9200 8500
-F 0 "Q1" H 9405 8454 50  0000 L CNN
-F 1 "BSS214NW" H 9405 8545 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9400 8425 50  0001 L CIN
-F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 9200 8500 50  0001 L CNN
-F 4 "BSS214NWH6327XTSA1CT-ND" H 9200 8500 50  0001 C CNN "Digikey"
-	1    9200 8500
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 5350 2500 5350
-Wire Wire Line
-	2450 5200 2450 5350
-Connection ~ 2450 5200
-Wire Wire Line
-	2550 5200 2450 5200
-Text GLabel 2500 5350 2    50   Input ~ 0
-NPX_MCU_BYPASS
-Text GLabel 3000 5200 2    50   Input ~ 0
-NPX
-Wire Wire Line
-	2850 5200 3000 5200
-$Comp
-L Device:R R4
-U 1 1 619F32E8
-P 2700 5200
-F 0 "R4" V 2750 4950 50  0000 L CNN
-F 1 "470R" V 2650 4900 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2630 5200 50  0001 C CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-3&DocType=DS&DocLang=English" H 2700 5200 50  0001 C CNN
-F 4 "A129745CT-ND" H 2700 5200 50  0001 C CNN "Digikey"
-	1    2700 5200
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2450 5200 2300 5200
-Wire Wire Line
-	2450 5100 2450 5200
-Wire Wire Line
-	2450 4800 2450 4700
-$Comp
-L power:VCC #PWR011
-U 1 1 61BB529D
-P 2450 4700
-F 0 "#PWR011" H 2450 4550 50  0001 C CNN
-F 1 "VCC" H 2465 4873 50  0000 C CNN
-F 2 "" H 2450 4700 50  0001 C CNN
-F 3 "" H 2450 4700 50  0001 C CNN
-	1    2450 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 61BB46AB
-P 2450 4950
-F 0 "R10" H 2300 4900 50  0000 L CNN
-F 1 "10k" H 2250 5000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2380 4950 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 2450 4950 50  0001 C CNN
-F 4 "RMCF0805JT10K0CT-ND" H 2450 4950 50  0001 C CNN "Digikey"
-	1    2450 4950
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1700 4750 1700 4700
-Connection ~ 1700 4750
-Wire Wire Line
-	2100 4750 1700 4750
-Wire Wire Line
-	2100 4900 2100 4750
-Wire Wire Line
-	1700 5200 1900 5200
-Wire Wire Line
-	1700 5100 1700 5200
-Wire Wire Line
-	1700 4800 1700 4750
-$Comp
-L power:+3V3 #PWR010
-U 1 1 61B997DA
-P 1700 4700
-F 0 "#PWR010" H 1700 4550 50  0001 C CNN
-F 1 "+3V3" H 1715 4873 50  0000 C CNN
-F 2 "" H 1700 4700 50  0001 C CNN
-F 3 "" H 1700 4700 50  0001 C CNN
-	1    1700 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 61B8EC10
-P 1700 4950
-F 0 "R3" H 1550 4900 50  0000 L CNN
-F 1 "10k" H 1500 5000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1630 4950 50  0001 C CNN
-F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 1700 4950 50  0001 C CNN
-F 4 "RMCF0805JT10K0CT-ND" H 1700 4950 50  0001 C CNN "Digikey"
-	1    1700 4950
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_FET:BSS214NW Q2
-U 1 1 61B83F6B
-P 2100 5100
-F 0 "Q2" V 2350 5050 50  0000 L CNN
-F 1 "BSS214NW" V 2450 4900 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 2300 5025 50  0001 L CIN
-F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 2100 5100 50  0001 L CNN
-F 4 "BSS214NWH6327XTSA1CT-ND" H 2100 5100 50  0001 C CNN "Digikey"
-	1    2100 5100
-	0    1    1    0   
-$EndComp
-Text GLabel 1600 5200 0    50   Input ~ 0
-NPX_MCU_SHIFT
-Wire Wire Line
-	1600 5200 1700 5200
-Connection ~ 1700 5200
-NoConn ~ 9950 2250
 $EndSCHEMATC
