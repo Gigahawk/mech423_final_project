@@ -11,26 +11,86 @@
 // Number of LEDs in Neopixel strip
 #define NPX_NUM_LEDS 30
 
+// Index of middle LED
+#define NPX_MID_IDX (NPX_NUM_LEDS/2)
+
+// True if even number of LEDs
+#define NPX_EVEN_LEDS (!(NPX_NUM_LEDS % 2))
+
+// Seed for pseudo-random number generator
+#define PRNG_SEED 0xB00B
+
+// Time to wait between allowing button edges during game select
+#define GAME_SELECT_DEBOUNCE_TIME 20
+
+// Width of game selection menu indicator
+#define GAME_SELECT_WIDTH 6
+
 // Time between demo animation frames
 #define DEMO_INTERVAL 10
+
+// Frame divisor for pong demo animation
+#define DEMO_PONG_INTERVAL_DIV 4
+
+// Frame divisor for ping pong demo animation
+#define DEMO_PINGPONG_INTERVAL_DIV 4
+
+// Frame divisor for tug o' war demo animation
+#define DEMO_TUGOWAR_INTERVAL_DIV 2
+
+// Chance of ball being returned each frame of ping pong demo animation (1/N)
+#define DEMO_PINGPONG_RETURN_RATE 9
+
+// Width of the demo animation
+#define DEMO_WIDTH 8
+
+#define DEMO_MIN_IDX (NPX_MID_IDX - DEMO_WIDTH/2)
+#define DEMO_MAX_IDX (NPX_MID_IDX + DEMO_WIDTH/2 - ((DEMO_WIDTH + 1) % 2))
 
 // Time between countdown ticks
 #define COUNTDOWN_INTERVAL 700
 
 // Number of LEDs lit up for each countdown tick
-#define COUNTDOWN_LED_WIDTH (2 - (NPX_NUM_LEDS % 2))
+#define COUNTDOWN_LED_WIDTH (1 + NPX_EVEN_LEDS)
 
 // Number of countdown ticks before game start
 #define COUNTDOWN_NUMBER 3
 
-// Initial time between ball events
-#define BALL_INTERVAL_START 150
+#define COUNTDOWN_MIN_IDX (NPX_MID_IDX - ((COUNTDOWN_NUMBER - 1)*COUNTDOWN_LED_WIDTH + NPX_EVEN_LEDS))
+#define COUNTDOWN_MAX_IDX (NPX_MID_IDX + (COUNTDOWN_NUMBER - 1)*COUNTDOWN_LED_WIDTH)
 
-// Amount of speedup after each rally
-#define BALL_INTERVAL_SPEEDUP 10
+// Brightness of ball return zones
+#define RETURN_ZONE_BRIGHTNESS 15
 
-// Minimum interval time (max ball speed)
-#define BALL_INTERVAL_MIN 50
+// Initial time between ball events for pong
+#define PONG_BALL_INTERVAL_START 70
+
+// Amount of speedup after each rally for pong
+#define PONG_BALL_INTERVAL_SPEEDUP 5
+
+// Minimum interval time (max ball speed) for pong
+#define PONG_BALL_INTERVAL_MIN 40
+
+// Size of return zone for pong
+#define PONG_RETURN_ZONE_WIDTH 3
+
+// Initial time between ball events for pong
+#define PINGPONG_BALL_INTERVAL_START 70
+
+// Amount of speedup after each rally for pong
+#define PINGPONG_BALL_INTERVAL_SPEEDUP 5
+
+// Minimum interval time (max ball speed) for pong
+#define PINGPONG_BALL_INTERVAL_MIN 10
+
+// Size of return zone for pong
+#define PINGPONG_RETURN_ZONE_WIDTH (NPX_MID_IDX - NPX_EVEN_LEDS)
+
+// Debounce time for ping pong button reads
+#define PINGPONG_DEBOUNCE_TIME 3
+
+// Debounce time for tug o' war button reads
+#define TUGOWAR_DEBOUNCE_TIME 3
 
 // Time between winner animation frames
 #define WINNER_INTERVAL 300
