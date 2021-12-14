@@ -373,9 +373,7 @@ uint8_t gameLoopPingPong(void) {
 // Returns 0 if Player 1  wins, 1 if Player 2 wins
 uint8_t gameLoopTugOWar(void) {
     int32_t pos = NPX_NUM_LEDS / 2;
-    uint64_t ball_counter = 0;
-    uint64_t cooldown1 = 0;
-    uint64_t cooldown2 = 0;
+    uint64_t cooldown = 0;
     ButtonState btn1 = BTN_WAIT;
     ButtonState btn2 = BTN_WAIT;
 
@@ -390,8 +388,8 @@ uint8_t gameLoopTugOWar(void) {
         clearStrip();
         setLEDColor(pos, 0, 0, 255);
         showStrip();
-        if(counter > cooldown1) {
-            cooldown1 = counter + TUGOWAR_DEBOUNCE_TIME;
+        if(counter > cooldown) {
+            cooldown = counter + TUGOWAR_DEBOUNCE_TIME;
             if(btnPressed(&btn1, BTN1_PIN)) {
                 btn1 = BTN_WAIT;
                 pos++;
