@@ -82,7 +82,7 @@
 \usepackage[makeroom]{cancel}
 
 %better tables
-\usepackage{booktabs} 
+\usepackage{booktabs}
 \usepackage{multicol}
 \usepackage{multirow}
 

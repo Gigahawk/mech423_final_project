@@ -1,34 +1,33 @@
-%%%%% DO NOT EDIT, MIGRATED TO GITHUB 
-\documentclass{Notes}
+\documentclass{notes}
 \begin{document}
 \vspace*{\fill}
 \begin{center}
-{\centering\huge{LitePog}}\\
-\vspace*{2em}
-{\centering\huge{MECH 423 Project Report}}\\
-\vspace*{2em}
-{\large Jasper Chan: 37467164 }\\
-{\large Jacky Chang: 19835164 }    
+    {\centering\huge{LitePog}}\\
+    \vspace*{2em}
+    {\centering\huge{MECH 423 Project Report}}\\
+    \vspace*{2em}
+    {\large Jasper Chan: 37467164 }\\
+    {\large Jacky Chang: 19835164 }
 \end{center}
 \vspace*{\fill}
 \newpage
 
 \begin{abstract}
-The objective of this project is to design and create a simple two player game similar to Light Pong\footnotemark. 
-\footnotetext{
-    \url{https://www.kickstarter.com/projects/aaqib/light-pong-game}
-}
-The system will consist of two handles/controllers on each end of a flexible tube that houses an LED strip.
-The MSP430 will be used to control the LED's and process the signals from each controller.The mechanical housing was designed in Solidworks and printed in PLA using Fused Deposition Modelling (FDM).
-The PCB's were custom designed and ordered from JLPCB.
+    The objective of this project is to design and create a simple two player game similar to Light Pong\footnotemark.
+    \footnotetext{
+        \url{https://www.kickstarter.com/projects/aaqib/light-pong-game}
+    }
+    The system will consist of two handles/controllers on each end of a flexible tube that houses an LED strip.
+    The MSP430 will be used to control the LED's and process the signals from each controller.
+    The mechanical housing was designed in SolidWorks and printed in PLA using Fused Deposition Modelling (FDM).
+    The PCBs were designed in KiCad and ordered from JLPCB.
 
-The game was slightly different from the original LightPong.
-Our version starts in an idle state and requires both players to hold down their buttons to start a countdown.
-At the end of the countdown the first player to let go launches the "ball" and the light begins to move towards the opposing player. 
-Players wait until the button on their handle lights up at which point they would need to press the button before a specified elapses.
-If they fail to do so the game ends and they lose, if they do press the button in time, the light moves towards the other player at a slightly increased speed.
-This process repeats until one player misses.
-
+    The game was slightly different from the original Light Pong.
+    Our version starts in an idle state and requires both players to hold down their buttons to start a countdown.
+    At the end of the countdown the first player to let go launches the "ball" and the light begins to move towards the opposing player.
+    Players wait until the button on their handle lights up at which point they would need to press the button before a specified elapses.
+    If they fail to do so the game ends, and they lose, if they do press the button in time, the light moves towards the other player at a slightly increased speed.
+    This process repeats until one player misses.
 \end{abstract}
 
 \section{Objectives}
@@ -49,12 +48,12 @@ Because it can't be purchased, this is a good opportunity to have a similar devi
 \begin{table}[H]
     \centering
     \begin{tabularx}{\textwidth}{>{\hsize=.6\hsize\raggedright}X>{\hsize=.1\hsize\raggedright}X>{\hsize=.3\hsize\raggedright\arraybackslash}X}
-        Task & Effort & Person Responsible  \\\toprule
-         Power + charging PCB capable of delivering enough current for LED strip&20\% & Jasper\\\midrule
-         Microcontroller PCB to drive LED strip and read button inputs & 20\% & Jasper\\\midrule
-         Mechanical housing for parts& 20\% & Jacky\\\midrule
-         Addressable LED Strip& 5\% & Jacky\\ \midrule
-         Microcontroller code & 35\% & Jasper and Jacky\\\bottomrule
+        Task                                                                    & Effort & Person Responsible \\\toprule
+        Power + charging PCB capable of delivering enough current for LED strip & 20\%   & Jasper             \\\midrule
+        Microcontroller PCB to drive LED strip and read button inputs           & 20\%   & Jasper             \\\midrule
+        Mechanical housing for parts                                            & 20\%   & Jacky              \\\midrule
+        Addressable LED Strip                                                   & 5\%    & Jacky              \\ \midrule
+        Microcontroller code                                                    & 35\%   & Jasper and Jacky   \\\bottomrule
     \end{tabularx}
     \caption{Functional Requirements and their efforts}
     \label{tab:funcreq}
@@ -78,13 +77,13 @@ In order to determine the power requirements for the power PCB, experimentation 
 \subsubsection{Inputs}
 
 \begin{enumerate}
-    \item Power 
-    \begin{enumerate}
-        \item Voltage: nominally \SI{5}{\volt}, actual TBD
-        \item Current: Max \SI{60}{\milli\ampere} per LED 
-    \end{enumerate}
+    \item Power
+          \begin{enumerate}
+              \item Voltage: nominally \SI{5}{\volt}, actual TBD
+              \item Current: Max \SI{60}{\milli\ampere} per LED
+          \end{enumerate}
     \item Data: the WS2812B data format is described in the datasheet\footnotemark
-    \footnotetext{\url{https://cdn-shop.adafruit.com/datasheets/WS2812.pdf}}
+          \footnotetext{\url{https://cdn-shop.adafruit.com/datasheets/WS2812.pdf}}
     \item Wiring: Wires between the handles will need to be run along the LED strip
 \end{enumerate}
 
@@ -100,15 +99,15 @@ In order to determine the power requirements for the power PCB, experimentation 
 
 \begin{enumerate}
     \item Strip length
-    \begin{enumerate}
-        \item Adafruit sells strips in \SI{1}{\meter} segments, but they can be cut in between each LED
-        \item A \SI{1}{\meter} strip will be used for convenience
-    \end{enumerate}
+          \begin{enumerate}
+              \item Adafruit sells strips in \SI{1}{\meter} segments, but they can be cut in between each LED
+              \item A \SI{1}{\meter} strip will be used for convenience
+          \end{enumerate}
     \item LED count
-    \begin{enumerate}
-        \item Adafruit sells strips at various LED densities
-        \item Higher densities will increase power and memory requirements on the MCU
-    \end{enumerate}
+          \begin{enumerate}
+              \item Adafruit sells strips at various LED densities
+              \item Higher densities will increase power and memory requirements on the MCU
+          \end{enumerate}
 \end{enumerate}
 
 \subsection{Development Plan}
@@ -132,7 +131,7 @@ A bench power supply will be used to determine if a \SI{5}{\volt} boost circuit 
 \subsubsection{Brightness requirements}
 \begin{enumerate}
     \item Power the LED strip with \SI{5}{\volt} from a bench power supply
-    \item Connect a MCU to the data pin of the strip
+    \item Connect an MCU to the data pin of the strip
     \item Set all LEDs to full brightness white (RGB 255, 255, 255)
     \item Incrementally turn down the brightness until it is at a reasonable level
 \end{enumerate}
@@ -140,18 +139,18 @@ A bench power supply will be used to determine if a \SI{5}{\volt} boost circuit 
 \subsubsection{Voltage requirements}
 \begin{enumerate}
     \item Power the LED strip with \SI{3.2}{\volt} from a bench power supply
-    \item Connect a MCU to the data pin of the strip
+    \item Connect an MCU to the data pin of the strip
     \item Set all LEDs to a reasonable brightness of white
     \item If the LEDs turn on correctly, note the current consumption, if not, repeat the test at a higher voltage until the LED strip reliably turns on.
-    \begin{itemize}
-        \item This will determine if we need a boost circuit or if the LEDs can be directly powered from a LiPo battery.
-    \end{itemize}
+          \begin{itemize}
+              \item This will determine if we need a boost circuit or if the LEDs can be directly powered from a LiPo battery.
+          \end{itemize}
 \end{enumerate}
 \subsubsection{Results}
 
 The LED strip was capable of being controlled with \SI{3.3}{\volt} level logic signals from the MSP430.
 
-It was determined that running the LEDs at about 100/255 brightness was a reasonable number that was clearly visible while keeping the current consumption managable.
+It was determined that running the LEDs at about 100/255 brightness was a reasonable number that was clearly visible while keeping the current consumption manageable.
 
 Powering the LED strip at less than \SI{5}{\volt} was not tested since it was determined that a boost converter was necessary to utilize the entirety of the battery capacity.
 
@@ -170,7 +169,7 @@ Powering the LED strip at less than \SI{5}{\volt} was not tested since it was de
 Because there is limited space to store a power source within the handles of the device, a custom PCB will have to be made to hold the battery, and associated charging, protection and boost circuitry as required.
 
 Because the handle will be cylindrical, an 18650 battery will be used because it will be the most convenient form factor while providing high power and energy density.
-For safety reasons, a spring loaded battery holder will be used to avoid soldering or spot welding connections.
+For safety reasons, a spring-loaded battery holder will be used to avoid soldering or spot welding connections.
 
 \subsection{Inputs and Outputs}
 
@@ -179,8 +178,8 @@ For safety reasons, a spring loaded battery holder will be used to avoid solderi
 \begin{enumerate}
     \item Charging power: Battery will be charged with a USB connection
     \item Button: Power PCB will be housed in one of the device handles, and will need to have a connector for the handle button
-    \item Button LED signal: Power PCB will need a connection to receive the signal to turn the button's LED on or off.
-    \item Power Switch: The power PCB will need a power switch to disable the power output.
+    \item Button LED signal: Power PCB will need a connection to receive the signal to turn the button's LED on or off
+    \item Power Switch: The power PCB will need a power switch to disable the power output
 \end{enumerate}
 
 \subsubsection{Outputs}
@@ -197,11 +196,11 @@ For safety reasons, a spring loaded battery holder will be used to avoid solderi
     \item LED strip voltage: Determined in \autoref{sec:fr1testplan}
     \item Total sustained current: Determined in \autoref{sec:fr1testplan}
     \item Battery choice: Must be capable of providing enough power
-    \begin{itemize}
-        \item Battery may or may not come with protection circuitry built in.
-        Requirement for protection circuitry on the PCB is only required for unprotected cells.
-        PCB silkscreen will clearly indicate whether protected or unprotected cells should be used.
-    \end{itemize}
+          \begin{itemize}
+              \item Battery may or may not come with protection circuitry built in.
+                    Requirement for protection circuitry on the PCB is only required for unprotected cells.
+                    PCB silkscreen will clearly indicate whether protected or unprotected cells should be used.
+          \end{itemize}
     \item Charging current: for safety reasons this will be a conservative number (max 1C)
     \item PCB dimensions: PCB must be big enough to hold all the components
 \end{enumerate}
@@ -219,20 +218,20 @@ For safety reasons, a spring loaded battery holder will be used to avoid solderi
 \subsubsection{Charging}
 
 \begin{enumerate}
-    \item Place PCB and USB battery bank inside of a fireproof container
+    \item Place PCB and USB battery bank inside a fireproof container
     \item Connect USB battery bank to PCB charging input
     \item Wait for charging to complete.
     \item Remove LiPo cell from PCB, ensure that it has the correct voltage for a charged cell (approximately \SI{4.2}{\volt})
 \end{enumerate}
 
-\subsubsection{Power Output} 
+\subsubsection{Power Output}
 
 \begin{enumerate}
-    \item Place PCB inside of a fireproof container
+    \item Place PCB inside a fireproof container
     \item Connect PCB power output to a load
-        \begin{itemize}
-            \item If the lab contains a programmable load, this is preferred, otherwise the load can just be the LED strip + MCU
-        \end{itemize}
+          \begin{itemize}
+              \item If the lab contains a programmable load, this is preferred, otherwise the load can just be the LED strip + MCU
+          \end{itemize}
     \item Enable PCB power output and load
     \item Ensure power output is stable
     \item Keep test running, ensure power output stops at or before designed battery cutoff voltage is reached.
@@ -262,7 +261,7 @@ After some modifications\footnotemark, the power PCB functions as expected.
 \footnotetext{Modifications are outlined in project files.}
 
 The power PCB was capable of providing \SI{5}{\volt} at \SI{1}{\ampere} continuously for over \SI{10}{\second}, which is more than we ever expect in normal use.
-Battery over and undervoltage protections worked as expected.
+Battery over and under voltage protections worked as expected.
 One modification involves running the battery current through the power switch, which exceeds its \SI{500}{\milli\ampere} rating, however no heat or adverse effects were noticed even during prolonged use.
 
 \section{Functional Requirement 3: Microcontroller PCB}
@@ -417,14 +416,14 @@ See the Results subsections within each Functional Requirements section.
 \section{Reflections}
 
 The project for the most part went very smoothly.
-We played to our strong points which allowed us to progress quickly; however, it may have proved to be a better learning experience if we worked on our weaker areas. 
+We played to our strong points which allowed us to progress quickly; however, it may have proved to be a better learning experience if we worked on our weaker areas.
 Some things that we would have done differently is speccing and ordering things earlier.
 As a result of this oversight, we were unable to obtain a tube to house the LED strip.
 Although the performance didn't suffer, it was still something that we would have liked to have.
 
 The most important things we learned in MECH 423 that we deemed to be the most important are:
 \begin{itemize}
-    \item Learning how to properly read and interpret documentation 
+    \item Learning how to properly read and interpret documentation
     \item Writing and debugging code
     \item PCB design
 \end{itemize}
