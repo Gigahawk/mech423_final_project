@@ -21,6 +21,23 @@ The list of required parts is:
     - `logic_handle` configuration x1
     - `power_handle` configuration x1
 
+## Rev 2 Notes
+
+The following notes refer to [mech_rev2](https://github.com/Gigahawk/mech423_final_project/tree/mech_rev2) (commit hash a1e2143).
+
+Hardware has not been validated as of 2021-12-16, however it is likely that this revision will be functional out of the box.
+
+Notable changes:
+- PCBs are now centered within handle
+    - Power switch sticks out less
+    - USB-C countersink is deeper
+- External screws have been removed
+    - Screw holes were left unused during rev 1 testing
+- Optimizations for 3D printing
+    - Fewer overhangs
+    - Wall thickness is more consistent
+- Alignment features for shim pieces
+    - Removal of screws means there the old alignment procedure no longer works, so this is now integrated into the design
 
 ## Rev 1 Notes
 
@@ -38,7 +55,8 @@ The following notes refer to [mech_rev1](https://github.com/Gigahawk/mech423_fin
 
 ### Assembly Notes
 - Thread features work smoothly
-- LED strip clamp could be better designed currently the clamping force is transmitted through hot glue covering the LED strip solder joints
+- LED strip clamp could be better designed
+    - Currently the clamping force is transmitted through hot glue covering the LED strip solder joints
 - Wall thickness is insufficient in many areas
     - Some areas are unfixable, like screw holes
 - Screw holes are unnecessary
